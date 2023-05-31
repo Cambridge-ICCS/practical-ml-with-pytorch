@@ -12,4 +12,7 @@ If you have never done this before worry: it *very* good practise, especially wh
 
 All of the Python dependencies are specified in in the [``requirements.txt``](requirements.txt) file.
 
-Bla ...
+### Using conda
+...
+
+### Using pyenv
