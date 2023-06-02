@@ -1,0 +1,44 @@
+---
+title: "Introduction to Machine Learning with PyTorch"
+subtitle: "ICCS Summer school 2023"
+format:
+  revealjs:
+    embed-resources: true
+    slide-number: true
+    chalkboard: false
+    preview-links: auto
+    history: false
+    logo: https://iccs.cam.ac.uk/sites/iccs.cam.ac.uk/files/logo2_2.png
+    theme: dark
+---
+
+# Theory
+
+## Regression
+
+## Gradient Descent
+
+## Neural Net Basics
+It's matrix multiplication, innit.
+
+## Classification and Regression
+
+
+# Python and PyTorch
+
+## Python projects
+
+## PyTorch
+
+# More theory
+
+# Applications
+
+
+# Further information
+
+## Slides
+
+## Contact
+
+## Resources
