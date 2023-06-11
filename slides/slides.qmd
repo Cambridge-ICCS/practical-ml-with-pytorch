@@ -10,13 +10,34 @@ format:
     history: false
     logo: https://iccs.cam.ac.uk/sites/iccs.cam.ac.uk/files/logo2_2.png
     theme: dark
+    render-on-save: true
 ---
 
-# Theory
+# Stochastic gradient descent (SGD) ...
 
-## Regression
+## ... in the context of fitting a function
 
-## Gradient Descent
+- Generally speaking, most neural networks are fit/trained using SGD (or some variant of it).
+
+- To understand the basics of how one might fit a function with SGD, let's do it with a straight line: $$y=mx+c$$
+
+
+## Fitting a straight line I
+
+- **Question**---when we a differentiate a function, what do we get?
+
+- Consider:
+
+$$y = mx + c$$
+
+$$\frac{dy}{dx} = m$$
+
+- $m$ is certainly $y$'s slope, but is there a (perhaps) more fundamental way to view a derivative?
+
+## Fitting a straight line II
+
+- **Answer**---a function's derivative gives a _vector_ which points in the directions of _steepest ascent_.
+
 
 ## Neural Net Basics
 It's matrix multiplication, innit.
