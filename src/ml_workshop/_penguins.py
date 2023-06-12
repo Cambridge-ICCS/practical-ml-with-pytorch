@@ -21,7 +21,7 @@ class PenguinDataset(Dataset):
     def __init__(self):
         """Build ``PenguinDataset``."""
         self._data = _load_penguin_data()
-        self._valid_split = self._data.groupby(b="species", n=20)
+        self._valid = self._data.groupby(by=["species", "sex"]).sample(n=10)
 
 
 def _load_penguin_data() -> DataFrame:
