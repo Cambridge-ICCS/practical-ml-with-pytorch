@@ -34,8 +34,10 @@ def _load_penguin_data() -> DataFrame:
 
     """
     data = load_penguins()
-    return (
+    data = (
         data.loc[~data.isna().any(axis=1)]
         .sort_values(by=sorted(data.keys()))
         .reset_index(drop=True)
     )
+    data.sex = (data.sex == "male").astype(float)
+    return data
