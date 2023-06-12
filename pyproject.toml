@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ml_workshop"
+version = "0.0.0"
+description = "ICCS ML workshop."
+authors = [
+  { name="Jim Denholm", email="jd949@cam.ac.uk" },
+  { name="Jack Atkinson", email="jwa34@cam.ac.uk" },
+]
+readme = "README.md"
+license = {file = "LICENSE.md"}
+requires-python = ">=3.9.10"
+
+dependencies = ["torch>=1.13","torchvision>=0.13", "palmerpenguins>=0.1.4",
+                "pandas", "mypy", "pydocstyle", "black",]
+
+
+[project.urls]
+"Homepage" = "https://github.com/Cambridge-ICCS/ml-training-material"
+"Bug Tracker" = "https://github.com/Cambridge-ICCS/ml-training-material/issues"
+
+[tool.setuptools]
+package-dir = {}
