@@ -9,6 +9,8 @@ from pandas import DataFrame
 
 from palmerpenguins import load_penguins
 
+# pylint: disable=too-many-arguments
+
 
 class PenguinDataset(Dataset):
     """Penguin dataset class.
