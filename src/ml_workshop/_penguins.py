@@ -29,6 +29,11 @@ class PenguinDataset(Dataset):
     y_tfms : Compose, optional
         A composition of transfroms to apply to the targets.
 
+    Notes
+    -----
+    The validation split contains 10 male and 10 female penguins of each
+    species.
+
     """
 
     def __init__(
