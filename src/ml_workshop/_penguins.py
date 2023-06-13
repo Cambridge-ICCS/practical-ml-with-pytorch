@@ -21,6 +21,13 @@ class PenguinDataset(Dataset):
         The column titles to use in the input feature vectors.
     target_keys : Sequnce[str]
         The column titles to use in the target feature vectors.
+    train : bool
+        If ``True``, this object will serve as the training set, and if
+        ``False``, the validation set.
+    x_tfms : Compose, optional
+        A composition of transforms to apply to the inputs.
+    y_tfms : Compose, optional
+        A composition of transfroms to apply to the targets.
 
     """
 
