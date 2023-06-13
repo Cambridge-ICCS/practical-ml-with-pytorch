@@ -22,7 +22,7 @@ format:
 - To understand the basics of how one might fit a function with SGD, let's do it with a straight line: $$y=mx+c$$
 
 
-## Fitting a straight line I
+## Fitting a straight line I {.smaller}
 
 - **Question**---when we a differentiate a function, what do we get?
 
@@ -34,7 +34,7 @@ $$\frac{dy}{dx} = m$$
 
 - $m$ is certainly $y$'s slope, but is there a (perhaps) more fundamental way to view a derivative?
 
-## Fitting a straight line II
+## Fitting a straight line II {.smaller}
 
 - **Answer**---a function's derivative gives a _vector_ which points in the direction of _steepest ascent_.
 
