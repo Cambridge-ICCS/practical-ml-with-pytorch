@@ -101,11 +101,13 @@ You can always boot back into the venv as you left it by running the activate co
 ### 3. Install dependencies
 
 It is now time to install the dependencies for our code, for example PyTorch.
-These are all listed in the [`requirements.txt`](requirements.txt) file and can be installed in one go.
+The project has been packaged with a [`pyproject.toml`](pyproject.toml) so can be installed in one go.
 From within the root directory in a active virtual environment run:
 ```
-pip install -r requirements.txt
+pip install .
 ```
+This will download the relevant dependencies into the venv as well as setting up the datasets that we will be using in the course.
+
 
 ## Teaching Material
 
@@ -117,5 +119,3 @@ The slides can be viewed at [TODO: Add link once ready]()
 ### Exercises
 The exercises that we will be working on can be found in the [exercises](#/exercises/) directory.
 These take the form of jupyter notebooks.
-
-
