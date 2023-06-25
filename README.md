@@ -7,9 +7,10 @@ and [**@jdenholm**](https://github.com/jdenholm) of
 
 
 ## Contents
-[Preparation and prerequisites](#preparation-and-prerequisites)
-[Installation and setup](#installation-and-setup)
-[Teaching material](#teaching-material)
+
+- [Preparation and prerequisites](#preparation-and-prerequisites)
+- [Installation and setup](#installation-and-setup)
+- [Teaching material](#teaching-material)
 
 
 ## Preparation and prerequisites
@@ -32,17 +33,18 @@ Neural Networks:
 The course will be taught in python using pyTorch.
 Whilst no prior knowledge of pyTorch is expected we assume users are familiar with the basics of Python3.
 This includes:
-- Writing and using functions
 - Basic mathematical operations
 - Writing and running scripts/programs
+- Writing and using functions
+- The conjcept of object orientation (that an object, e.g. a dataset, can have associated functions/methods associated with it.)
 - Basic use of the following libraries:
-  - numpy for mathematical and array operations
-  - matplotlib for ploting and visualisation
-  - pandas for storing and accessing data
+  - `numpy` for mathematical and array operations
+  - `matplotlib` for ploting and visualisation
+  - `pandas` for storing and accessing data
 - Familiarity with the concept of a jupyter notebook
 
 ### git and GitHub
-The course from day 1 of the summer school should provide the neccessary knowledge.
+The [course from day 1 of the summer school](https://github.com/Cambridge-ICCS/ss23-git) should provide the neccessary knowledge.
 You will be expected to know how to clone and/or fork a repository, commit, and push.
 
 ### Preparation
