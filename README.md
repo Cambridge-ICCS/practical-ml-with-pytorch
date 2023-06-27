@@ -1,7 +1,7 @@
 # ICCS PyTorch training
 
 This repository contains documentation, resources, and code for the Introduction to
-Machine Learning with PyTorch session deliovered by [**@jatkinson1000**](https://github.com/jatkinson1000)
+Machine Learning with PyTorch session delivered by [**@jatkinson1000**](https://github.com/jatkinson1000)
 and [**@jdenholm**](https://github.com/jdenholm) of
 [ICCS](https://github.com/Cambridge-ICCS) at the [2023 summer school](https://iccs.cam.ac.uk/events/iccs-summer-school-2023).
 
@@ -15,7 +15,7 @@ and [**@jdenholm**](https://github.com/jdenholm) of
 
 ## Preparation and prerequisites
 
-To get the most out of the session we expact a basic understanding in a few areas and for you to do some preparation.
+To get the most out of the session we expect a basic understanding in a few areas and for you to do some preparation.
 Topics expected are outlined below, along with some resources for reading if you are unfamiliar.
 
 ### Mathematics and Machine Learning
@@ -36,12 +36,12 @@ This includes:
 - Basic mathematical operations
 - Writing and running scripts/programs
 - Writing and using functions
-- The conjcept of object orientation (that an object, e.g. a dataset, can have associated functions/methods associated with it.)
+- The concept of [object orientation](https://eli5.gg/Object-oriented%20programming) (that an object, e.g. a dataset, can have associated functions/methods associated with it.)
 - Basic use of the following libraries:
-  - `numpy` for mathematical and array operations
-  - `matplotlib` for ploting and visualisation
-  - `pandas` for storing and accessing data
-- Familiarity with the concept of a jupyter notebook
+  - [`numpy`](https://numpy.org/) for mathematical and array operations
+  - [`matplotlib`](https://matplotlib.org/) for ploting and visualisation
+  - [`pandas`](https://pandas.pydata.org/docs/getting_started/index.html) for storing and accessing tabular data
+- Familiarity with the [concept of a jupyter notebook](https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/index.html)
 
 ### git and GitHub
 The [course from day 1 of the summer school](https://github.com/Cambridge-ICCS/ss23-git) should provide the neccessary knowledge.
@@ -49,13 +49,13 @@ You will be expected to know how to clone and/or fork a repository, commit, and 
 
 ### Preparation
 In preparation for the course please ensure that your computer contains the following:
-- Text editor - e.g. vim, gedit, vscode, sublimetext etc. to open and edit code files
-- UNIX terminal - e.g. Terminal, iTerm, kitty, 
+- Text editor - e.g. vim/[neovim](https://neovim.io/), [gedit](https://gedit.en.softonic.com/), [vscode](https://code.visualstudio.com/), [sublimetext](https://www.sublimetext.com/) etc. to open and edit code files
+- A terminal emulator - e.g. [GNOME Terminal](https://help.gnome.org/users/gnome-terminal/stable/), [kitty](https://sw.kovidgoyal.net/kitty/), [Windows Terminal (windows only)](https://learn.microsoft.com/en-us/windows/terminal/), [iTerm (mac only)](https://iterm2.com/)
 - python virtual environment (see [Installation and setup](#installation-and-setup))
 
-If you are a windows user we strongly advise working in linux.
-The easiest way to do this is [using Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/install).
-Virtual machines or dual-booting are also options.
+Note for Windows users: _We have linked suitable applications for windows in the above lists.
+However, you may wish to refer to [Windows' getting-started with python information](https://learn.microsoft.com/en-us/windows/python/beginners)
+for a complete guide to getting set up on a Windows system._
 
 If you require assistance or further information with any of these please reach out to us before the school.
 
