@@ -34,7 +34,7 @@ $$\frac{dy}{dx} = m$$
 
 - $m$ is certainly $y$'s slope, but is there a (perhaps) more fundamental way to view a derivative?
 
-## Fitting a straight line II {.smaller}
+## Fitting a straight line with SGD II {.smaller}
 
 - **Answer**---a function's derivative gives a _vector_ which points in the direction of _steepest ascent_.
 
@@ -56,30 +56,179 @@ $$\frac{dy}{dx} = 1$$
 
 ::::
 
-- The derivative points in the _positive_ direction---the direction of steepest ascent.
-
 - What is the direction of _steepest descent?_
+
 $$-\frac{dy}{dx}$$
 
 
+## Fitting a straight line with SGD III {.smaller}
+
+- To fit a function, we essentially want to create a model which describes data.
+
+- We therefore need a way of measuring how a model's predictions deviate from our observations.
+
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+- Consider the data:
+
+| $x_{i}$  | $y_{i}$ |
+|---------:|:-----   |
+| 1.0      | 2.1     |
+| 2.0      | 3.9     |
+| 3.0      | 6.2     |
+
+
+
+
+:::
+
+::: {.column width="70%"}
+- We can measure the distance between $f(x_{i})$ and $y_{i}$.
+
+- Normally we might consider the mean-squared error:
+
+$$MSE = \frac{1}{n}\sum_{i=1}^{n}\left(y_{i} - f(x_{i})\right)^{2}$$
+
+:::
+
+::::
+
+
+- We can differentiate the loss function w.r.t. to each parameter in the the model $f$.
+
+- We can use the direction of steepest descent to iteratively 'nudge' the parameters in a direction which reduces the loss.
+
+
+## Fitting a straight line with SGD IV {.smaller}
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+- Model: $f(x) = mx + c$
+
+- Data: $\{x_{i}, y_{i}\}$
+
+- Loss: $\frac{1}{n}\sum_{i=1}^{n}(y_{i} - x_{i})^{2}$
+
+:::
+
+::: {.column width="70%"}
+
+- Loss:
+
+$$L = \frac{1}{n}\sum_{i=1}^{n}(y_{i} - f(x_{i}))^{2}\\
+    = \frac{1}{n}\sum_{i=1}^{n}(y_{i} - mx_{i} + c)^{2}
+$$
+
+
+:::
+
+::::
+
+- We can iteratively minimise the loss by stepping the model's parameters in the direction of steepest descent:
+
+$$m_{n + 1} = -m_{n}\frac{dL}{dm} \cdot l_{r}$$
+
+$$c_{n + 1} = -c_{n}\frac{dL}{dm} \cdot l_{r}$$
+
+
+
+## Quick recap
+
+To fit a model we need:
+
+- A model.
+
+- Some data.
+
+- A loss function
+
+- An optimisation procedure (often SGD and other flavours of SGD).
+
+All in all, 'tis quite simple.
 
 ## What about neural networks?
 
-## Neural Net Basics
-It's matrix multiplication, innit.
+- Neural networks are just functions.
 
-## Classification and Regression
+- We can ''train'', or fit, them as we would any other function:
+  - by iteratively nudging parameters to minimise a the loss.
+
+- With neural networks, differentiating the loss function is a bit more complicated.
+  - but ultimately it's just the chain rule.
+
+- We won't go through any more maths on the topic---learning resources on the topic are in no short supply.
 
 
-# Python and PyTorch
+## Fully-connected neural networks {.smaller}
 
-## Python projects
+- The simplest neural networks commonly used are generally called fully-connected nerual nets, dense networks or multi-layer perceptrons.
 
-## PyTorch
 
-# More theory
 
-# Applications
+:::: {.columns}
+
+
+::: {.column width=40%}
+
+- We map between the features at consecutive layers through matrix multiplication and the application of some non-linear activation function.
+
+$$a_{l+1} = \sigma \left( W_{l}a_{l} + b_{l} \right)$$
+
+- For common choices of activation functions, see the [PyTorch](https://pytorch.org/docs/stable/nn.html#non-linear-activations-weighted-sum-nonlinearity) docs.
+
+:::
+
+::: {.column width=60%}
+
+<img src="fc-net.png" width="750"/>
+
+:::
+
+
+
+::::
+
+
+
+## Uses: Classification and Regression
+
+- Fully connected neural networks are essentially applied to tabular data.
+  - I.e. where it makes sense to express the data in table-like object (such as a data frame).
+
+- Normally people use neural networks for one of two things:
+
+  - Classification: assigning a semantic label to something---i.e. is this a dog or cat?
+
+  - Regression: Estimating a continuous quantity such as mass or volume.
+
+
+# Python and PyTorch {.smaller}
+
+- In this workship-lecture-thing, we will implement some straightforward neural networks in PyTorch, and use them for different classification and regression problems.
+
+- PyTorch is a deep learning framework that can be used in both Python and C++.
+  - I have never met anyone actually training models in C++; I find it a bit weird.
+
+- See the PyTorch website: [https://pytorch.org/](https://pytorch.org/)
+
+
+
+## Exercises: Penguins {.smaller}
+
+<img src="penguins.jpg" width="750"/>
+
+## Exercise 1---classification
+
+- In this exercise, you will train a full-connected neural network to classify the species of penguins based on certain physical features.
+
+- [https://github.com/allisonhorst/palmerpenguins](https://github.com/allisonhorst/palmerpenguins)
+
+- Thanks to Jack Atkinson for suggesting this dataset.
 
 
 # Further information
