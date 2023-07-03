@@ -16,7 +16,8 @@ requires-python = ">=3.9.10"
 
 dependencies = ["torch>=1.13","torchvision>=0.13", "palmerpenguins>=0.1.4",
                 "pandas", "mypy", "pydocstyle", "black", "ipykernel",
-                "jupyter-black"]
+                "jupyter-black",
+                "torch_tools @ git+https://github.com/jdenholm/TorchTools.git",]
 
 
 [project.urls]
