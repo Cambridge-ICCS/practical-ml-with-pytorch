@@ -14,12 +14,29 @@ readme = "README.md"
 license = {file = "LICENSE.md"}
 requires-python = ">=3.9.10"
 
-dependencies = ["torch>=1.13","torchvision>=0.13", "palmerpenguins>=0.1.4",
-                "pandas", "mypy", "pydocstyle", "black", "ipykernel",
-                "jupyter-black", "scikit-image", "notebook",
-                "torch_tools @ git+https://github.com/jdenholm/TorchTools.git",
-                "matplotlib",]
+dependencies = [
+    "torch>=1.13",
+    "torchvision>=0.13",
+    "palmerpenguins>=0.1.4",
+    "pandas",
+    "ipykernel",
+    "scikit-image",
+    "notebook",
+    "torch_tools @ git+https://github.com/jdenholm/TorchTools.git",
+    "matplotlib",
+]
 
+[project.optional-dependencies]
+# test = [
+#     "pytest>=7.2.0",
+# ]
+lint = [
+    "black>=22.12.0",
+    # "pylint",
+    "pydocstyle",
+    "mypy>=1.0.0",
+    "jupyter-black",
+]
 
 [project.urls]
 "Homepage" = "https://github.com/Cambridge-ICCS/ml-training-material"
