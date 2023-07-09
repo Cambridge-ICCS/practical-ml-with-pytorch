@@ -246,6 +246,110 @@ $$a_{l+1} = \sigma \left( W_{l}a_{l} + b_{l} \right)$$
 # Part 2: Fun with CNNs
 
 
+## Convolutional neural networks (CNNs): why?
+
+
+
+### Advantages over simple ANNs
+- They require many fewer parameters per layer.
+  - The forward pass of a conv layer involves passing a filter---of fixed size---over the inputs.
+  - The number of parameters per layer _does not_ depend on the input size.
+- They are a much more natural choice of function for image-like data.
+
+## Some other points
+- Convolutional layers are translationally invariant:
+  - They don't care where the "dog" is in the image.
+- Convolutional layers are _not_ rotationally invariant.
+  - A model trained to detect correctly-oriented human faces will likely fail on upside-down images, etc.
+  - We can address this with data augmentation (explored in exercises).
+
+
+## What is a (1D) convolutional layer?
+
+<img src="1d-conv.png" width="750"/>
+
+Look at the [``torch.nn.Conv1d docs``](https://pytorch.org/docs/stable/generated/torch.nn.Conv1d.html)
+
+## 2D convolutional layer {.smaller}
+
+- Same idea as in on dimension, but in two (funnily enough).
+
+<img src="2d-conv.png" width="750"/>
+
+- Everthing else proceeds in the same way as with the 1D case.
+- See the [``torch.nn.Conv2d docs``](https://pytorch.org/docs/stable/generated/torch.nn.Conv2d.html).
+- As with Linear layers, Conv2d layers also have non-linear activations applied to them.
+
+
+
+## Typical CNN overview {.smaller}
+
+
+:::: {columns}
+
+
+::: {.column width=50%}
+
+<img src="cnn-architecture.png" width="750"/>
+Image source: [https://medium.com/techiepedia/binary-image-classifier-cnn-using-tensorflow-a3f5d6746697](https://medium.com/techiepedia/binary-image-classifier-cnn-using-tensorflow-a3f5d6746697)
+
+:::
+
+::: {.column width=49%}
+- Series of conv layers extract features from the inputs.
+  - Often called an encoder.
+- Adaptive pooling layer:
+  - Image-like objects $\to$ vectors.
+  - Standardises size.
+  - [``torch.nn.AdaptiveAvgPool2d``](https://pytorch.org/docs/stable/generated/torch.nn.AdaptiveAvgPool2d.html)
+  - [``torch.nn.AdaptiveMaxPool2d``](https://pytorch.org/docs/stable/generated/torch.nn.AdaptiveMaxPool2d.html)
+- Classification (or regression) head.
+
+:::
+
+
+::::
+
+- For commonly chosen CNN architectures, see [``torchvision.models``](https://pytorch.org/vision/stable/models.html).
+
+
+# Exercises
+
+
+## Exercise 1---classification
+### MNIST hand-written digits.
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+<img src="mnist.jpeg">
+
+:::
+
+::: {.column width=49%}:
+
+- In this exercise we'll train a CNN to classify hand-written digits in the MNSIT dataset.
+
+- See the [MNIST database wiki](https://en.wikipedia.org/wiki/MNIST_database) for more details.
+
+:::
+
+::::
+
+
+## Exercise 2---regression
+### Random ellipse problem
+
+- In this exercise, we'll train a CNN to estimate the centre $(x_{\text{c}}, y_{\text{c}})$ and the $x$ and $y$ radii of an ellipse defined by
+$$
+\frac{(x - x_{\text{c}})^{2}}{r_{x}^{2}} + \frac{(y - y_{\text{c}})^{2}}{r_{y}^{2}} = 1
+$$
+
+- The ellipse, and the background, will have random colours chosen uniformly on $\left[0,\ 255\right]^{3}$.
+
+- In short, the model must learn to estimate $x_{\text{c}}$, $y_{\text{c}}$, $r_{x}$ and $r_{y}$.
+
 # Further information
 
 ## Slides
