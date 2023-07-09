@@ -13,9 +13,9 @@ format:
     render-on-save: true
 ---
 
-# Stochastic gradient descent (SGD) ...
+# Part 1: Some neural-network basics---and fun applications.
 
-## ... in the context of fitting a function
+## Stochastic gradient descent (SGD)
 
 - Generally speaking, most neural networks are fit/trained using SGD (or some variant of it).
 
@@ -51,7 +51,7 @@ $$\frac{dy}{dx} = 1$$
 :::
 
 ::: {.column width="50%"}
-- Plot
+- <img src="straight-line.png" width="750"/>
 :::
 
 ::::
@@ -90,7 +90,7 @@ $$-\frac{dy}{dx}$$
 
 - Normally we might consider the mean-squared error:
 
-$$MSE = \frac{1}{n}\sum_{i=1}^{n}\left(y_{i} - f(x_{i})\right)^{2}$$
+$$L_{\text{MSE}} = \frac{1}{n}\sum_{i=1}^{n}\left(y_{i} - f(x_{i})\right)^{2}$$
 
 :::
 
@@ -106,7 +106,7 @@ $$MSE = \frac{1}{n}\sum_{i=1}^{n}\left(y_{i} - f(x_{i})\right)^{2}$$
 
 :::: {.columns}
 
-::: {.column width="30%"}
+::: {.column width="35%"}
 
 - Model: $f(x) = mx + c$
 
@@ -116,11 +116,11 @@ $$MSE = \frac{1}{n}\sum_{i=1}^{n}\left(y_{i} - f(x_{i})\right)^{2}$$
 
 :::
 
-::: {.column width="70%"}
+::: {.column width="65%"}
 
 - Loss:
 
-$$L = \frac{1}{n}\sum_{i=1}^{n}(y_{i} - f(x_{i}))^{2}\\
+$$L_{\text{MSE}} = \frac{1}{n}\sum_{i=1}^{n}(y_{i} - f(x_{i}))^{2}\\
     = \frac{1}{n}\sum_{i=1}^{n}(y_{i} - mx_{i} + c)^{2}
 $$
 
@@ -135,6 +135,7 @@ $$m_{n + 1} = -m_{n}\frac{dL}{dm} \cdot l_{r}$$
 
 $$c_{n + 1} = -c_{n}\frac{dL}{dm} \cdot l_{r}$$
 
+- $l_{\text{r}}$ is a small constant known as the _learning rate_.
 
 
 ## Quick recap
@@ -161,12 +162,12 @@ All in all, 'tis quite simple.
 - With neural networks, differentiating the loss function is a bit more complicated.
   - but ultimately it's just the chain rule.
 
-- We won't go through any more maths on the topic---learning resources on the topic are in no short supply.
+- We won't go through any more maths on the matter---learning resources on the topic are in no short supply.
 
 
 ## Fully-connected neural networks {.smaller}
 
-- The simplest neural networks commonly used are generally called fully-connected nerual nets, dense networks or multi-layer perceptrons.
+- The simplest neural networks commonly used are generally called fully-connected nerual nets, dense networks, multi-layer perceptrons or artifical neural networks (ANNs).
 
 
 
@@ -197,8 +198,9 @@ $$a_{l+1} = \sigma \left( W_{l}a_{l} + b_{l} \right)$$
 
 ## Uses: Classification and Regression
 
-- Fully connected neural networks are essentially applied to tabular data.
+- Fully-connected neural networks are often applied to tabular data.
   - I.e. where it makes sense to express the data in table-like object (such as a data frame).
+  - The inputs features, and targets, are presented as vectors.
 
 - Normally people use neural networks for one of two things:
 
@@ -218,17 +220,30 @@ $$a_{l+1} = \sigma \left( W_{l}a_{l} + b_{l} \right)$$
 
 
 
-## Exercises: Penguins {.smaller}
+# Exercises: Penguins {.smaller}
 
 <img src="penguins.jpg" width="750"/>
 
 ## Exercise 1---classification
 
-- In this exercise, you will train a full-connected neural network to classify the species of penguins based on certain physical features.
+- In this exercise, you will train a fully-connected neural network to classify the species of penguins based on certain physical features.
 
 - [https://github.com/allisonhorst/palmerpenguins](https://github.com/allisonhorst/palmerpenguins)
 
 - Thanks to Jack Atkinson for suggesting this dataset.
+
+
+## Exercise 2---regression
+
+- In this exercise, you will train a fully-connected neural network to predict the mass of penguins based on other physical features.
+
+- [https://github.com/allisonhorst/palmerpenguins](https://github.com/allisonhorst/palmerpenguins)
+
+- Thanks (again) to Jack Atkinson for suggesting this dataset.
+
+
+
+# Part 2: Fun with CNNs
 
 
 # Further information
