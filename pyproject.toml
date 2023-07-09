@@ -20,6 +20,10 @@ dependencies = [
     "palmerpenguins>=0.1.4",
     "pandas",
     "ipykernel",
+    "scikit-image",
+    "notebook",
+    "torch_tools @ git+https://github.com/jdenholm/TorchTools.git",
+    "matplotlib",
 ]
 
 [project.optional-dependencies]
@@ -31,6 +35,7 @@ lint = [
     # "pylint",
     "pydocstyle",
     "mypy>=1.0.0",
+    "jupyter-black",
 ]
 
 [project.urls]
