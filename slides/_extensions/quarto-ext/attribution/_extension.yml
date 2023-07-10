@@ -1,0 +1,14 @@
+title: Attribution
+author:  Roland Schmehl
+version: 0.1.0
+quarto-required: ">=1.2.198"
+contributes:
+  revealjs-plugins:
+    - name: RevealAttribution
+      script:
+        - attribution.js
+      stylesheet:
+        - attribution.css
+
+
+
