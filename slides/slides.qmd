@@ -346,13 +346,56 @@ $$
 \frac{(x - x_{\text{c}})^{2}}{r_{x}^{2}} + \frac{(y - y_{\text{c}})^{2}}{r_{y}^{2}} = 1
 $$
 
-- The ellipse, and the background, will have random colours chosen uniformly on $\left[0,\ 255\right]^{3}$.
+- The ellipse, and its background, will have random colours chosen uniformly on $\left[0,\ 255\right]^{3}$.
 - In short, the model must learn to estimate $x_{\text{c}}$, $y_{\text{c}}$, $r_{x}$ and $r_{y}$.
+
 
 # Further information
 
 ## Slides
 
-## Contact
+These slides can be viewed at: 
+
+The html and source can be found at:
+
+
+## Contact {.smaller}
+
+For more information we can be reached at:
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+{{< fa pencil >}} \ Jim Denholm
+
+{{< fa solid person-digging >}} \ AstraZeneca/UoCambridge
+
+{{< fa solid globe >}} \ [linkedin](https://uk.linkedin.com/in/jim-denholm-13043b189)
+
+{{< fa solid envelope >}} \ [jd949[AT]cam.ac.uk](mailto:jd949@cam.ac.uk)
+
+{{< fa brands github >}} \ [jdenholm](https://github.com/jdenholm)
+
+:::
+
+::: {.column width="50%"}
+
+{{< fa pencil >}} \ Jack Atkinson
+
+{{< fa solid person-digging >}} \ [ICCS/UoCambridge](https://iccs.cam.ac.uk/about-us/our-team)
+
+{{< fa solid globe >}} \ [jackatkinson.net](https://jackatkinson.net)
+
+{{< fa solid envelope >}} \ [jwa34[AT]cam.ac.uk](mailto:jwa34@cam.ac.uk)
+
+{{< fa brands github >}} \ [jatkinson1000](https://github.com/jatkinson1000)
+
+{{< fa brands mastodon >}} \ [\@jatkinson1000\@fosstodon.org](https://fosstodon.org/@jatkinson1000)
+
+:::
+::::
+
+You can also contact the ICCS, [make a resource allocation request](https://iccs.cam.ac.uk/resources-vesri-members/resource-allocation-process), or visit us at the [Summer School RSE Helpdesk](https://docs.google.com/spreadsheets/d/1WKZxp3nqpXrIRMRkfFzc71sos-UD-Uy1zeab0c1p7Xc/edit#gid=0).
 
 ## Resources
