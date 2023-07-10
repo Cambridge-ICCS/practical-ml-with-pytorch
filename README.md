@@ -115,9 +115,9 @@ This will download the relevant dependencies into the venv as well as setting up
 
 ### Slides
 The slides for this workshop are generated from markdown using quarto.
-The raw markdown and html files can be found in the [slides](#/slides/) directory.
+The raw markdown and html files can be found in the [slides](slides/) directory.
 The slides can be viewed at [TODO: Add link once ready]()
 
 ### Exercises
-The exercises that we will be working on can be found in the [exercises](#/exercises/) directory.
+The exercises that we will be working on can be found in the [exercises](exercises/) directory.
 These take the form of jupyter notebooks.
