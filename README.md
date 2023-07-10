@@ -1,4 +1,11 @@
-# ICCS PyTorch training
+<img src="https://iccs.cam.ac.uk/sites/iccs.cam.ac.uk/files/logo2_1.png"  width="355" align="left">
+
+<br><br><br><br><br>
+
+# ICCS Machine Learning with PyTorch Training
+
+![GitHub](https://img.shields.io/github/license/Cambridge-ICCS/ml-training-material)
+[![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
 
 This repository contains documentation, resources, and code for the Introduction to
 Machine Learning with PyTorch session delivered by [**@jatkinson1000**](https://github.com/jatkinson1000)
@@ -11,6 +18,7 @@ and [**@jdenholm**](https://github.com/jdenholm) of
 - [Preparation and prerequisites](#preparation-and-prerequisites)
 - [Installation and setup](#installation-and-setup)
 - [Teaching material](#teaching-material)
+- [License information](#license)
 
 
 ## Preparation and prerequisites
@@ -121,3 +129,16 @@ The slides can be viewed at [TODO: Add link once ready]()
 ### Exercises
 The exercises that we will be working on can be found in the [exercises](exercises/) directory.
 These take the form of jupyter notebooks.
+
+## License
+
+The code materials in this project are licensed under the [MIT License](LICENSE).
+
+The teaching materials are licensed under a
+[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
+
+[cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
+[cc-by-nc-sa-image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
+[cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
+
+[![CC BY-NC-SA 4.0][cc-by-nc-sa-image]][cc-by-nc-sa]
