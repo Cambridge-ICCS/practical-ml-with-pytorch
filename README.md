@@ -1,4 +1,6 @@
-<img src="https://iccs.cam.ac.uk/sites/iccs.cam.ac.uk/files/logo2_1.png"  width="355" height="100" align="left">
+<img src="https://iccs.cam.ac.uk/sites/iccs.cam.ac.uk/files/logo2_1.png"  width="355" align="left">
+
+<br>
 
 # ICCS PyTorch training
 
@@ -16,6 +18,7 @@ and [**@jdenholm**](https://github.com/jdenholm) of
 - [Preparation and prerequisites](#preparation-and-prerequisites)
 - [Installation and setup](#installation-and-setup)
 - [Teaching material](#teaching-material)
+- [License](#license)
 
 
 ## Preparation and prerequisites
