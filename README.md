@@ -1,8 +1,8 @@
 <img src="https://iccs.cam.ac.uk/sites/iccs.cam.ac.uk/files/logo2_1.png"  width="355" align="left">
 
-<br>
+<br><br><br><br><br>
 
-# ICCS PyTorch training
+# ICCS Machine Learning with PyTorch Training
 
 ![GitHub](https://img.shields.io/github/license/Cambridge-ICCS/ml-training-material)
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
@@ -18,7 +18,7 @@ and [**@jdenholm**](https://github.com/jdenholm) of
 - [Preparation and prerequisites](#preparation-and-prerequisites)
 - [Installation and setup](#installation-and-setup)
 - [Teaching material](#teaching-material)
-- [License](#license)
+- [License information](#license)
 
 
 ## Preparation and prerequisites
