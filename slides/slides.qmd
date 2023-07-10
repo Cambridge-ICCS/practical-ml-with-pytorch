@@ -117,20 +117,20 @@ $$L_{\text{MSE}} = \frac{1}{n}\sum_{i=1}^{n}\left(y_{i} - f(x_{i})\right)^{2}$$
 :::: {.columns}
 ::: {.column width="45%"}
 
-- Model: $f(x) = mx + c$
+- Model: \ $f(x) = mx + c$
 
-- Data: $\{x_{i}, y_{i}\}$
+- Data: \ $\{x_{i}, y_{i}\}$
 
-- Loss: $\frac{1}{n}\sum_{i=1}^{n}(y_{i} - x_{i})^{2}$
+- Loss: \ $\frac{1}{n}\sum_{i=1}^{n}(y_{i} - x_{i})^{2}$
 
 :::
 ::: {.column width="55%"}
 
-- Loss:
-
 $$
-L_{\text{MSE}} = \frac{1}{n}\sum_{i=1}^{n}(y_{i} - f(x_{i}))^{2}\\
-    = \frac{1}{n}\sum_{i=1}^{n}(y_{i} - mx_{i} + c)^{2}
+\begin{align}
+L_{\text{MSE}} &= \frac{1}{n}\sum_{i=1}^{n}(y_{i} - f(x_{i}))^{2}\\
+    &= \frac{1}{n}\sum_{i=1}^{n}(y_{i} - mx_{i} + c)^{2}
+\end{align}
 $$
 
 :::
@@ -138,11 +138,25 @@ $$
 
 - We can iteratively minimise the loss by stepping the model's parameters in the direction of steepest descent:
 
+::: {layout="[0.5, 1, 0.5, 1, 0.5]"}
+
+:::: {#placeholder}
+::::
+
 $$m_{n + 1} = -m_{n}\frac{dL}{dm} \cdot l_{r}$$
+
+:::: {#placeholder}
+::::
 
 $$c_{n + 1} = -c_{n}\frac{dL}{dm} \cdot l_{r}$$
 
-- $l_{\text{r}}$ is a small constant known as the _learning rate_.
+:::: {#placeholder}
+::::
+
+:::
+
+- where $l_{\text{r}}$ is a small constant known as the _learning rate_.
+
 
 
 ## Quick recap {.smaller}
