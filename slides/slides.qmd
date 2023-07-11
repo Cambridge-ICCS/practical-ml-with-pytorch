@@ -13,7 +13,7 @@ format:
     render-on-save: true
 authors:
   - name: Jim Denholm
-    affiliations: AstraZeneca/Cambridge
+    affiliations: Cambridge
     orcid: 
   - name: Jack Atkinson
     orcid: 0000-0001-5001-4812
@@ -383,7 +383,7 @@ For more information we can be reached at:
 
 {{< fa pencil >}} \ Jim Denholm
 
-{{< fa solid person-digging >}} \ AstraZeneca/UoCambridge
+{{< fa solid person-digging >}} \ UoCambridge
 
 {{< fa solid globe >}} \ [linkedin](https://uk.linkedin.com/in/jim-denholm-13043b189)
 
