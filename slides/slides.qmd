@@ -9,22 +9,33 @@ format:
     preview-links: auto
     history: false
     logo: https://iccs.cam.ac.uk/sites/iccs.cam.ac.uk/files/logo2_2.png
-    theme: dark
+    theme: [dark, custom.scss]
     render-on-save: true
+authors:
+  - name: Jim Denholm
+    affiliations: Cambridge
+    orcid: 
+  - name: Jack Atkinson
+    orcid: 0000-0001-5001-4812
+    affiliations: ICCS/Cambridge
+revealjs-plugins:
+  - attribution
 ---
 
-# Part 1: Some neural-network basics---and fun applications.
+# Part 1: Neural-network basics -- and fun applications.
+
 
 ## Stochastic gradient descent (SGD)
 
 - Generally speaking, most neural networks are fit/trained using SGD (or some variant of it).
+- To understand how one might fit a function with SGD, let's start with a straight line: $$y=mx+c$$
 
-- To understand the basics of how one might fit a function with SGD, let's do it with a straight line: $$y=mx+c$$
 
-
-## Fitting a straight line I {.smaller}
+## Fitting a straight line with SGD I {.smaller}
 
 - **Question**---when we a differentiate a function, what do we get?
+
+::: {.fragment .fade-in}
 
 - Consider:
 
@@ -34,12 +45,16 @@ $$\frac{dy}{dx} = m$$
 
 - $m$ is certainly $y$'s slope, but is there a (perhaps) more fundamental way to view a derivative?
 
+:::
+
+
 ## Fitting a straight line with SGD II {.smaller}
 
 - **Answer**---a function's derivative gives a _vector_ which points in the direction of _steepest ascent_.
 
-:::: {.columns}
+::: {.fragment .fade-in}
 
+:::: {.columns}
 ::: {.column width="50%"}
 
 - Consider
@@ -48,132 +63,129 @@ $$y = x$$
 
 $$\frac{dy}{dx} = 1$$
 
-:::
-
-::: {.column width="50%"}
-- <img src="straight-line.png" width="750"/>
-:::
-
-::::
-
 - What is the direction of _steepest descent?_
 
 $$-\frac{dy}{dx}$$
 
+:::
+::::
+
+![](straight-line.png){.absolute top=35% left=60% width=40%}
+
+:::
+
 
 ## Fitting a straight line with SGD III {.smaller}
 
-- To fit a function, we essentially want to create a model which describes data.
+- When fitting a function, we are essentially creating a model, $f$, which describes some data, $y$.
+- We therefore need a way of measuring how well a model's predictions match our observations.
 
-- We therefore need a way of measuring how a model's predictions deviate from our observations.
 
+::: {.fragment .fade-in}
 
 :::: {.columns}
-
 ::: {.column width="30%"}
 
 - Consider the data:
 
 | $x_{i}$  | $y_{i}$ |
-|---------:|:-----   |
+|:--------:|:-------:|
 | 1.0      | 2.1     |
 | 2.0      | 3.9     |
 | 3.0      | 6.2     |
 
-
-
-
 :::
-
 ::: {.column width="70%"}
 - We can measure the distance between $f(x_{i})$ and $y_{i}$.
-
 - Normally we might consider the mean-squared error:
 
 $$L_{\text{MSE}} = \frac{1}{n}\sum_{i=1}^{n}\left(y_{i} - f(x_{i})\right)^{2}$$
 
 :::
-
 ::::
 
+:::
 
+::: {.fragment .fade-in}
 - We can differentiate the loss function w.r.t. to each parameter in the the model $f$.
-
-- We can use the direction of steepest descent to iteratively 'nudge' the parameters in a direction which reduces the loss.
+- We can use these directions of steepest descent to iteratively 'nudge' the parameters in a direction which will reduce the loss.
+:::
 
 
 ## Fitting a straight line with SGD IV {.smaller}
 
 :::: {.columns}
+::: {.column width="45%"}
 
-::: {.column width="35%"}
+- Model: \ $f(x) = mx + c$
 
-- Model: $f(x) = mx + c$
+- Data: \ $\{x_{i}, y_{i}\}$
 
-- Data: $\{x_{i}, y_{i}\}$
-
-- Loss: $\frac{1}{n}\sum_{i=1}^{n}(y_{i} - x_{i})^{2}$
+- Loss: \ $\frac{1}{n}\sum_{i=1}^{n}(y_{i} - x_{i})^{2}$
 
 :::
+::: {.column width="55%"}
 
-::: {.column width="65%"}
-
-- Loss:
-
-$$L_{\text{MSE}} = \frac{1}{n}\sum_{i=1}^{n}(y_{i} - f(x_{i}))^{2}\\
-    = \frac{1}{n}\sum_{i=1}^{n}(y_{i} - mx_{i} + c)^{2}
+$$
+\begin{align}
+L_{\text{MSE}} &= \frac{1}{n}\sum_{i=1}^{n}(y_{i} - f(x_{i}))^{2}\\
+    &= \frac{1}{n}\sum_{i=1}^{n}(y_{i} - mx_{i} + c)^{2}
+\end{align}
 $$
 
-
 :::
-
 ::::
 
 - We can iteratively minimise the loss by stepping the model's parameters in the direction of steepest descent:
 
+::: {layout="[0.5, 1, 0.5, 1, 0.5]"}
+
+:::: {#placeholder}
+::::
+
 $$m_{n + 1} = -m_{n}\frac{dL}{dm} \cdot l_{r}$$
+
+:::: {#placeholder}
+::::
 
 $$c_{n + 1} = -c_{n}\frac{dL}{dm} \cdot l_{r}$$
 
-- $l_{\text{r}}$ is a small constant known as the _learning rate_.
+:::: {#placeholder}
+::::
+
+:::
+
+- where $l_{\text{r}}$ is a small constant known as the _learning rate_.
 
 
-## Quick recap
+
+## Quick recap {.smaller}
 
 To fit a model we need:
 
-- A model.
-
 - Some data.
-
+- A model.
 - A loss function
-
 - An optimisation procedure (often SGD and other flavours of SGD).
 
 All in all, 'tis quite simple.
 
-## What about neural networks?
+
+## What about neural networks? {.smaller}
 
 - Neural networks are just functions.
-
-- We can ''train'', or fit, them as we would any other function:
-  - by iteratively nudging parameters to minimise a the loss.
-
-- With neural networks, differentiating the loss function is a bit more complicated.
+- We can "train", or "fit", them as we would any other function:
+  - by iteratively nudging parameters to minimise a loss.
+- With neural networks, differentiating the loss function is a bit more complicated
   - but ultimately it's just the chain rule.
-
-- We won't go through any more maths on the matter---learning resources on the topic are in no short supply.
+- We won't go through any more maths on the matter---learning resources on the topic are in no short supply.^[The term to search for is ['backpropogation'](https://en.wikipedia.org/wiki/Backpropagation).]
 
 
 ## Fully-connected neural networks {.smaller}
 
-- The simplest neural networks commonly used are generally called fully-connected nerual nets, dense networks, multi-layer perceptrons or artifical neural networks (ANNs).
-
-
+- The simplest neural networks commonly used are generally called fully-connected nerual nets, dense networks, multi-layer perceptrons, or artifical neural networks (ANNs).
 
 :::: {.columns}
-
-
 ::: {.column width=40%}
 
 - We map between the features at consecutive layers through matrix multiplication and the application of some non-linear activation function.
@@ -183,73 +195,221 @@ $$a_{l+1} = \sigma \left( W_{l}a_{l} + b_{l} \right)$$
 - For common choices of activation functions, see the [PyTorch](https://pytorch.org/docs/stable/nn.html#non-linear-activations-weighted-sum-nonlinearity) docs.
 
 :::
+::::
 
-::: {.column width=60%}
+![](https://3b1b-posts.us-east-1.linodeobjects.com//images/topics/neural-networks.jpg){style="border-radius: 50%;" .absolute top=35% left=42.5% width=65%}
 
-<img src="fc-net.png" width="750"/>
-
+::: {.attribution}
+Image source: [3Blue1Brown](https://www.3blue1brown.com/topics/neural-networks)
 :::
 
 
-
-::::
-
-
-
-## Uses: Classification and Regression
+## Uses: Classification and Regression {.smaller}
 
 - Fully-connected neural networks are often applied to tabular data.
-  - I.e. where it makes sense to express the data in table-like object (such as a data frame).
-  - The inputs features, and targets, are presented as vectors.
-
-- Normally people use neural networks for one of two things:
-
-  - Classification: assigning a semantic label to something---i.e. is this a dog or cat?
-
-  - Regression: Estimating a continuous quantity such as mass or volume.
+  - i.e. where it makes sense to express the data in table-like object (such as a `pandas` data frame).
+  - The input features and targets are represented as vectors.
+- Neural networks are normally used for one of two things:
+  - **Classification**: assigning a semantic label to something -- i.e. is this a dog or cat?
+  - **Regression**: Estimating a continuous quantity -- e.g. mass or volume -- based on other information.
 
 
 # Python and PyTorch {.smaller}
 
-- In this workship-lecture-thing, we will implement some straightforward neural networks in PyTorch, and use them for different classification and regression problems.
-
+- In this workshop-lecture-thing, we will implement some straightforward neural networks in PyTorch, and use them for different classification and regression problems.
 - PyTorch is a deep learning framework that can be used in both Python and C++.
   - I have never met anyone actually training models in C++; I find it a bit weird.
-
 - See the PyTorch website: [https://pytorch.org/](https://pytorch.org/)
 
 
-
-# Exercises: Penguins {.smaller}
-
-<img src="penguins.jpg" width="750"/>
-
-## Exercise 1---classification
-
-- In this exercise, you will train a fully-connected neural network to classify the species of penguins based on certain physical features.
-
-- [https://github.com/allisonhorst/palmerpenguins](https://github.com/allisonhorst/palmerpenguins)
-
-- Thanks to Jack Atkinson for suggesting this dataset.
+# Exercises
 
 
-## Exercise 2---regression
+## Penguins!
 
-- In this exercise, you will train a fully-connected neural network to predict the mass of penguins based on other physical features.
+![](https://thecelebrationist.files.wordpress.com/2011/04/madagascar-penguins-movie.jpg)
 
-- [https://github.com/allisonhorst/palmerpenguins](https://github.com/allisonhorst/palmerpenguins)
 
-- Thanks (again) to Jack Atkinson for suggesting this dataset.
+## Exercise 1 -- classification
 
+- In this exercise, you will train a fully-connected neural network to [*classify the species*]{style="text-decoration: underline;"} of penguins based on certain physical features.
+- [https://github.com/allisonhorst/palmerpenguins](https://github.com/allisonhorst/palmerpenguins)^[Thanks to Jack Atkinson for suggesting this dataset.]
+
+
+## Exercise 2 -- regression
+
+- In this exercise, you will train a fully-connected neural network to [*predict the mass*]{style="text-decoration: underline;"} of penguins based on other physical features.
+- [https://github.com/allisonhorst/palmerpenguins](https://github.com/allisonhorst/palmerpenguins)^[Thanks (again) to Jack Atkinson for suggesting this dataset.]
 
 
 # Part 2: Fun with CNNs
+
+
+## Convolutional neural networks (CNNs): why? {.smaller}
+
+Advantages over simple ANNs:
+
+- They require far fewer parameters per layer.
+  - The forward pass of a conv layer involves running a filter of fixed size over the inputs.
+  - The number of parameters per layer _does not_ depend on the input size.
+- They are a much more natural choice of function for *image-like* data:
+
+:::: {.columns}
+::: {.column width=10%}
+:::
+::: {.column width=35%}
+
+![](https://machinelearningmastery.com/wp-content/uploads/2019/03/Plot-of-the-First-Nine-Photos-of-Dogs-in-the-Dogs-vs-Cats-Dataset.png)
+
+:::
+::: {.column width=10%}
+:::
+::: {.column width=35%}
+
+![](https://machinelearningmastery.com/wp-content/uploads/2019/03/Plot-of-the-First-Nine-Photos-of-Cats-in-the-Dogs-vs-Cats-Dataset.png)
+
+:::
+::::
+
+::: {.attribution}
+Image source: [Machine Learning Mastery](https://machinelearningmastery.com/how-to-develop-a-convolutional-neural-network-to-classify-photos-of-dogs-and-cats/)
+::: {.column width=10%}
+:::
+:::
+
+
+## Convolutional neural networks (CNNs): why? {.smaller}
+
+Some other points:
+
+- Convolutional layers are translationally invariant:
+  - i.e. they don't care _where_ the "dog" is in the image.
+- Convolutional layers are _not_ rotationally invariant.
+  - e.g. a model trained to detect correctly-oriented human faces will likely fail on upside-down images
+  - We can address this with data augmentation (explored in exercises).
+
+
+## What is a (1D) convolutional layer? {.smaller}
+
+![](1d-conv.png)
+
+See the [`torch.nn.Conv1d` docs](https://pytorch.org/docs/stable/generated/torch.nn.Conv1d.html)
+
+
+## 2D convolutional layer {.smaller}
+
+- Same idea as in on dimension, but in two (funnily enough).
+
+![](2d-conv.png)
+
+- Everthing else proceeds in the same way as with the 1D case.
+- See the [`torch.nn.Conv2d` docs](https://pytorch.org/docs/stable/generated/torch.nn.Conv2d.html).
+- As with Linear layers, Conv2d layers also have non-linear activations applied to them.
+
+
+## Typical CNN overview {.smaller}
+
+::: {layout="[ 0.5, 0.5 ]"}
+
+![](https://miro.medium.com/v2/resize:fit:1162/format:webp/1*tvwYybdIwvoOs0DuUEJJTg.png)
+
+- Series of conv layers extract features from the inputs.
+  - Often called an encoder.
+- Adaptive pooling layer:
+  - Image-like objects $\to$ vectors.
+  - Standardises size.
+  - [``torch.nn.AdaptiveAvgPool2d``](https://pytorch.org/docs/stable/generated/torch.nn.AdaptiveAvgPool2d.html)
+  - [``torch.nn.AdaptiveMaxPool2d``](https://pytorch.org/docs/stable/generated/torch.nn.AdaptiveMaxPool2d.html)
+- Classification (or regression) head.
+
+:::
+
+- For common CNN architectures see [``torchvision.models`` docs](https://pytorch.org/vision/stable/models.html).
+
+::: {.attribution}
+Image source: [medium.com - binary image classifier cnn using tensorflow](https://medium.com/techiepedia/binary-image-classifier-cnn-using-tensorflow-a3f5d6746697)
+:::
+
+
+# Exercises
+
+## Exercise 1 -- classification
+
+### MNIST hand-written digits.
+
+::: {layout="[ 0.5, 0.5 ]"}
+
+![](https://i.ytimg.com/vi/0QI3xgXuB-Q/hqdefault.jpg)
+
+- In this exercise we'll train a CNN to classify hand-written digits in the MNIST dataset.
+- See the [MNIST database wiki](https://en.wikipedia.org/wiki/MNIST_database) for more details.
+
+:::
+
+::: {.attribution}
+Image source: [npmjs.com](https://www.npmjs.com/package/mnist)
+:::
+
+
+
+## Exercise 2---regression
+### Random ellipse problem
+
+- In this exercise, we'll train a CNN to estimate the centre $(x_{\text{c}}, y_{\text{c}})$ and the $x$ and $y$ radii of an ellipse defined by
+$$
+\frac{(x - x_{\text{c}})^{2}}{r_{x}^{2}} + \frac{(y - y_{\text{c}})^{2}}{r_{y}^{2}} = 1
+$$
+
+- The ellipse, and its background, will have random colours chosen uniformly on $\left[0,\ 255\right]^{3}$.
+- In short, the model must learn to estimate $x_{\text{c}}$, $y_{\text{c}}$, $r_{x}$ and $r_{y}$.
 
 
 # Further information
 
 ## Slides
 
-## Contact
+These slides can be viewed at: 
+
+The html and source can be found at:
+
+
+## Contact {.smaller}
+
+For more information we can be reached at:
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+{{< fa pencil >}} \ Jim Denholm
+
+{{< fa solid person-digging >}} \ UoCambridge
+
+{{< fa solid globe >}} \ [linkedin](https://uk.linkedin.com/in/jim-denholm-13043b189)
+
+{{< fa solid envelope >}} \ [jd949[AT]cam.ac.uk](mailto:jd949@cam.ac.uk)
+
+{{< fa brands github >}} \ [jdenholm](https://github.com/jdenholm)
+
+:::
+
+::: {.column width="50%"}
+
+{{< fa pencil >}} \ Jack Atkinson
+
+{{< fa solid person-digging >}} \ [ICCS/UoCambridge](https://iccs.cam.ac.uk/about-us/our-team)
+
+{{< fa solid globe >}} \ [jackatkinson.net](https://jackatkinson.net)
+
+{{< fa solid envelope >}} \ [jwa34[AT]cam.ac.uk](mailto:jwa34@cam.ac.uk)
+
+{{< fa brands github >}} \ [jatkinson1000](https://github.com/jatkinson1000)
+
+{{< fa brands mastodon >}} \ [\@jatkinson1000\@fosstodon.org](https://fosstodon.org/@jatkinson1000)
+
+:::
+::::
+
+You can also contact the ICCS, [make a resource allocation request](https://iccs.cam.ac.uk/resources-vesri-members/resource-allocation-process), or visit us at the [Summer School RSE Helpdesk](https://docs.google.com/spreadsheets/d/1WKZxp3nqpXrIRMRkfFzc71sos-UD-Uy1zeab0c1p7Xc/edit#gid=0).
 
 ## Resources
