@@ -13,7 +13,7 @@ format:
     render-on-save: true
 authors:
   - name: Jim Denholm
-    affiliations: AstraZeneca/Cambridge
+    affiliations: Cambridge
     orcid: 
   - name: Jack Atkinson
     orcid: 0000-0001-5001-4812
@@ -368,9 +368,10 @@ $$
 
 ## Slides
 
-These slides can be viewed at: 
+These slides can be viewed at:  
+[https://cambridge-iccs.github.io/slides/ml-training/slides.html](https://cambridge-iccs.github.io/slides/ml-training/slides.html)
 
-The html and source can be found at:
+The html and source can be found [on GitHub](https://github.com/Cambridge-ICCS/ml-training-material).
 
 
 ## Contact {.smaller}
@@ -383,7 +384,7 @@ For more information we can be reached at:
 
 {{< fa pencil >}} \ Jim Denholm
 
-{{< fa solid person-digging >}} \ AstraZeneca/UoCambridge
+{{< fa solid person-digging >}} \ UoCambridge
 
 {{< fa solid globe >}} \ [linkedin](https://uk.linkedin.com/in/jim-denholm-13043b189)
 
@@ -411,5 +412,3 @@ For more information we can be reached at:
 ::::
 
 You can also contact the ICCS, [make a resource allocation request](https://iccs.cam.ac.uk/resources-vesri-members/resource-allocation-process), or visit us at the [Summer School RSE Helpdesk](https://docs.google.com/spreadsheets/d/1WKZxp3nqpXrIRMRkfFzc71sos-UD-Uy1zeab0c1p7Xc/edit#gid=0).
-
-## Resources
