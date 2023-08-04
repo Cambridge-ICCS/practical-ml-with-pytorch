@@ -2,15 +2,17 @@
 
 <br><br><br><br><br>
 
-# ICCS Machine Learning with PyTorch Training
+# ICCS Practical Machine Learning with PyTorch
 
 ![GitHub](https://img.shields.io/github/license/Cambridge-ICCS/ml-training-material)
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
 
 This repository contains documentation, resources, and code for the Introduction to
-Machine Learning with PyTorch session delivered by [**@jatkinson1000**](https://github.com/jatkinson1000)
-and [**@jdenholm**](https://github.com/jdenholm) of
-[ICCS](https://github.com/Cambridge-ICCS) at the [2023 summer school](https://iccs.cam.ac.uk/events/iccs-summer-school-2023).
+Machine Learning with PyTorch session designed and delivered by Jack Atkinson ([**@jatkinson1000**](https://github.com/jatkinson1000))
+and Jim Denholm ([**@jdenholm**](https://github.com/jdenholm)) of [ICCS](https://github.com/Cambridge-ICCS).  
+The material has been delivered at both the [ICCS](https://iccs.cam.ac.uk/events/iccs-summer-school-2023) 
+and [NCAS](https://ncas.ac.uk/study-with-us/climate-modelling-summer-school/) summer schools.  
+All materials, including slides and videos, are available such that individuals can cover the course in their own time.
 
 
 ## Contents
@@ -23,12 +25,14 @@ and [**@jdenholm**](https://github.com/jdenholm) of
 
 ## Preparation and prerequisites
 
-To get the most out of the session we expect a basic understanding in a few areas and for you to do some preparation.
-Topics expected are outlined below, along with some resources for reading if you are unfamiliar.
+To get the most out of the session we assume a basic understanding in a few areas and 
+for you to do some preparation in advance.
+Expected knowledge is outlined below, along with resources for reading if you are unfamiliar.
+
 
 ### Mathematics and Machine Learning
 
-Basic knowledge of:
+Basic mathematics knowledge:
 - calculus - differentiating a function
 - matrix algebra - matrix multiplication and representing data as a matrix
 - regression - fitting a function to data
@@ -52,12 +56,17 @@ This includes:
 - Familiarity with the [concept of a jupyter notebook](https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/index.html)
 
 ### git and GitHub
-The [course from day 1 of the summer school](https://github.com/Cambridge-ICCS/ss23-git) should provide the neccessary knowledge.
-You will be expected to know how to clone and/or fork a repository, commit, and push.
+You will be expected to know how to
+- clone and/or fork a repository,
+- commit, and
+- push.
+
+The [workshop from the 2022 ICCS Summer School](https://www.youtube.com/watch?v=ZrwzK4CnJ3Q) 
+should provide the neccessary knowledge.
 
 ### Preparation
 In preparation for the course please ensure that your computer contains the following:
-- Text editor - e.g. vim/[neovim](https://neovim.io/), [gedit](https://gedit.en.softonic.com/), [vscode](https://code.visualstudio.com/), [sublimetext](https://www.sublimetext.com/) etc. to open and edit code files
+- A text editor - e.g. vim/[neovim](https://neovim.io/), [gedit](https://gedit.en.softonic.com/), [vscode](https://code.visualstudio.com/), [sublimetext](https://www.sublimetext.com/) etc. to open and edit code files
 - A terminal emulator - e.g. [GNOME Terminal](https://help.gnome.org/users/gnome-terminal/stable/), [kitty](https://sw.kovidgoyal.net/kitty/), [Windows Terminal (windows only)](https://learn.microsoft.com/en-us/windows/terminal/), [iTerm (mac only)](https://iterm2.com/)
 - python virtual environment (see [Installation and setup](#installation-and-setup))
 
@@ -65,7 +74,8 @@ Note for Windows users: _We have linked suitable applications for windows in the
 However, you may wish to refer to [Windows' getting-started with python information](https://learn.microsoft.com/en-us/windows/python/beginners)
 for a complete guide to getting set up on a Windows system._
 
-If you require assistance or further information with any of these please reach out to us before the school.
+If you require assistance or further information with any of these please reach out to
+us before a training sesison.
 
 
 ## Installation and setup
@@ -78,15 +88,18 @@ git clone https://github.com/Cambridge-ICCS/ml-training-material.git
 ```
 This will create a directory `ml-training-material/` with the contents of this repository.
 
-Please note that if you have a GitHub account and want to push any work you might do back up for future reference we 
-suggest you [fork the repository](https://github.com/Cambridge-ICCS/ml-training-material/fork) and then clone your fork.
+Please note that if you have a GitHub account and want to push any work you might do back
+up for future reference we suggest you [fork the repository](https://github.com/Cambridge-ICCS/ml-training-material/fork) 
+and then clone your fork.
 
 
 ### 2. Create a virtual environment
 Before installing any Python packages it is important to first create a Python virtual environment.
-This provides an insulated environment inside which we can install Python packages without polluting the operating systems's Python environment.
+This provides an insulated environment inside which we can install Python packages 
+without polluting the operating systems's Python environment.
 
-If you have never done this before don't worry: it is *very* good practise, especially when you are working on multiple projects, and easy to do.
+If you have never done this before don't worry: it is *very* good practise, especially 
+when you are working on multiple projects, and easy to do.
 
 ```
 python3 -m venv MLvenv
@@ -122,15 +135,22 @@ This will download the relevant dependencies into the venv as well as setting up
 ## Teaching Material
 
 ### Slides
-The slides for this workshop are generated from markdown using quarto.
-The raw markdown and html files can be found in the [slides](slides/) directory.
-The slides can be viewed on the ICCS Summer School Website:
+The slides for this workshop can be viewed on the ICCS Summer School Website:
   - [Teaching](https://cambridge-iccs.github.io/slides/ml-training/slides.html)
   - [Climate Applications](https://cambridge-iccs.github.io/slides/ml-training/applications.html)
 
+The slides are generated from markdown using quarto.
+The raw markdown and html files can be found in the [slides](slides/) directory.
+
 ### Exercises
-The exercises that we will be working on can be found in the [exercises](exercises/) directory.
-These take the form of jupyter notebooks.
+The exercises for the course can be found in the [exercises](exercises/) directory.  
+These take the form of partially complete jupyter notebooks.
+
+### Videos
+Videos from past workshops may be useful if you are following along independently.  
+These can be found on the [ICCS youtube channel](https://www.youtube.com/@instituteofcomputingforcli3982) 
+under the 2023 Summer School materials.
+
 
 ## License
 

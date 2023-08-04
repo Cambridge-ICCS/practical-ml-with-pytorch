@@ -1,0 +1,551 @@
+---
+title: "Climate Machine Learning Applications"
+subtitle: "ICCS Summer school 2023"
+format:
+  revealjs:
+    embed-resources: true
+    slide-number: true
+    chalkboard: false
+    preview-links: auto
+    history: false
+    highlight-style: monokai
+    code-line-numbers: false
+    logo: https://iccs.cam.ac.uk/sites/iccs.cam.ac.uk/files/logo2_2.png
+    render-on-save: true
+    theme: [dark, custom.scss]
+revealjs-plugins:
+  - attribution
+authors:
+  - name: <b><u>Jack Atkinson</u></b>
+    orcid: 0000-0001-5001-4812
+    affiliations: ICCS/Cambridge
+  - name: Jim Denholm
+    affiliations: Cambridge
+date: last-modified
+bibliography: references.bib
+---
+
+
+# Teaching Material Recap
+
+## Teaching Material Recap {.smaller}
+
+Over the ML sessions at the summer school we have learnt about:
+
+- Classification - categorising items based on information
+- Regression - using information to predict another value
+
+using:
+
+- ANNs - using input _features_ to make predictions
+- CNNs - using _image-like_ data as an input
+
+
+# Considerations
+
+## _Image-like_ data
+
+![](https://colah.github.io/posts/2014-10-Visualizing-MNIST/img/mnist_pca/MNIST-p1815-1.png){.absolute width=30% top=20% left=35%}
+
+::: {.fragment}
+![](https://colah.github.io/posts/2014-10-Visualizing-MNIST/img/mnist_pca/MNIST-PCA1.png){.absolute width=30% top=20% left=35%}
+:::
+
+::: {.fragment}
+![](https://colah.github.io/posts/2014-10-Visualizing-MNIST/img/mnist_pca/MNIST-PCA1-4.png){.absolute width=30% top=20% left=35%}
+:::
+
+::: {.fragment}
+![](https://www.mdpi.com/atmosphere/atmosphere-08-00024/article_deploy/html/images/atmosphere-08-00024-g005.png){.absolute width=70% top=15% left=15%}
+:::
+
+::: {.attribution}
+Gravity waves image from @sheridan2017mountain.  
+MNIST Images from [colah](https://colah.github.io/posts/2014-10-Visualizing-MNIST/)
+:::
+
+::: aside
+NB: [colah provides an excellent article](https://colah.github.io/posts/2014-10-Visualizing-MNIST/) trying to understand MNIST NNs.
+:::
+
+
+# Potential Applications
+
+## Applications in geosciences: {.smaller}
+
+See review of @kashinath2021physics
+
+:::: {.columns}
+::: {.column width="50%"}
+
+- Emulation of existing parameterisations  
+  [@espinosa2022machine]  
+  <br>
+- Data-driven paramterisations  
+  [@yuval2020stable; @giglio2018estimating]  
+  <br>
+- Downscaling/Upsampling  
+  [@harris2022generative]
+  <br>
+:::
+
+::: {.column width="50%"}
+- Time series forecasting  
+  [@shao2021deep]  
+  <br>
+- Equation discovery  
+  [@zanna2020data; @ma2021data]  
+  <br>  
+- Complete forecasting  
+  [@rasp2020weatherbench; @pathak2022fourcastnet; @bi2022pangu]  
+  <br>
+
+:::
+::::
+
+## Paramterisations {.smaller}
+
+- Parameterisations are typically expensive
+  - Microphysics and Radiation are top offenders
+- Replace parameterisations with NNs
+  - emulation of existing parameterisation  
+    e.g. @espinosa2022machine
+  - data-driven parameterisations
+    - capture missing physics?
+  - train with a high-resolution model  
+    access the benefits of subgrid model without the cost(?)
+
+::: {.notes}
+- data-driven may suffer from a lack of data for training?
+:::
+
+
+## Downscaling {.smaller}
+
+- Can we get information for _'free'_?
+- Train to predict _'image'_ from coarsened version.
+  - Topography?
+
+![](https://www.earthdatascience.org/images/earth-analytics/climate-data/downscale-climate-data-met.jpg)
+
+::: {.attribution}
+Image by [Earth Lab](https://www.earthdatascience.org/courses/use-data-open-source-python/hierarchical-data-formats-hdf/intro-to-MACAv2-cmip5-data/)
+:::
+
+
+
+## Forecasting {.smaller}
+
+- Time-series
+  - popular use
+  - Recurrent Neural Nets
+- Complete weather
+  - FourCastNet, Pangu-Weather, GraphCast
+
+![](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41586-023-06185-3/MediaObjects/41586_2023_6185_Fig2_HTML.png?as=webp){.absolute bottom=0% left=0% width=48%}
+
+![](https://raw.githubusercontent.com/NVlabs/FourCastNet/master/assets/FourCastNet.gif){.absolute top=20% right=0% width=40%}
+
+::: {.attribution}
+Line plot image from @bi2023accurate  
+Global image from NVIDIA FourCastNet
+:::
+
+::: {.notes}
+Speaker notes go here.
+:::
+
+# Challenges
+
+## Training data - considerations {.smaller}
+
+How should we prepare our training data?
+
+- Cyclic data?
+  - e.g. diurnal, annual, other
+  - use time as an input
+  - use a \[daily\] average
+
+
+## Training data - implications {.smaller}
+
+- A NN only knows as much as its training data.
+- How do you predict the 1/100 event? 1/1000 event?
+- How do you train for a changing climate?
+  - And tipping points?
+
+![](https://cdn.vox-cdn.com/uploads/chorus_asset/file/6465873/spiral.gif){.absolute top=20% right=0% width=40%}
+
+::: {.attribution}
+Image by NASA
+:::
+
+
+## Structure/Physics-informed approach {.smaller}
+
+There is a wide variety of ways to structure a Neural Net.
+
+What is the most appropriate for our application.
+
+What are potentiall pitfalls - don't go in blind with an ML hammer!
+
+Case study of @ukkonen2022exploring for emulating radiative transfer:
+
+- Recurrent Neural Network reflects physical propogation,
+- and prevents spurious correlations.
+
+
+## Physical Compatibility {.smaller}
+
+Many ML applications in climate science are more complex than other _classical_ applications.
+
+- our ML useage is often not end-to-end
+- A stable/accurate offline model will not neccessarily be stable online [@furner2023iterative].
+
+Your NN is perfectly happy to have 'negative rain'.
+
+  - Even with heavy penalties
+  - This is not a new problem in numerical parameterisations.
+  - How is it best to enforce physical constraints in NNs.
+
+
+## Redeployability {.smaller}
+
+How easy is it to redeploy a ML model? - exactly _what_ has it learned?
+
+- Locked to a geographical location?
+- Locked to numerical model?
+  - Locked to a specific grid!?
+- How do we handle inputs from different models?
+
+
+## Interfacing {.smaller}
+
+Replacing physics-based components of larger models (emulation or data-driven) requires care.
+
+- Language interoperation
+- Physical compatibility
+
+![](https://upload.wikimedia.org/wikipedia/commons/5/55/Mathematical_Bridge_tangents.jpg){style="border-radius: 50%;" .absolute top=40% left=30% width=40%}
+
+::: {.attribution}
+[Mathematical Bridge](https://en.wikipedia.org/wiki/Mathematical_Bridge)
+by [cmglee](https://commons.wikimedia.org/wiki/User:Cmglee)
+used under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en)
+:::
+
+
+
+[comment: short python logo]: ![](https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/community/logos/python-logo-only.png){.absolute top=0 left=0 width="50"}
+
+![](https://www.python.org/static/community_logos/python-logo-generic.svg){.absolute top=50% left=0 width=30%}
+
+![](https://raw.githubusercontent.com/pytorch/pytorch/main/docs/source/_static/img/pytorch-logo-dark.png){style="background-image: radial-gradient(gray 40%, black);" .absolute top=65% left=5% width=20%}
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/TensorFlowLogo.svg/696px-TensorFlowLogo.svg.png?20180105010857){.absolute top=75% left=7.5% width=15%}
+
+
+
+
+![](https://upload.wikimedia.org/wikipedia/commons/b/b8/Fortran_logo.svg){.absolute top=50% right=10% width=10%}
+
+![](https://www.metoffice.gov.uk/binaries/content/gallery/metofficegovuk/images/about-us/website/mo_master_for_dark_backg_rbg.png){.absolute top=65% right=0% height=10%}
+
+![](https://climate.copernicus.eu/sites/default/files/custom-uploads/branding/ECMWF_Master_Logo_RGB_nostrap.png){.absolute top=74.5% left=70% height=5%}
+
+![](https://pbs.twimg.com/profile_images/1321471419558121472/T4a-ll9Z_400x400.jpg){style="border-radius: 20%;" .absolute bottom=4.5% right=0 width=10%}
+
+![](https://www2.mmm.ucar.edu/wrf/users/images/wrf_logo.jpg){.absolute bottom=4.5% right=12.75% width=7%}
+
+![](https://avatars.githubusercontent.com/u/33552285?s=200&v=4){.absolute bottom=4.5% left=70% width=7%}
+
+
+
+::: {.notes}
+Emulation and data-driven is a focus of several of out projects.
+
+Models typically in Fortran
+ML typically in Python
+Challenge of interoperation
+:::
+
+
+
+## Interfacing - Possible solutions {.smaller}
+
+Ideally need to:
+
+- Not generate excess additional work for user
+  - Not require excess knowledge of computing
+  - Minimal learning curve
+- Not add excess dependencies
+- Be easy to maintain
+- Maximise performance
+
+::: {.notes}
+1. No re-writing net after you have already done and trained
+2. For scientists doing science, not compsci
+3. Run on HPC environments so minimal additional 
+4. Easily keep up to date
+5. Simple to learn and deploy
+6. Needs to be as efficient as possible
+:::
+
+## Interfacing - Possible solutions {.smaller}
+
+- Implement a NN in Fortran
+- Forpy/CFFI
+- SmartSim/Pipes
+- Fortran-Keras Bridge
+
+::: {.notes}
+:::
+
+## Interfacing - Our Solution {.smaller}
+
+
+![](https://upload.wikimedia.org/wikipedia/commons/b/b8/Fortran_logo.svg){.absolute top=10% right=12.5% width=15%}
+
+
+![](https://www.freepngimg.com/thumb/youtube/77810-arrows-marketing-youtube-arrow-red-free-transparent-image-hq.png){.absolute top=20% right=30% width="35%" height="20%"}
+
+![](https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/community/logos/python-logo-only.png){.absolute top=40% left=30% height="20%"}
+
+![](https://www.freepngimg.com/thumb/youtube/77810-arrows-marketing-youtube-arrow-red-free-transparent-image-hq.png){style="transform: rotate(270deg);" .absolute top=70% left=30% width="18%" height="10%"}
+
+![](https://www.pngall.com/wp-content/uploads/5/Open-Box-PNG-Clipart.png){.absolute top=18% left=0% height="22%"}
+
+![](https://www.freepngimg.com/thumb/youtube/77810-arrows-marketing-youtube-arrow-red-free-transparent-image-hq.png){style="transform: rotate(270deg);" .absolute top=33% left=14% width="10%" height="25%"}
+
+:::{style="text-align: center; color: black;" .absolute top="27%" left="6.5%"}
+Python  
+env
+:::
+
+:::{style="text-align: center;" .absolute top="44%" left="44%"}
+Python  
+runtime
+:::
+
+
+![](https://raw.githubusercontent.com/pytorch/pytorch/main/docs/source/_static/img/pytorch-logo-dark.png){style="background-image: radial-gradient(gray 40%, black);" .absolute bottom=12.5% right=22% height=10%}
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/TensorFlowLogo.svg/696px-TensorFlowLogo.svg.png?20180105010857){.absolute bottom=10% left=82% height=15%}
+
+
+
+::: {.fragment .fade-in}
+![](https://www.freepngimg.com/thumb/youtube/77810-arrows-marketing-youtube-arrow-red-free-transparent-image-hq.png){style="transform: scaleY(-1) rotate(130deg); filter:hue-rotate(215deg);" .absolute top=37% left=78% width="35%" height="20%"}
+:::
+
+
+
+::: {.fragment .fade-in}
+![](https://imgs.xkcd.com/comics/python_environment_2x.png){style="background-image: radial-gradient(gray 40%, black);" .absolute bottom=8% left=0% height=80%}
+
+::: {.attribution}
+[xkcd #1987](https://xkcd.com/1987/)
+by Randall Munroe,
+used under [CC BY-NC 2.5](https://creativecommons.org/licenses/by-nc/2.5/)
+:::
+
+:::
+
+## Interfacing - Our Solution {.smaller}
+
+Ftorch and TF-lib
+
+- <span style="color:red;">Use Fortran's intrinsic C-bindings to access the C/C++ APIs provided by ML frameworks</span>
+- Performance
+- Ease of use
+- Use frameworks' implementations directly
+
+::: {.notes}
+**MOTIVATION**
+Driven by disadvantages of the above.
+Make it **quick** and **easy** for researchers to **correctly** deploy their models.
+
+- intrinsic => readily available
+- highly functional
+
+:::
+
+## Interfacing - Our Solution {.smaller}
+
+Ftorch and TF-lib
+
+- Use Fortran's intrinsic C-bindings to access the C/C++ APIs provided by ML frameworks
+- <span style="color:red;">Performance</span>
+  - avoids python runtime
+  - no-copy transfer (shared memory)
+- Ease of use
+- Use frameworks' implementations directly
+
+::: {.notes}
+Copying is one of the most expensive operations you can do. Avoid this!
+:::
+
+## Interfacing - Our Solution {.smaller}
+
+Ftorch and TF-lib
+
+- Use Fortran's intrinsic C-bindings to access the C/C++ APIs provided by ML frameworks
+- Performance
+- <span style="color:red;">Ease of use</span>
+  - pleasant API (see next slides)
+  - utilities for generating TorchScript/TF module provided
+  - examples provided
+- Use frameworks' implementations directly
+
+::: {.notes}
+
+:::
+
+## Interfacing - Our Solution {.smaller}
+
+Ftorch and TF-lib
+
+- Use Fortran's intrinsic C-bindings to access the C/C++ APIs provided by ML frameworks
+- Performance
+- Ease of use
+- <span style="color:red;">Use frameworks' implementations directly</span>
+  - feature support
+  - future support
+  - direct translation of python models ^[Caveats exist if using exotic non-Torch features.]
+
+::: {.notes}
+- NB Currently inference only - build and train in python
+:::
+
+## Code Example - PyTorch
+
+- Take model file
+- Save as torchscript
+
+```{.python}
+import torch
+import my_ml_model
+
+trained_model = my_ml_model.initialize()
+scripted_model = torch.jit.script(model)
+scripted_model.save("my_torchscript_model.pt")
+```
+
+## Code Example - PyTorch
+
+Neccessary imports:
+
+```{.fortranfree .code-overflow-wrap}
+use, intrinsic :: iso_c_binding, only: c_int64_t, c_float, c_char, &
+                                       c_null_char, c_ptr, c_loc
+use ftorch
+```
+
+Loading a pytorch model:
+
+```{.fortranfree .code-overflow-wrap}
+model = torch_module_load('/path/to/saved/model.pt'//c_null_char)
+```
+
+## Code Example - PyTorch
+
+Tensor creation from Fortran arrays:
+
+```{.fortranfree .code-overflow-wrap}
+! Fortran variables
+real, dimension(:,:), target  :: SST, model_output
+! C/Torch variables
+integer(c_int), parameter :: dims_T = 2
+integer(c_int64_t) :: shape_T(dims_T)
+integer(c_int), parameter :: n_inputs = 1
+type(torch_tensor), dimension(n_inputs), target :: model_inputs
+type(torch_tensor) :: model_output_T
+
+shape_T = shape(SST)
+
+model_inputs(1) = torch_tensor_from_blob(c_loc(SST), dims_T, shape_T &
+                                         torch_kFloat64, torch_kCPU)
+
+model_output = torch_tensor_from_blob(c_loc(output), dims_T, shape_T, &
+                                      torch_kFloat64, torch_kCPU)
+```
+
+## Code Example - PyTorch
+
+Running the model
+
+```{.fortranfree .code-overflow-wrap}
+call torch_module_forward(model, model_inputs, n_inputs, model_output_T)
+```
+
+Cleaning up:
+
+```{.fortranfree .code-overflow-wrap}
+call torch_tensor_delete(model_inputs(1))
+call torch_module_delete(model)
+```
+
+::: {.notes}
+
+We recommend PT
+TF has a weakness that prior knowledge of model structure is required.
+
+:::
+
+
+
+# Further information
+
+
+## References {.smaller}
+
+::: {#refs}
+:::
+
+
+## Slides
+
+These slides can be viewed at:  
+[https://cambridge-iccs.github.io/slides/ml-training/applications.html](https://cambridge-iccs.github.io/slides/ml-training/applications.html)
+
+The html and source can be found [on GitHub](https://github.com/Cambridge-ICCS/ml-training-material)
+
+
+## Contact {.smaller}
+
+For more information we can be reached at:
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+{{< fa pencil >}} \ Jack Atkinson
+
+{{< fa solid person-digging >}} \ [ICCS/UoCambridge](https://iccs.cam.ac.uk/about-us/our-team)
+
+{{< fa solid globe >}} \ [jackatkinson.net](https://jackatkinson.net)
+
+{{< fa solid envelope >}} \ [jwa34[AT]cam.ac.uk](mailto:jwa34@cam.ac.uk)
+
+{{< fa brands github >}} \ [jatkinson1000](https://github.com/jatkinson1000)
+
+{{< fa brands mastodon >}} \ [\@jatkinson1000\@fosstodon.org](https://fosstodon.org/@jatkinson1000)
+
+:::
+
+::: {.column width="50%"}
+
+{{< fa pencil >}} \ Jim Denholm
+
+{{< fa solid person-digging >}} \ UoCambridge
+
+{{< fa solid globe >}} \ [linkedin](https://uk.linkedin.com/in/jim-denholm-13043b189)
+
+{{< fa solid envelope >}} \ [jd949[AT]cam.ac.uk](mailto:jd949@cam.ac.uk)
+
+{{< fa brands github >}} \ [jdenholm](https://github.com/jdenholm)
+
+:::
+::::
+
+You can also contact the ICCS, [make a resource allocation request](https://iccs.cam.ac.uk/resources-vesri-members/resource-allocation-process), or visit us at the [Summer School RSE Helpdesk](https://docs.google.com/spreadsheets/d/1WKZxp3nqpXrIRMRkfFzc71sos-UD-Uy1zeab0c1p7Xc/edit#gid=0).
