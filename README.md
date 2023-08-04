@@ -126,7 +126,7 @@ The slides for this workshop are generated from markdown using quarto.
 The raw markdown and html files can be found in the [slides](slides/) directory.
 The slides can be viewed on the ICCS Summer School Website:
   - [Teaching](https://cambridge-iccs.github.io/slides/ml-training/slides.html)
-  - [Applications](https://cambridge-iccs.github.io/slides/ml-training/slides.html)
+  - [Climate Applications](https://cambridge-iccs.github.io/slides/ml-training/applications.html)
 
 ### Exercises
 The exercises that we will be working on can be found in the [exercises](exercises/) directory.

@@ -1,12 +1,12 @@
 # Slides
 
-This directory contains the slides for the course.
-These have been written in [Quarto](https://quarto.org/) markdown and rendered to html
+The slides for this course can be viewed on the ICCS Website:
+  - [Teaching](https://cambridge-iccs.github.io/slides/ml-training/slides.html)
+  - [Climate Applications](https://cambridge-iccs.github.io/slides/ml-training/applications.html)
+
+This directory contains the source for the slides.
+They have been written in [Quarto](https://quarto.org/) markdown and rendered to html
 using quarto-cli.
-
-As we develop the teaching materials further we may consider using the Jupyter or Python
-features of Quarto to create dynamic content.
-
 
 ## Day 1 - ML and NN basics
 
