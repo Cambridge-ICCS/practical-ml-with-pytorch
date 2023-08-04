@@ -137,7 +137,7 @@ This will download the relevant dependencies into the venv as well as setting up
 ### Slides
 The slides for this workshop can be viewed on the ICCS Summer School Website:
   - [Teaching](https://cambridge-iccs.github.io/slides/ml-training/slides.html)
-  - [Climate Applications](https://cambridge-iccs.github.io/slides/ml-training/slides.html)
+  - [Climate Applications](https://cambridge-iccs.github.io/slides/ml-training/applications.html)
 
 The slides are generated from markdown using quarto.
 The raw markdown and html files can be found in the [slides](slides/) directory.
