@@ -109,6 +109,7 @@ def _load_penguin_data() -> DataFrame:
         .sort_values(by=sorted(data.keys()))
         .reset_index(drop=True)
     )
+    # Transform the sex field into a float, with male represented by 1.0, female by 0.0
     data.sex = (data.sex == "male").astype(float)
     return data
 
