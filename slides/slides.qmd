@@ -148,7 +148,7 @@ $$m_{n + 1} = -m_{n}\frac{dL}{dm} \cdot l_{r}$$
 :::: {#placeholder}
 ::::
 
-$$c_{n + 1} = -c_{n}\frac{dL}{dm} \cdot l_{r}$$
+$$c_{n + 1} = -c_{n}\frac{dL}{dc} \cdot l_{r}$$
 
 :::: {#placeholder}
 ::::
