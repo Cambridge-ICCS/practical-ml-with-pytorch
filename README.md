@@ -131,6 +131,12 @@ pip install .
 ```
 This will download the relevant dependencies into the venv as well as setting up the datasets that we will be using in the course.
 
+### 4. (Optional) Keep virtual environment persistent in Jupyter Notebooks
+
+The following step is sometimes useful if you're having trouble with your Jupyter notebook finding the virtual environment.
+```
+python -m ipykernel install --user --name=MLvenv
+```
 
 ## Teaching Material
 
