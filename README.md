@@ -131,9 +131,18 @@ pip install .
 ```
 This will download the relevant dependencies into the venv as well as setting up the datasets that we will be using in the course.
 
-### 4. (Optional) Keep virtual environment persistent in Jupyter Notebooks
+### 4. Run the notebook
 
-The following step is sometimes useful if you're having trouble with your Jupyter notebook finding the virtual environment.
+From the current directory, launch the Jupyter notebook server:
+```
+jupyter notebook
+```
+This command should then point you to the right location within your browser to use the notebook, typically [http://localhost:8888/](http://localhost:8888/).
+
+### (Optional) Keep virtual environment persistent in Jupyter Notebooks
+
+The following step is sometimes useful if you're having trouble with your Jupyter notebook finding the virtual environment. You will want to do this before
+launching the Jupyter notebook.
 ```
 python -m ipykernel install --user --name=MLvenv
 ```
