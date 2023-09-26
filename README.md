@@ -80,7 +80,21 @@ us before a training sesison.
 
 ## Installation and setup
 
-### 1. Clone or fork the repository
+There are two options for participating in this workshop for which instructions are provided below:
+
+* via a [local install](#local-install)
+* on [Google Colab](#google-colab)
+
+We recommend the [local install](#local-install) approach, especially if you forked
+the repository, as it is the easiest way to keep a copy of your work and push back to github.
+
+However, if you experience issues with the installation process or are unfamiliar with
+the terminal/installation process there is the option to run the notebooks in
+[Google Colab](#google-colab).
+
+### Local Install
+
+#### 1. Clone or fork the repository
 Navigate to the location you want to install this repository on your system and clone
 via https by running:
 ```
@@ -92,8 +106,7 @@ Please note that if you have a GitHub account and want to push any work you migh
 up for future reference we suggest you [fork the repository](https://github.com/Cambridge-ICCS/ml-training-material/fork) 
 and then clone your fork.
 
-
-### 2. Create a virtual environment
+#### 2. Create a virtual environment
 Before installing any Python packages it is important to first create a Python virtual environment.
 This provides an insulated environment inside which we can install Python packages 
 without polluting the operating systems's Python environment.
@@ -120,8 +133,7 @@ to deactivate the venv and return to the system python environment.
 
 You can always boot back into the venv as you left it by running the activate command again.
 
-
-### 3. Install dependencies
+#### 3. Install dependencies
 
 It is now time to install the dependencies for our code, for example PyTorch.
 The project has been packaged with a [`pyproject.toml`](pyproject.toml) so can be installed in one go.
@@ -131,7 +143,7 @@ pip install .
 ```
 This will download the relevant dependencies into the venv as well as setting up the datasets that we will be using in the course.
 
-### 4. Run the notebook
+#### 4. Run the notebook
 
 From the current directory, launch the Jupyter notebook server:
 ```
@@ -139,13 +151,28 @@ jupyter notebook
 ```
 This command should then point you to the right location within your browser to use the notebook, typically [http://localhost:8888/](http://localhost:8888/).
 
-### (Optional) Keep virtual environment persistent in Jupyter Notebooks
+#### (Optional) Keep virtual environment persistent in Jupyter Notebooks
 
 The following step is sometimes useful if you're having trouble with your Jupyter notebook finding the virtual environment. You will want to do this before
 launching the Jupyter notebook.
 ```
 python -m ipykernel install --user --name=MLvenv
 ```
+
+### Colab
+
+To run the notebooks in Google Colab click the following links for each of the exercises:
+
+* [Exercise 01](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/exercises/01_penguin_classification.ipynb)
+* [Exercise 02](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/exercises/02_penguin_regression.ipynb)
+* [Exercise 03](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/exercises/03_mnist_classification.ipynb)
+* [Exercise 04](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/exercises/04_ellipse_regression.ipynb)
+
+_Notes:_
+* _Running in Google Colab requires you to have a Google account._
+* _If you leave a Colab session your work will be lost, so be careful to save any work
+  you want to keep._
+
 
 ## Teaching Material
 
@@ -165,6 +192,18 @@ These take the form of partially complete jupyter notebooks.
 Videos from past workshops may be useful if you are following along independently.  
 These can be found on the [ICCS youtube channel](https://www.youtube.com/@instituteofcomputingforcli3982) 
 under the 2023 Summer School materials.
+
+### Worked Solutions
+Worked solutions for all of the exercises can be found in the [worked solutions](worked-solutions/) directory.  
+These are for recapping after the course in case you missed anything, and contain ideal solutions complete with
+docstrings, outfitted with mypy type hints, linted, and conforming to the black code style.
+
+If you were working on Colab you can open the worked solutions using the following links:
+
+* [Exercise 01](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/worked-solutions/01_penguin_classification.ipynb)
+* [Exercise 02](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/worked-solutions/02_penguin_regression.ipynb)
+* [Exercise 03](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/worked-solutions/03_mnist_classification.ipynb)
+* [Exercise 04](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/worked-solutions/04_ellipse_regression.ipynb)
 
 
 ## License
