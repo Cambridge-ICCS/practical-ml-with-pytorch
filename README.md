@@ -159,7 +159,7 @@ launching the Jupyter notebook.
 python -m ipykernel install --user --name=MLvenv
 ```
 
-### Colab
+### Google Colab
 
 To run the notebooks in Google Colab click the following links for each of the exercises:
 
