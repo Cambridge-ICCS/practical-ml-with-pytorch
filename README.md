@@ -203,7 +203,6 @@ Whilst the workshop should install and run with the latest versions of python li
 it has been tested with following versions for major dependencies: torch 2.0.1,
 pandas 2.1.0, palmerpenguins 0.1.4, ipykernel 6.25.2, matplotlib 3.8.0, notebook 7.0.3.
 
-
 #### 4. Run the notebook
 
 From the current directory, launch the jupyter notebook server:
@@ -212,7 +211,7 @@ jupyter notebook
 ```
 This command should then point you to the right location within your browser to use the notebook, typically [http://localhost:8888/](http://localhost:8888/).
 
-#### (Optional) Keep virtual environment persistent in jupyter Notebooks
+#### (Optional) Keep virtual environment persistent in Jupyter Notebooks
 
 The following step is sometimes useful if you're having trouble with your jupyter notebook finding the virtual environment. You will want to do this before
 launching the jupyter notebook.
@@ -246,6 +245,21 @@ _Notes:_
   you want to keep_
 * _Due to the limited resources provided by binder you will struggle to run training in
   exercises 3 and 4._
+
+### Worked Solutions
+Worked solutions for all of the exercises can be found in the [worked solutions](worked-solutions/) directory.  
+These are for recapping after the course in case you missed anything, and contain ideal solutions complete with
+[docstrings](https://peps.python.org/pep-0257/), outfitted with
+[type hints](https://docs.python.org/3/library/typing.html),
+[linted](https://docs.pylint.org/intro.html), and conforming to the
+[black](https://black.readthedocs.io/en/stable/) code style.
+
+If you were working on Colab you can open the worked solutions using the following links:
+
+* [Exercise 01](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/worked-solutions/01_penguin_classification_solutions.ipynb)
+* [Exercise 02](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/worked-solutions/02_penguin_regression_solutions.ipynb)
+* [Exercise 03](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/worked-solutions/03_mnist_classification_solutions.ipynb)
+* [Exercise 04](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/worked-solutions/04_ellipse_regression_solutions.ipynb)
 
 
 ## JOSE Publication
