@@ -102,9 +102,11 @@ git clone https://github.com/Cambridge-ICCS/ml-training-material.git
 ```
 This will create a directory `ml-training-material/` with the contents of this repository.
 
-Please note that if you have a GitHub account and want to push any work you might do back
-up for future reference we suggest you [fork the repository](https://github.com/Cambridge-ICCS/ml-training-material/fork) 
+Please note that if you have a GitHub account and want to preserve any work you do
+we suggest you first [fork the repository](https://github.com/Cambridge-ICCS/ml-training-material/fork) 
 and then clone your fork.
+This will allow you to push your changes and progress from the workshop back up to your
+fork for future reference.
 
 #### 2. Create a virtual environment
 Before installing any Python packages it is important to first create a Python virtual environment.
@@ -196,7 +198,10 @@ under the 2023 Summer School materials.
 ### Worked Solutions
 Worked solutions for all of the exercises can be found in the [worked solutions](worked-solutions/) directory.  
 These are for recapping after the course in case you missed anything, and contain ideal solutions complete with
-docstrings, outfitted with mypy type hints, linted, and conforming to the black code style.
+[docstrings](https://peps.python.org/pep-0257/), outfitted with
+[type hints](https://docs.python.org/3/library/typing.html),
+[linted](https://docs.pylint.org/intro.html), and conforming to the
+[black](https://black.readthedocs.io/en/stable/) code style.
 
 If you were working on Colab you can open the worked solutions using the following links:
 
