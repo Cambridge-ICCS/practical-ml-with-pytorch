@@ -31,16 +31,17 @@ jobs:
         run: |
           cd slides
           quarto render *.qmd
+          cd ../
 
-      - name: Test docs build
+      - name: Test pages build
         if: github.ref != 'refs/heads/main'
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: docs-test # The branch the action should deploy to.
+          branch: pages-test # The branch the action should deploy to.
           folder: slides      # The folder the action should deploy.
           dry-run: true    # Don't actually push to pages, just test if we can
 
-      - name: Deploy Documentation for master
+      - name: Deploy pages for master
         # if: github.ref == 'refs/heads/main'
         if: github.ref == 'refs/heads/slides-pages'
         uses: JamesIves/github-pages-deploy-action@v4
