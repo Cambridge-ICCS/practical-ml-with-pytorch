@@ -32,7 +32,8 @@ jobs:
       - name: Render Quarto Project
         run: |
           cd slides
-          quarto render *.qmd
+          quarto render slides.qmd
+          quarto render applications.qmd
           cd ../
 
       - name: Test pages build
