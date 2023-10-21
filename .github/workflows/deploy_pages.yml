@@ -30,7 +30,7 @@ jobs:
       - name: Render Quarto Project
         run: |
           cd slides
-          quarto --render *.qmd
+          quarto render *.qmd
 
       - name: Test docs build
         if: github.ref != 'refs/heads/main'
