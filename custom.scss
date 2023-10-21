@@ -1,0 +1,61 @@
+/*-- scss:defaults --*/
+
+// Custom colours and variables
+$jet: #131516;
+$accent: #107895;
+$accent2: #9a2515;
+$right-arrow: "\2192"; // Unicode character for right arrow
+$linkcolour: #00ffff;
+
+// colors
+//$body-bg: #f0f1eb !default;
+//$body-color: $jet !default;
+$link-color: $linkcolour !default;
+//$selection-bg: #26351c !default;
+
+
+/*-- scss:rules --*/
+
+// title and headings
+
+#title-slide {
+  text-align: center;
+
+  .title {
+    color: $body-color;
+    font-size: 1.4em;
+    font-weight: 350;
+    //line-height: 0;
+  }
+
+  .subtitle {
+    color: $accent;
+    font-style: italic;
+  }
+
+  .institute,
+  .quarto-title-affiliation,
+  .quarto-title-author-email {
+    font-style: italic;
+    // font-size: 80%;
+    color: #7F7F7F;
+  }
+
+  .author,
+  .quarto-title-author-name {
+    color: $body-color;
+  }
+
+  .quarto-title-authors {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    .quarto-title-author {
+      //padding-left: 0em;
+      //padding-right: 0em;
+      //width: 100%;
+    }
+  }
+
+}
