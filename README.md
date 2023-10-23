@@ -8,19 +8,74 @@
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
 
 This repository contains documentation, resources, and code for the Introduction to
-Machine Learning with PyTorch session designed and delivered by Jack Atkinson ([**@jatkinson1000**](https://github.com/jatkinson1000))
+Machine Learning with PyTorch session designed and delivered by [Jack Atkinson](https://jackatkinson.net/) ([**@jatkinson1000**](https://github.com/jatkinson1000))
 and Jim Denholm ([**@jdenholm**](https://github.com/jdenholm)) of [ICCS](https://github.com/Cambridge-ICCS).  
 The material has been delivered at both the [ICCS](https://iccs.cam.ac.uk/events/iccs-summer-school-2023) 
 and [NCAS](https://ncas.ac.uk/study-with-us/climate-modelling-summer-school/) summer schools.  
 All materials, including slides and videos, are available such that individuals can cover the course in their own time.
 
+A website for this workshop can be found at [https://cambridge-iccs.github.io/ml-training-material/](https://cambridge-iccs.github.io/ml-training-material/).
 
 ## Contents
 
+- [Learning Objectives](#learning-objectives)
+- [Teaching material](#teaching-material)
 - [Preparation and prerequisites](#preparation-and-prerequisites)
 - [Installation and setup](#installation-and-setup)
-- [Teaching material](#teaching-material)
 - [License information](#license)
+
+
+## Learning Objectives
+The key learning objective from this workshop could be simply summarised as:  
+_Provide the ability to develop ML models in PyTorch_.
+
+However, more specifically we aim to:
+
+* provide an understanding of the structure of a PyTorch model and ML pipeline,
+* introduce the different functionalities PyTorch might provide,
+* encourage good research software engineering (RSE) practice, and
+* exercise careful consideration and understanding of data used for training ML models.
+
+With regards to specific ML content we cover:
+
+* using ML for both classification and regression,
+* artificial neural networks (ANNs) and convolutional neural networks (CNNs)
+* treatment of both tabular and image data
+
+
+## Teaching Material
+
+### Slides
+The slides for this workshop can be viewed on the ICCS Summer School Website:
+  - [Teaching](https://cambridge-iccs.github.io/ml-training-material/slides.html)
+  - [Climate Applications](https://cambridge-iccs.github.io/ml-training-material/applications.html)
+
+The slides are generated from markdown using quarto.
+The raw markdown and html files can be found in the [slides](slides/) directory.
+
+### Exercises
+The exercises for the course can be found in the [exercises](exercises/) directory.  
+These take the form of partially complete jupyter notebooks.
+
+### Videos
+Videos from past workshops may be useful if you are following along independently.  
+These can be found on the [ICCS youtube channel](https://www.youtube.com/@instituteofcomputingforcli3982) 
+under the 2023 Summer School materials.
+
+### Worked Solutions
+Worked solutions for all of the exercises can be found in the [worked solutions](worked-solutions/) directory.  
+These are for recapping after the course in case you missed anything, and contain ideal solutions complete with
+[docstrings](https://peps.python.org/pep-0257/), outfitted with
+[type hints](https://docs.python.org/3/library/typing.html),
+[linted](https://docs.pylint.org/intro.html), and conforming to the
+[black](https://black.readthedocs.io/en/stable/) code style.
+
+If you were working on Colab you can open the worked solutions using the following links:
+
+* [Exercise 01](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/worked-solutions/01_penguin_classification_solutions.ipynb)
+* [Exercise 02](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/worked-solutions/02_penguin_regression_solutions.ipynb)
+* [Exercise 03](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/worked-solutions/03_mnist_classification_solutions.ipynb)
+* [Exercise 04](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/worked-solutions/04_ellipse_regression_solutions.ipynb)
 
 
 ## Preparation and prerequisites
@@ -48,7 +103,8 @@ This includes:
 - Basic mathematical operations
 - Writing and running scripts/programs
 - Writing and using functions
-- The concept of [object orientation](https://eli5.gg/Object-oriented%20programming) (that an object, e.g. a dataset, can have associated functions/methods associated with it.)
+- The concept of [object orientation](https://eli5.gg/Object-oriented%20programming)  
+  i.e. that an object, e.g. a dataset, can have associated functions/methods associated with it.
 - Basic use of the following libraries:
   - [`numpy`](https://numpy.org/) for mathematical and array operations
   - [`matplotlib`](https://matplotlib.org/) for ploting and visualisation
@@ -62,12 +118,12 @@ You will be expected to know how to
 - push.
 
 The [workshop from the 2022 ICCS Summer School](https://www.youtube.com/watch?v=ZrwzK4CnJ3Q) 
-should provide the neccessary knowledge.
+should provide the necessary knowledge.
 
 ### Preparation
 In preparation for the course please ensure that your computer contains the following:
 - A text editor - e.g. vim/[neovim](https://neovim.io/), [gedit](https://gedit.en.softonic.com/), [vscode](https://code.visualstudio.com/), [sublimetext](https://www.sublimetext.com/) etc. to open and edit code files
-- A terminal emulator - e.g. [GNOME Terminal](https://help.gnome.org/users/gnome-terminal/stable/), [kitty](https://sw.kovidgoyal.net/kitty/), [Windows Terminal (windows only)](https://learn.microsoft.com/en-us/windows/terminal/), [iTerm (mac only)](https://iterm2.com/)
+- A terminal emulator - e.g. [GNOME Terminal](https://help.gnome.org/users/gnome-terminal/stable/), [wezterm](https://wezfurlong.org/wezterm/index.html), [Windows Terminal (windows only)](https://learn.microsoft.com/en-us/windows/terminal/), [iTerm (mac only)](https://iterm2.com/)
 - python virtual environment (see [Installation and setup](#installation-and-setup))
 
 Note for Windows users: _We have linked suitable applications for windows in the above lists.
@@ -75,7 +131,7 @@ However, you may wish to refer to [Windows' getting-started with python informat
 for a complete guide to getting set up on a Windows system._
 
 If you require assistance or further information with any of these please reach out to
-us before a training sesison.
+us before a training session.
 
 
 ## Installation and setup
@@ -86,7 +142,7 @@ There are two options for participating in this workshop for which instructions 
 * on [Google Colab](#google-colab)
 
 We recommend the [local install](#local-install) approach, especially if you forked
-the repository, as it is the easiest way to keep a copy of your work and push back to github.
+the repository, as it is the easiest way to keep a copy of your work and push back to GitHub.
 
 However, if you experience issues with the installation process or are unfamiliar with
 the terminal/installation process there is the option to run the notebooks in
@@ -111,7 +167,7 @@ fork for future reference.
 #### 2. Create a virtual environment
 Before installing any Python packages it is important to first create a Python virtual environment.
 This provides an insulated environment inside which we can install Python packages 
-without polluting the operating systems's Python environment.
+without polluting the operating systems' Python environment.
 
 If you have never done this before don't worry: it is *very* good practise, especially 
 when you are working on multiple projects, and easy to do.
@@ -147,16 +203,16 @@ This will download the relevant dependencies into the venv as well as setting up
 
 #### 4. Run the notebook
 
-From the current directory, launch the Jupyter notebook server:
+From the current directory, launch the jupyter notebook server:
 ```
 jupyter notebook
 ```
 This command should then point you to the right location within your browser to use the notebook, typically [http://localhost:8888/](http://localhost:8888/).
 
-#### (Optional) Keep virtual environment persistent in Jupyter Notebooks
+#### (Optional) Keep virtual environment persistent in jupyter Notebooks
 
-The following step is sometimes useful if you're having trouble with your Jupyter notebook finding the virtual environment. You will want to do this before
-launching the Jupyter notebook.
+The following step is sometimes useful if you're having trouble with your jupyter notebook finding the virtual environment. You will want to do this before
+launching the jupyter notebook.
 ```
 python -m ipykernel install --user --name=MLvenv
 ```
@@ -174,41 +230,6 @@ _Notes:_
 * _Running in Google Colab requires you to have a Google account._
 * _If you leave a Colab session your work will be lost, so be careful to save any work
   you want to keep._
-
-
-## Teaching Material
-
-### Slides
-The slides for this workshop can be viewed on the ICCS Summer School Website:
-  - [Teaching](https://cambridge-iccs.github.io/slides/ml-training/slides.html)
-  - [Climate Applications](https://cambridge-iccs.github.io/slides/ml-training/applications.html)
-
-The slides are generated from markdown using quarto.
-The raw markdown and html files can be found in the [slides](slides/) directory.
-
-### Exercises
-The exercises for the course can be found in the [exercises](exercises/) directory.  
-These take the form of partially complete jupyter notebooks.
-
-### Videos
-Videos from past workshops may be useful if you are following along independently.  
-These can be found on the [ICCS youtube channel](https://www.youtube.com/@instituteofcomputingforcli3982) 
-under the 2023 Summer School materials.
-
-### Worked Solutions
-Worked solutions for all of the exercises can be found in the [worked solutions](worked-solutions/) directory.  
-These are for recapping after the course in case you missed anything, and contain ideal solutions complete with
-[docstrings](https://peps.python.org/pep-0257/), outfitted with
-[type hints](https://docs.python.org/3/library/typing.html),
-[linted](https://docs.pylint.org/intro.html), and conforming to the
-[black](https://black.readthedocs.io/en/stable/) code style.
-
-If you were working on Colab you can open the worked solutions using the following links:
-
-* [Exercise 01](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/worked-solutions/01_penguin_classification_solutions.ipynb)
-* [Exercise 02](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/worked-solutions/02_penguin_regression_solutions.ipynb)
-* [Exercise 03](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/worked-solutions/03_mnist_classification_solutions.ipynb)
-* [Exercise 04](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/worked-solutions/04_ellipse_regression_solutions.ipynb)
 
 
 ## License
