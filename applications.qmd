@@ -303,12 +303,14 @@ used under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en
 
 ![](https://raw.githubusercontent.com/pytorch/pytorch/main/docs/source/_static/img/pytorch-logo-dark.png){style="background-image: radial-gradient(gray 40%, black);" .absolute top=65% left=5% width=20%}
 
-![]( https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/TensorFlowLogo.svg/696px-TensorFlowLogo.svg.png?20180105010857 ){.absolute top=75% left=7.5% width=15%}
+![]( https://upload.wikimedia.org/wikipedia/commons/1/11/TensorFlowLogo.svg ){.absolute top=75% left=7.5% width=15%}
 
 
 
 
-![]( https://upload.wikimedia.org/wikipedia/commons/b/b8/Fortran_logo.svg ){.absolute top=50% right=10% width=10%}
+
+![]( https://raw.githubusercontent.com/fortran-lang/assets/main/fortran-logo.svg ){.absolute top=50% right=10% width=10%}
+
 
 ![](https://www.metoffice.gov.uk/binaries/content/gallery/metofficegovuk/images/about-us/website/mo_master_for_dark_backg_rbg.png){.absolute top=65% right=0% height=10%}
 
@@ -365,7 +367,7 @@ Ideally need to:
 ## Interfacing - Our Solution {.smaller}
 
 
-![](https://upload.wikimedia.org/wikipedia/commons/b/b8/Fortran_logo.svg){.absolute top=10% right=12.5% width=15%}
+![](https://raw.githubusercontent.com/fortran-lang/assets/main/fortran-logo.svg){.absolute top=10% right=12.5% width=15%}
 
 
 ![](https://www.freepngimg.com/thumb/youtube/77810-arrows-marketing-youtube-arrow-red-free-transparent-image-hq.png){.absolute top=20% right=30% width="35%" height="20%"}
