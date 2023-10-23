@@ -186,7 +186,7 @@ $$m_{n + 1} = -m_{n}\frac{dL}{dm} \cdot l_{r}$$
 :::: {#placeholder}
 ::::
 
-$$c_{n + 1} = -c_{n}\frac{dL}{dm} \cdot l_{r}$$
+$$c_{n + 1} = -c_{n}\frac{dL}{dc} \cdot l_{r}$$
 
 :::: {#placeholder}
 ::::
@@ -228,7 +228,7 @@ To fit a model we need:
 
 $$a_{l+1} = \sigma \left( W_{l}a_{l} + b_{l} \right)$$
 
-- For common choices of activation functions, see the [PyTorch](https://pytorch.org/docs/stable/nn.html#non-linear-activations-weighted-sum-nonlinearity) docs.
+- For common choices of activation function, see the [PyTorch](https://pytorch.org/docs/stable/nn.html#non-linear-activations-weighted-sum-nonlinearity) docs.
 
 :::
 ::::
@@ -243,7 +243,7 @@ Image source: [3Blue1Brown](https://www.3blue1brown.com/topics/neural-networks)
 ## Uses: Classification and Regression {.smaller}
 
 - Fully-connected neural networks are often applied to tabular data.
-  - i.e. where it makes sense to express the data in table-like object (such as a `pandas` data frame).
+  - i.e. where it makes sense to express the data in a table-like object (such as a `pandas` data frame).
   - The input features and targets are represented as vectors.
 
 ::: {.fragment .fade-in}
