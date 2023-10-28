@@ -36,13 +36,13 @@ received any training in machine learning.
 
 We have developed, and delivered, a set of materials entitled _Practical
 machine learning with PyTorch_, designed to teach participants how to _actually_
-write and run ML code whilst also illustrating important design considerations.
+write and run ML code in a _hands-on_ fashion whilst also illustrating important design considerations.
 
 
 # Statement of need
 
-With the explosion of ML/DL there have been several promising opportunities
-to use these techniques in research.
+With the explosion of ML and DL there have been several promising opportunities
+to apply these techniques in research.
 There are notable applications across many fields from
 the physical sciences [@carleo2019machine], climate science [@kashinath2021physics],
 to the digital humanities [@gefen2021ai].
@@ -55,18 +55,18 @@ In contrast, much theoretical ML material addresses high-level concepts
 without discussing coding considerations or details of how to
 actually use popular frameworks to implement the models.
 
-
-
-Practical aspects that can only really be learnt through trial-and-error and
+<!-- TODO -->
+Practical aspects can only really be learnt through trial-and-error and
 practical experience.
-Many know how ML works in the abstract, but not details such as image transforms.
-They can describe how something works, but would have no idea where to start if asked to do it.
-
-
+Many know how ML works in an abstract sense, but will be unfamiliar with lower-level
+practicalities such as image transforms and other preprocessing techniques required
+to present data to neural networks.
+They can describe how something works, but would have no idea where to start if
+asked to do it.
 
 Many machine learning frameworks are accessed using a Python framework.
 One such commonly used framework is [PyTorch](https://pytorch.org/) [@paszke2019pytorch].
-Researchers are likely to have experience writing python code, but not pytorch.
+Researchers are likely to have experience writing Python code, but not PyTorch.
 
 
 # Learning objectives
@@ -102,7 +102,7 @@ We have produced two slide decks for the course, both available online and linke
 both the repository and the GitHub pages site.
 The slides are written in [Quarto](https://quarto.org/) [@Allaire_Quarto_2022]
 markdown and rendered as [reveal.js](https://revealjs.com/) html.
-Source and instructions on how to render is included in the repository should
+Source and instructions on how to render are included in the repository should
 others wish to tailor them to their specifications.
 
 The
@@ -110,8 +110,8 @@ The
 covers the machine learning content introducing deep learning
 and neural networks through the concept of optimisation and gradient descent which
 should be a familiar concept to participants.
-They then cover the concept of convolutional layers as a method to reduce image-like
-data for use in a neural network.
+They then cover the concept of convolutional layers as a method to 
+map and abstract image-like data for use in a neural network.
 
 The
 [second set of slides](https://cambridge-iccs.github.io/ml-training-material/applications.html)
@@ -126,7 +126,7 @@ branch.
 
 ## Exercises (jupyter notebooks)
 
-The main material is made up of four [jupyter notebooks](https://jupyter.org/),
+The main material is composed of four [jupyter notebooks](https://jupyter.org/),
 each containing a standalone
 exercise that takes participants through the process of developing and training
 an ML model, from data preparation and training to running inference.
@@ -138,7 +138,7 @@ This means that installation for use in the workshop is simplified to cloning th
 python -m pip install .
 ```
 We advise users do this from within a
-[virtual environment](https://docs.python.org/3/library/venv.html),
+[virtual Python environment](https://docs.python.org/3/library/venv.html),
 instructions for which are provided under 'Installation and setup'.
 From there the jupyter notebook exercises are activated from the command
 line with `jupyter notebook`.
@@ -154,20 +154,21 @@ key features of PyTorch in the early exercises.
 We review this code during the workshop to understand its functionality and how data
 can be prepared for use in training.
 
-### 1) Penguin Classification  
+### 1) Penguin Species Classification  
 _Classification of penguin species based on other physical characteristics._  
 This exercise takes participants through the process of writing an ANN.
-The tabular data from the _palmer penguins_ dataset is read in and transforms
-applied before creating dataloaders and introducing the concepts of training and
+The tabular data from the _palmer penguins_ dataset is read in and
+transformed using idiomatic PyTorch data-loading objects
+before creating dataloaders and introducing the concepts of training and
 validation splits.
 As part of this exercise we also discuss how to prepare a dataset in terms of
-identifying unsuitable characteristics that could introduce bias or
-unintended behaviour to the learning process.  
+identifying unsuitable characteristics that could introduce bias,
+unintended behaviour, or spurious results in the learning process.  
 Data preparation is followed by creating a net from scratch, introducing loss functions
 and optimisers, and writing a training and validation loop.
-Finally, we don't stop at simply training, but complete the exercise by plotting
-metrics, visualising some results, and then deploy the net to perform inference in
-a practical manner - a step that is often missing from ML tutorials.
+Finally, we proceed beyond simply training the model, completing the exercise by inspecting
+metrics, visualising results, and deploying the model to perform inference in
+a practical manner -- a step that is often missing from ML tutorials.
 
 ### 2) Penguin Regression  
 _Prediction of penguin mass (regression) based on other physical characteristics._  
@@ -226,8 +227,8 @@ Whilst we discuss RSE principles during the course and provide examples, there i
 not time, nor is it conducive, to write docstrings and apply type hints to every
 function as we write them.
 The worked solutions are complete with [docstrings](https://peps.python.org/pep-0257/)
-([numpy convention](https://numpydoc.readthedocs.io/en/latest/format.html)) and
-[type hints](https://docs.python.org/3/library/typing.html)
+([NumPy convention](https://numpydoc.readthedocs.io/en/latest/format.html)) and
+[type-hints](https://docs.python.org/3/library/typing.html)
 (checked by [mypy](https://mypy.readthedocs.io/en/stable/index.html)).
 In a similar manner, though we emphasise the importance of code style and
 [PEP8](https://peps.python.org/pep-0008/) during the course, we cannot guarantee
@@ -269,7 +270,7 @@ the pace of those taking notes and allows for tailoring of the content to the
 participants.
 
 Whilst the course can be delivered entirely as a code-along, we have also taught
-exercises 3 and 4 as a 'lab', with participants working individually or in small groups
+exercises 3 and 4 as a "lab", with participants working individually or in small groups
 supported by floating demonstrators.
 An advantage of this approach for the CNN exercises is that it allows participants
 to explore a variety of PyTorch's features,
@@ -332,8 +333,8 @@ We believe that
 We thank anyone who has made a contribution to these materials, however small,
 assisted in code review for us, or helped as demonstrators on the course.
 
-The Institute of Computing for Climate Science is funded by the Schmidt
-Futures Foundation.
+The [Institute of Computing for Climate Science](https://iccs.cam.ac.uk/)
+is funded by the Schmidt Futures Foundation.
 
 
 # References
