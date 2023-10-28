@@ -161,9 +161,10 @@ The tabular data from the _palmer penguins_ dataset is read in and
 transformed using idiomatic PyTorch data-loading objects
 before creating dataloaders and introducing the concepts of training and
 validation splits.
-As part of this exercise we also discuss how to prepare a dataset in terms of
+As part of this exercise we discuss how to prepare a dataset in terms of
 identifying unsuitable characteristics that could introduce bias,
-unintended behaviour, or spurious results in the learning process.  
+unintended behaviour, or spurious results in the learning process.
+We also introduce one-hot-encoding as a method to balance loss between different classes.  
 Data preparation is followed by creating a net from scratch, introducing loss functions
 and optimisers, and writing a training and validation loop.
 Finally, we proceed beyond simply training the model, completing the exercise by inspecting
@@ -176,7 +177,10 @@ The second exercise is similar to the first, using an ANN to learn from
 _palmer penguins_ data, but focusses on regression rather than classification.
 The procedure is largely the same, with a discussion around how the relevant
 features of the dataset are different to those selected in exercise 1.
-We also introduce the TorchTools package [@torchtools] to simplify the process of
+We highlight how appropriate choice of loss (objective) function allows us to leverage
+an identical architecture for a different applications -- binary-cross-entropy for
+classification and mean-squared-error for regression.
+The TorchTools package [@torchtools] is also introduced to simplify the process of
 creating neural nets.
 
 ### 3) MNIST Classification  
