@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Material for learning how to perform machine learning using PyTorch">
+    <meta name="author" content="ICCS Cambridge" >
+
+    <title> ICCS Practical Machine Learning with PyTorch </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style type="text/css">
+      code { 
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+            border-left: 3px solid #f36d33;
+            color: #666;
+            page-break-inside: avoid;
+            font-family: monospace;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 0.5em;
+            margin-top: 0.5em;
+            margin-left: 1.0em;
+            max-width: 100%;
+            overflow: auto;
+            padding: 0.5em 1.0em;
+            display: block;
+            word-wrap: break-word;
+      }
+      inlinecode { 
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+            color: black;
+            page-break-inside: avoid;
+            font-family: monospace;
+            font-size: 15px;
+            max-width: 100%;
+            overflow: auto;
+            word-wrap: break-word;
+      }
+      indent{
+            page-break-inside: avoid;
+            max-width: 100%;
+            overflow: auto;
+            padding-left: 1.5em;
+            display: block;
+            word-wrap: break-word;
+
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="row" id='text'>
+        <div class=col-md-8>
+          <br>
+          <img src="https://iccs.cam.ac.uk/sites/iccs.cam.ac.uk/files/logo2_1.png" height="70px">
+          <br><br>
+          <h1>ICCS Practical Machine Learning with PyTorch</h1>
+          <hr>
+          <p>Material for learning how to perform machine learning using PyTorch</p>
+
+          <p>
+            <a class="btn btn-lg btn-primary" href="https://github.com/Cambridge-ICCS/ml-training-material" role="button" target=blank>Open the GitHub Repository</a>
+          </p>
+          
+          <p>This course was designed by <a href="https://jackatkinson.net/">Jack Atkinson</a> (<a href="https://github.com/jatkinson1000">@jatkinson1000</a>) and Jim Denholm (<a href="https://github.com/jdenholm">@jdenholm</a>) of <a href="https://github.com/Cambridge-ICCS">ICCS</a>.<br>
+          The material has been delivered at both the <a href="https://iccs.cam.ac.uk/events/iccs-summer-school-2023">ICCS</a> and <a href="https://ncas.ac.uk/study-with-us/climate-modelling-summer-school/">NCAS</a> summer schools.
+          All materials, including slides and videos, are available such that individuals can cover the course in their own time.
+          </p>
+          
+          <div class="toc">
+          <h2 id="contents">Contents</h2>
+            <ul>
+              <li><a href="#objectives">Learning Objectives</a></li>
+              <li><a href="#slides">Slides</a></li>
+              <li><a href="#exercises">Exercises</a></li>
+              <li><a href="#setup">Setup Instructions</a></li>
+              <ul>
+                <li><a href="#github">GitHub</a></li>
+                <li><a href="#colab">Colab</a></li>
+                <li><a href="#solutions">Solutions</a></li>
+              </ul>
+              <li><a href="#prerequisites">Prerequisites</a></li>
+              <li><a href="#license">License</a></li>
+            </ul>
+          </div>
+         
+
+          <h2 id="objectives">Learning objectives</h2>
+          <p>The key learning objective from this workshop could be simply summarised as:<br>
+          <i>'Provide the ability to develop ML models in PyTorch'</i>.</p>
+
+          <p>However, more specifically we aim to:</p>
+          <ul>
+            <li>provide an understanding of the structure of a PyTorch model and ML pipeline,</li>
+            <li>introduce the different functionalities PyTorch might provide,</li>
+            <li>encourage good research software engineering (RSE) practice, and</li>
+            <li>exercise careful consideration and understanding of data used for training ML models.</li>
+          </ul>
+
+          <p>With regards to specific ML content we cover:</p>
+          <ul>
+            <li>using ML for both classification and regression,</li>
+            <li>artificial neural networks (ANNs) and convolutional neural networks (CNNs)</li>
+            <li>treatment of both tabular and image data</li>
+          </ul>
+
+
+          <h2 id="slides"> Slides</h2>
+          <p>The slides for the workshop can be viewed at the following links:</p>
+          <ul>
+            <li><a href="./slides.html">ML Slides</a></li>
+            <li><a href="./applications.html">Climate Applications Slides</a></li>
+          </ul>
+          <p>They are generated from markdown using quarto.
+          The raw markdown and html files can be found in the <inlinecode>slides/</inlinecode> directory.</p>
+
+          <p>Videos from past workshops may be useful if you are following along independently. These can be found on the <a href="https://www.youtube.com/@instituteofcomputingforcli3982">ICCS youtube channel</a> under the 2023 Summer School materials.</p>
+          
+          <h2 id="exercises">Exercises</h2>
+          <p>The practical element of the course consists of 4 exercises demonstrating how to use both ANNs and CNNs to perform classification and regression.</p>
+          <p>The exercises take the form of partially completed jupyter notebooks and can be found in the <inlinecode>exercises/</inlinecode> folder of the repository. Instructions on how to access and run them are given below in the <a href="#setup">Setup Instructions</a>.</p>
+
+          <h2 id="setup">Setup Instructions</h2>
+
+          There are two options for participating in this workshop for which instructions are provided below:
+          <ul>
+            <li><a href="#github">a local install via Github</a></li>
+            <li><a href="#colab">online via Google Colab</a></li>
+          </ul>
+
+          <p>We recommend the local install approach, especially if you forked the repository, as it is the easiest way to keep a copy of your work and push back to github.</p>
+
+          <p>However, if you experience issues with the installation process or are unfamiliar with the terminal/installation process there is the option to run the notebooks in Google Colab.</p>
+
+          <h4 id="github">Github Repository</h4>
+          <h6>1) Clone or fork the GitHub repository</h6>
+          <p>Navigate to the location you want to install this repository on your system and clone via https by running:
+          <code>git clone https://github.com/Cambridge-ICCS/ml-training-material.git</code>
+          This will create a directory <inlinecode>ml-training-material/</inlinecode> with the contents of this repository.</p>
+
+          <p><i>Please note that if you have a GitHub account and want to preserve any work you do we suggest you first <a href="https://github.com/Cambridge-ICCS/ml-training-material/fork">fork the repository</a> and then clone your fork. This will allow you to push your changes and progress from the workshop back up to your fork for future reference.</i></p>
+          
+          <h6>2) Create a virtual environment</h6>
+          <p>Before installing any Python packages it is important to first create a Python virtual environment.
+          This provides an insulated environment inside which we can install Python packages without polluting the operating systems's Python environment.</p>
+          <p>If you have never done this before don't worry: it is *very* good practise, especially when you are working on multiple projects, and easy to do.
+          <code>python3 -m venv MLvenv</code>
+          This will create a directory called `MLvenv` containing software for the virtual environment.</p>
+          <p>To activate the environment run:
+          <code>source MLvenv/bin/activate</code>
+          You can now work on python from within this isolated environment, installing packages as you wish without disturbing your base system environment.</p>
+
+          <p>When you have finished working on this project run:
+          <code>deactivate</code>
+          to deactivate the venv and return to the system python environment.</p>
+
+          <p>You can always boot back into the venv as you left it by running the activate command again.</p>
+
+          <h6>3) Install dependencies</h6>
+          <p>It is now time to install the dependencies for our code, for example PyTorch. The project has been packaged with a pyproject.toml so can be installed in one go.</p>
+
+          <p>From within the root directory in a active virtual environment run:
+          <code>pip install .</code>
+          This will download the relevant dependencies into the venv as well as setting up the datasets that we will be using in the course.</p>
+
+          <h6>4) Run the notebook</h6>
+          <p>From the current directory, launch the Jupyter notebook server:
+          <code>jupyter notebook</code>
+          This command should then point you to the right location within your browser to use the notebook, typically <a href="http://localhost:8888/">http://localhost:8888/</a>.</p>
+
+          <h6>Optional) Keep virtual environment persistent in Jupyter Notebooks</h6>
+
+          <p>The following step is sometimes useful if you're having trouble with your Jupyter notebook finding the virtual environment. Before launching the Jupyter notebook run:
+          <code>python -m ipykernel install --user --name=MLvenv</code></p>
+
+          <h4 id="colab">Google Colab</h4>
+          <p>To run the notebooks in Google Colab click the following links for each of the exercises:</p>
+          <ul>
+            <li><a href="https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/exercises/01_penguin_classification.ipynb">Exercise 01</a></li>
+            <li><a href="https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/exercises/02_penguin_regression.ipynb">Exercise 02</a></li>
+            <li><a href="https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/exercises/03_mnist_classification.ipynb">Exercise 03</a></li>
+            <li><a href="https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/exercises/04_ellipse_regression.ipynb">Exercise 04</a></li>
+          </ul>
+
+          <p><i>Notes:<br>
+            <indent>Running in Google Colab requires you to have a Google account.</indent>
+            <indent>If you leave a Colab session your work will be lost, so be careful to save any work you want to keep.</indent>
+          </i></p>
+
+          <h4 id="solutions">Solutions</h4>
+
+          <p>Worked solutions for all of the exercises can be found in the <inlinecode>worked-solutions/</inlinecode> directory.
+          These are for recapping after the course in case you missed anything, and contain ideal solutions complete with <a href="https://peps.python.org/pep-0257/">docstrings</a>, outfitted with <a href="https://docs.python.org/3/library/typing.html">type hints</a>, <a href="https://docs.pylint.org/intro.html">linted</a>, and conforming to the <a href="https://black.readthedocs.io/en/stable/">black</a> code style.</p>
+
+          <p>If you were working on Colab you can open the worked solutions using the following links:</p>
+
+          <ul>
+            <li><a href="https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/worked-solutions/01_penguin_classification.ipynb">Exercise 01</a></li>
+            <li><a href="https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/worked-solutions/02_penguin_regression.ipynb">Exercise 02</a></li>
+            <li><a href="https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/worked-solutions/03_mnist_classification.ipynb">Exercise 03</a></li>
+            <li><a href="https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/worked-solutions/04_ellipse_regression.ipynb">Exercise 04</a></li>
+          </ul>
+
+          <h2 id="prerequisites">Prerequisites</h2>
+          <p>To get the most out of the session we assume a basic understanding in a few areas and for you to do some preparation in advance. Expected knowledge is outlined below, along with resources for reading if you are unfamiliar.<p>
+
+          <h4>Mathematics and Machine Learning</h4>
+          <p>Basic mathematics knowledge:</p>
+          <ul>
+            <li>calculus - differentiating a function</li>
+            <li>matrix algebra - matrix multiplication and representing data as a matrix</li>
+            <li>regression - fitting a function to data</li>
+          </ul>
+
+          <p>Neural Networks:</p>
+          <ul>
+            <li>Awareness of high-level concepts</li>
+            <li>We recommend the <a href="https://www.3blue1brown.com/topics/neural-networks">video series by 3Blue1Brown</a>, at least chapters 1-3.</li>
+          </ul>
+
+          <h4>Python</h4>
+          <p>The course will be taught in python using PyTorch.<br>
+          Whilst no prior knowledge of PyTorch is expected we assume users are familiar with the basics of Python3.<br>
+          This includes:</p>
+          <ul>
+            <li>Basic mathematical operations</li>
+            <li>Writing and running scripts/programs</li>
+            <li>Writing and using functions</li>
+            <li>The concept of <a href="https://eli5.gg/Object-oriented%20programming">object orientation</a><br>i.e. that an object, e.g. a dataset, can have various functions/methods associated with it.</li>
+            <li>Basic use of the following libraries:</li>
+            <ul>
+              <li><a href="https://numpy.org/">numpy</a> for mathematical and array operations</li>
+              <li><a href="https://matplotlib.org/">matplotlib</a> for ploting and visualisation</li>
+              <li><a href="https://pandas.pydata.org/docs/getting_started/index.html">pandas</a> for storing and accessing tabular data</li>
+            </ul>
+            <li>Familiarity with the <a href="https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/index.html">concept of a jupyter notebook</a></li>
+          </ul>
+
+          <h4>git and GitHub</h4>
+          <p>Unless participating via <a href="#colab">Colab</a> you will be expected to know how to:</p>
+          <ul>
+          <li>clone and/or fork a repository,</li>
+          <li>commit, and</li>
+          <li>push.</li>
+          </ul>
+
+          <p>The <a href="https://www.youtube.com/watch?v=ZrwzK4CnJ3Q">workshop from the 2022 ICCS Summer School</a> should provide the neccessary knowledge.</p>
+
+          <h4>Preparation</h4>
+          In preparation for the course please ensure that your computer contains the following:
+          <ul>
+            <li>A text editor<br>e.g. vim/<a href="https://neovim.io/">neovim</a>, <a href="https://gedit.en.softonic.com/">gedit</a>, <a href="https://code.visualstudio.com/">vscode</a>, <a href="https://www.sublimetext.com/">sublimetext</a> etc. to open and edit code files</li>
+            <li>A terminal emulator<br>e.g. <a href="https://help.gnome.org/users/gnome-terminal/stable/">GNOME Terminal</a>, <a href="https://wezfurlong.org/wezterm/index.html">wezterm</a>, <a href="https://learn.microsoft.com/en-us/windows/terminal/">Windows Terminal</a> (Windows only), <a href="https://iterm2.com/">iTerm</a> (mac only)</li>
+            <li>python virtual environment<br>see <a href="#setup">Installation and setup</a></li>
+          </ul>
+
+          Note for Windows users:<br>
+          <indent><i><p>We have linked suitable applications for windows in the above lists.
+          <br>
+          However, you may wish to refer to <a href="https://learn.microsoft.com/en-us/windows/python/beginners">Windows' getting-started with python information</a> for a complete guide to getting set up on a Windows system.</p></i></indent>
+
+          <p>If you require assistance or further information with any of these please reach out to us before a training session.</p>
+          
+          <h2 id="license">License</h2>
+          <p>The code materials in this project are licensed under the <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a> license.</p>
+
+          <p>The teaching materials are licensed under <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.<br>
+          <img src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png"></img></p>
+
+        </div>
+      </div>
+
+      <div class="row">
+        <hr>
+      </div>
+    </div> <!-- /container -->
+    
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>This material was developed by <a href="https://jackatkinson.net/" target=blank>Jack Atkinson</a> and Jim Denholm of ICCS Cambridge<br>&copy; 2023 <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a> (code) and <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> (materials)
+</p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+  </body>
+</html>

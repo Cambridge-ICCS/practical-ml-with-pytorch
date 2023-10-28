@@ -1,0 +1,52 @@
+# workflow to build and slides to github pages
+
+name: BuildPages
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  pull_request:
+    branches: [ "main" ]
+  push:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Workflow run - one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build" that builds pages site and slides
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+      
+      - name: Render Quarto Project
+        run: |
+          cd slides
+          quarto render slides.qmd
+          quarto render applications.qmd
+          cd ../
+
+      - name: Test pages build
+        if: github.ref != 'refs/heads/main'
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: pages-test # The branch the action should deploy to.
+          folder: slides      # The folder the action should deploy.
+          dry-run: true    # Don't actually push to pages, just test if we can
+
+      - name: Deploy pages for master
+        if: github.ref == 'refs/heads/main'
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: slides   # The folder the action should deploy.

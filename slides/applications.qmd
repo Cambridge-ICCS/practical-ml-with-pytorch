@@ -20,6 +20,7 @@ authors:
     orcid: 0000-0001-5001-4812
     affiliations: ICCS/Cambridge
   - name: Jim Denholm
+    orcid: 0000-0002-2389-3134
     affiliations: Cambridge
 date: last-modified
 bibliography: references.bib
@@ -103,6 +104,15 @@ See review of @kashinath2021physics
 :::
 ::::
 
+
+## Climate Modelling
+
+Climate models are large, complex, many-part systems.
+<br>
+
+![]( Climate_Models.svg )
+
+
 ## Paramterisations {.smaller}
 
 - Parameterisations are typically expensive
@@ -120,6 +130,58 @@ See review of @kashinath2021physics
 :::
 
 
+## Machine Learning {.smaller auto-animate=true}
+
+We typically think of Deep Learning as an end-to-end process;  
+a black box with an input and an output.
+
+![]( https://3b1b-posts.us-east-1.linodeobjects.com//images/topics/neural-networks.jpg ){style="border-radius: 50%;" .absolute top=35% left=30% width=40% height=40%}
+
+![]( https://archives.bulbagarden.net/media/upload/e/e1/025Pikachu_OS_anime_4.png ){.absolute top=37.5% left=5.5% width=25%}
+[Who's that Pokémon?]{.absolute top=32.5% left=4% width=25% style="text-align:center;"}
+
+[$$\begin{bmatrix}\vdots\\a_{23}\\a_{24}\\a_{25}\\a_{26}\\a_{27}\\\vdots\\\end{bmatrix}=\begin{bmatrix}\vdots\\0\\0\\1\\0\\0\\\vdots\\\end{bmatrix}$$]{.absolute top=30% right=8.5% width=25%}
+[It's Pikachu!]{.absolute top=27.5% right=8.5% width=25% style="text-align:center;"}
+
+::: {.attribution}
+Neural Net by [3Blue1Brown]( https://www.3blue1brown.com/topics/neural-networks ) under [*fair dealing*](https://www.gov.uk/guidance/exceptions-to-copyright).  
+Pikachu &#169; *The Pokemon Company*, used under [*fair dealing*]( https://www.gov.uk/guidance/exceptions-to-copyright ).
+:::
+
+
+## Machine Learning in Science  {.smaller auto-animate=true}
+
+![]( Climate_Models.svg )
+
+![]( https://3b1b-posts.us-east-1.linodeobjects.com//images/topics/neural-networks.jpg ){style="border-radius: 50%;" .absolute bottom=5% left=56% width=25% height=25%}
+
+::: {.attribution}
+Neural Net by [3Blue1Brown]( https://www.3blue1brown.com/topics/neural-networks ) under [*fair dealing*](https://www.gov.uk/guidance/exceptions-to-copyright).  
+Pikachu &#169; *The Pokemon Company*, used under [*fair dealing*]( https://www.gov.uk/guidance/exceptions-to-copyright ).
+:::
+
+
+## Replacing physics-based components {.smaller}
+
+2 approaches: 
+
+* emulation, or
+* data-driven.
+
+Additional challenges:
+
+* Physical compatibility
+  * Physics-based models have conservation laws  
+    Required for accuracy and stability
+* Language interoperation
+
+![]( https://iccs.cam.ac.uk/sites/iccs.cam.ac.uk/files/logo2_2.png ){.absolute top=30% right=7% style="width: 15%; aspect-ratio: 1 / 1; object-fit: cover; object-position: 0 0;"}
+
+![]( https://raw.githubusercontent.com/DataWaveProject/DataWaveProject.github.io/master/static/images/logo/logo_square.png ){.absolute width=15% top=50% right=15%}
+
+![]( https://raw.githubusercontent.com/m2lines/m2lines.github.io/master/static/images/newlogo.png ){.absolute width=15% top=50% right=0%}
+
+
 ## Downscaling {.smaller}
 
 - Can we get information for _'free'_?
@@ -131,7 +193,6 @@ See review of @kashinath2021physics
 ::: {.attribution}
 Image by [Earth Lab](https://www.earthdatascience.org/courses/use-data-open-source-python/hierarchical-data-formats-hdf/intro-to-MACAv2-cmip5-data/)
 :::
-
 
 
 ## Forecasting {.smaller}
@@ -226,7 +287,7 @@ Replacing physics-based components of larger models (emulation or data-driven) r
 - Language interoperation
 - Physical compatibility
 
-![](https://upload.wikimedia.org/wikipedia/commons/5/55/Mathematical_Bridge_tangents.jpg){style="border-radius: 50%;" .absolute top=40% left=30% width=40%}
+![]( https://upload.wikimedia.org/wikipedia/commons/5/55/Mathematical_Bridge_tangents.jpg ){style="border-radius: 50%;" .absolute top=40% left=30% width=40%}
 
 ::: {.attribution}
 [Mathematical Bridge](https://en.wikipedia.org/wiki/Mathematical_Bridge)
@@ -242,12 +303,14 @@ used under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en
 
 ![](https://raw.githubusercontent.com/pytorch/pytorch/main/docs/source/_static/img/pytorch-logo-dark.png){style="background-image: radial-gradient(gray 40%, black);" .absolute top=65% left=5% width=20%}
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/TensorFlowLogo.svg/696px-TensorFlowLogo.svg.png?20180105010857){.absolute top=75% left=7.5% width=15%}
+![]( https://upload.wikimedia.org/wikipedia/commons/1/11/TensorFlowLogo.svg ){.absolute top=75% left=7.5% width=15%}
 
 
 
 
-![](https://upload.wikimedia.org/wikipedia/commons/b/b8/Fortran_logo.svg){.absolute top=50% right=10% width=10%}
+
+![]( https://raw.githubusercontent.com/fortran-lang/assets/main/fortran-logo.svg ){.absolute top=50% right=10% width=10%}
+
 
 ![](https://www.metoffice.gov.uk/binaries/content/gallery/metofficegovuk/images/about-us/website/mo_master_for_dark_backg_rbg.png){.absolute top=65% right=0% height=10%}
 
@@ -304,7 +367,7 @@ Ideally need to:
 ## Interfacing - Our Solution {.smaller}
 
 
-![](https://upload.wikimedia.org/wikipedia/commons/b/b8/Fortran_logo.svg){.absolute top=10% right=12.5% width=15%}
+![](https://raw.githubusercontent.com/fortran-lang/assets/main/fortran-logo.svg){.absolute top=10% right=12.5% width=15%}
 
 
 ![](https://www.freepngimg.com/thumb/youtube/77810-arrows-marketing-youtube-arrow-red-free-transparent-image-hq.png){.absolute top=20% right=30% width="35%" height="20%"}
@@ -506,9 +569,9 @@ TF has a weakness that prior knowledge of model structure is required.
 ## Slides
 
 These slides can be viewed at:  
-[https://cambridge-iccs.github.io/slides/ml-training/applications.html](https://cambridge-iccs.github.io/slides/ml-training/applications.html)
+[https://cambridge-iccs.github.io/ml-training-material](https://cambridge-iccs.github.io/ml-training-material)  
 
-The html and source can be found [on GitHub](https://github.com/Cambridge-ICCS/ml-training-material)
+The html and source can be found [on GitHub](https://github.com/Cambridge-ICCS/ml-training-material).
 
 
 ## Contact {.smaller}
