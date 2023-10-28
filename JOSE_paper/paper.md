@@ -325,13 +325,6 @@ We encourage anyone using this material to tailor this final set of slides
 to their own domain.
 
 
-# Summary
-
-We have developed a set of teaching materials for machine learning based on the
-PyTorch framework.
-We believe that 
-
-
 # Acknowledgments
 
 We thank anyone who has made a contribution to these materials, however small,
