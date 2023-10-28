@@ -72,7 +72,7 @@ Researchers are likely to have experience writing Python code, but not PyTorch.
 # Learning objectives
 
 The key learning objective from this workshop could be simply summarised as:  
-_'Provide participants with the ability to develop ML models in PyTorch'_.
+_"Provide participants with the ability to develop ML models in PyTorch"_.
 
 However, there are a few subtleties that we wish to highlight.
 We go beyond the ability to blindly run downloaded code to:
@@ -248,7 +248,7 @@ The course has been designed to be very flexible in terms of delivery, allowing
 it to be adapted to and reused in various setups.
 
 The main aspect we wish to emphasise in delivery is teaching via jupyter notebooks
-in a _'code-along'_ fashion.
+in a _"code-along"_ fashion.
 This helps with engagement, participation, and understanding [@barba2019teaching] and
 is essential, we feel, to having a long-lasting benefit.
 This approach slows those leading the course towards the rate at which the participants
@@ -293,7 +293,7 @@ The first time delivered in two half-day workshops, the second
 as a single one-day workshop.
 No plan survives contact with the enemy, and we found is that it is not possible to
 complete all of the material in single day.
-We chose to focus on exercises 1 and 3, with exercises 2 and 4 being 'homework'.
+We chose to focus on exercises 1 and 3, with exercises 2 and 4 being "homework".
 
 Perhaps the most notable improvement following delivery was the addition of
 Colab instances of the notebooks.
