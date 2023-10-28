@@ -55,14 +55,13 @@ In contrast, much theoretical ML material addresses high-level concepts
 without discussing coding considerations or details of how to
 actually use popular frameworks to implement the models.
 
-<!-- TODO -->
-Practical aspects can only really be learnt through trial-and-error and
-practical experience.
 Many know how ML works in an abstract sense, but will be unfamiliar with lower-level
 practicalities such as image transforms and other preprocessing techniques required
 to present data to neural networks.
 They can describe how something works, but would have no idea where to start if
 asked to do it.
+Such practical aspects are ideally learnt through trial-and-error and
+hands-on experience.
 
 Many machine learning frameworks are accessed using a Python framework.
 One such commonly used framework is [PyTorch](https://pytorch.org/) [@paszke2019pytorch].
