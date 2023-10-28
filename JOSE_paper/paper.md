@@ -331,7 +331,7 @@ We thank anyone who has made a contribution to these materials, however small,
 assisted in code review for us, or helped as demonstrators on the course.
 
 The [Institute of Computing for Climate Science](https://iccs.cam.ac.uk/)
-is funded by the Schmidt Futures Foundation.
+is funded by the [Schmidt Futures Foundation](https://www.schmidtfutures.com/).
 
 
 # References
