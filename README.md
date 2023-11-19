@@ -71,13 +71,6 @@ These are for recapping after the course in case you missed anything, and contai
 [linted](https://docs.pylint.org/intro.html), and conforming to the
 [black](https://black.readthedocs.io/en/stable/) code style.
 
-If you were working on Colab you can open the worked solutions using the following links:
-
-* [Exercise 01](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/worked-solutions/01_penguin_classification_solutions.ipynb)
-* [Exercise 02](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/worked-solutions/02_penguin_regression_solutions.ipynb)
-* [Exercise 03](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/worked-solutions/03_mnist_classification_solutions.ipynb)
-* [Exercise 04](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/worked-solutions/04_ellipse_regression_solutions.ipynb)
-
 
 ## Preparation and prerequisites
 
@@ -148,7 +141,7 @@ the repository, as it is the easiest way to keep a copy of your work and push ba
 
 However, if you experience issues with the installation process or are unfamiliar with
 the terminal/installation process there is the option to run the notebooks in
-[Google Colab](#google-colab).
+[Google Colab](#google-colab) or on [binder](#binder).
 
 ### Local Install
 
@@ -224,10 +217,10 @@ python -m ipykernel install --user --name=MLvenv
 Running on Colab is useful as it allows you to access GPU resources.  
 To run the notebooks in Google Colab click the following links for each of the exercises:
 
-* [Exercise 01](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/exercises/01_penguin_classification.ipynb)
-* [Exercise 02](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/exercises/02_penguin_regression.ipynb)
-* [Exercise 03](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/exercises/03_mnist_classification.ipynb)
-* [Exercise 04](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/exercises/04_ellipse_regression.ipynb)
+* [Exercise 01](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/exercises/01_penguin_classification.ipynb) - [Worked Solution 01](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/worked-solutions/01_penguin_classification_solutions.ipynb)
+* [Exercise 02](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/exercises/02_penguin_regression.ipynb) - [Worked Solution 02](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/worked-solutions/02_penguin_regression_solutions.ipynb)
+* [Exercise 03](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/exercises/03_mnist_classification.ipynb) - [Worked Solution 03](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/worked-solutions/03_mnist_classification_solutions.ipynb)
+* [Exercise 04](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/exercises/04_ellipse_regression.ipynb) - [Worked Solution 04](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/worked-solutions/04_ellipse_regression_solutions.ipynb)
 
 _Notes:_
 * _Running in Google Colab requires you to have a Google account._
@@ -241,8 +234,11 @@ the exercises can be launched
 [on binder](https://mybinder.org/v2/gh/Cambridge-ICCS/ml-training-material/main).
 
 _Notes:_
-* _It is not possible to save work from a binder session, so we advise using one of the above options.
-  This is an easy way to run the worked solutions, however._
+* _If you leave a binder session your work will be lost, so be careful to save any work
+  you want to keep_
+* _Due to the limited resources provided by binder you will struggle to run training in
+  exercises 3 and 4._
+
 
 ## License
 
