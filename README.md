@@ -120,13 +120,6 @@ These are for recapping after the course in case you missed anything, and contai
 [linted](https://docs.pylint.org/intro.html), and conforming to the
 [black](https://black.readthedocs.io/en/stable/) code style.
 
-If you were working on Colab you can open the worked solutions using the following links:
-
-* [Exercise 01](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/worked-solutions/01_penguin_classification_solutions.ipynb)
-* [Exercise 02](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/worked-solutions/02_penguin_regression_solutions.ipynb)
-* [Exercise 03](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/worked-solutions/03_mnist_classification_solutions.ipynb)
-* [Exercise 04](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/worked-solutions/04_ellipse_regression_solutions.ipynb)
-
 
 ## Preparation and prerequisites
 
