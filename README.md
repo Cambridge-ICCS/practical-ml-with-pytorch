@@ -215,7 +215,7 @@ python -m ipykernel install --user --name=MLvenv
 ### Google Colab
 
 Running on Colab is useful as it allows you to access GPU resources.  
-To run the notebooks in Google Colab click the following links for each of the exercises:
+To launch the notebooks in Google Colab click the following links for each of the exercises:
 
 * [Exercise 01](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/exercises/01_penguin_classification.ipynb) - [Worked Solution 01](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/worked-solutions/01_penguin_classification_solutions.ipynb)
 * [Exercise 02](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/exercises/02_penguin_regression.ipynb) - [Worked Solution 02](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/worked-solutions/02_penguin_regression_solutions.ipynb)
@@ -229,8 +229,8 @@ _Notes:_
 
 ### binder
 
-If you cannot operate using a local install, and do not wish to sign up for a Colab account,
-the exercises can be launched
+If you cannot operate using a local install, and do not wish to sign up for a Google account,
+the repository can be launched
 [on binder](https://mybinder.org/v2/gh/Cambridge-ICCS/ml-training-material/main).
 
 _Notes:_
