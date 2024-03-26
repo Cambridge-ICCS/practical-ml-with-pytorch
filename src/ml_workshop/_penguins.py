@@ -1,4 +1,5 @@
 """Penguins dataset."""
+
 from typing import Optional, List, Dict, Tuple, Any
 
 from torch.utils.data import Dataset
@@ -17,9 +18,9 @@ class PenguinDataset(Dataset):
 
     Parameters
     ----------
-    input_keys : Sequence[str]
+    input_keys : List[str]
         The column titles to use in the input feature vectors.
-    target_keys : Sequnce[str]
+    target_keys : List[str]
         The column titles to use in the target feature vectors.
     train : bool
         If ``True``, this object will serve as the training set, and if
@@ -39,7 +40,7 @@ class PenguinDataset(Dataset):
     def __init__(
         self,
         input_keys: List[str],
-        target_keys: str,
+        target_keys: List[str],
         train: bool,
         x_tfms: Optional[Compose] = None,
         y_tfms: Optional[Compose] = None,
