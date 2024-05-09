@@ -24,7 +24,6 @@ A website for this workshop can be found at [https://cambridge-iccs.github.io/ml
 - [Preparation and prerequisites](#preparation-and-prerequisites)
 - [Installation and setup](#installation-and-setup)
 - [License information](#license)
-- [Contribution Guidelines and Support](#contribution-guidelines-and-support)
 
 
 ## Learning Objectives
@@ -253,24 +252,3 @@ The teaching materials are licensed under a
 [cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
 
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-image]][cc-by-nc-sa]
-
-## Contribution Guidelines and Support
-
-If you spot an issue with the materials please let us know by
-[opening an issue](https://github.com/Cambridge-ICCS/ml-training-material/issues/new/choose)
-here on GitHub clearly describing the problem.
-
-If you are able to fix an issue that you spot, or an
-[existing open issue](https://github.com/Cambridge-ICCS/ml-training-material/issues/new/choose)
-please get in touch by commenting on the issue thread.
-
-Contributions from the community are welcome.
-To contribute back to the repository please first
-[fork it](https://github.com/Cambridge-ICCS/ml-training-material/fork),
-make the neccessary changes to fix the problem, and then open a pull request back to
-this repository clerly describing the changes you have made.
-We will then preform a review and merge once ready.
-
-If you would like support using these materials, adapting them to your needs, or
-delivering them please get in touch either via GitHub or via
-[ICCS](https://github.com/Cambridge-ICCS).
