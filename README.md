@@ -6,7 +6,6 @@
 
 ![GitHub](https://img.shields.io/github/license/Cambridge-ICCS/ml-training-material)
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Cambridge-ICCS/ml-training-material/main)
 
 This repository contains documentation, resources, and code for the Introduction to
 Machine Learning with PyTorch session designed and delivered by [Jack Atkinson](https://jackatkinson.net/) ([**@jatkinson1000**](https://github.com/jatkinson1000))
@@ -137,11 +136,10 @@ us before a training session.
 
 ## Installation and setup
 
-There are three options for participating in this workshop for which instructions are provided below:
+There are two options for participating in this workshop for which instructions are provided below:
 
 * via a [local install](#local-install)
 * on [Google Colab](#google-colab)
-* on [binder](#binder)
 
 We recommend the [local install](#local-install) approach, especially if you forked
 the repository, as it is the easiest way to keep a copy of your work and push back to GitHub.
@@ -221,7 +219,6 @@ python -m ipykernel install --user --name=MLvenv
 
 ### Google Colab
 
-Running on Colab is useful as it allows you to access GPU resources.  
 To run the notebooks in Google Colab click the following links for each of the exercises:
 
 * [Exercise 01](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/exercises/01_penguin_classification.ipynb)
@@ -234,15 +231,6 @@ _Notes:_
 * _If you leave a Colab session your work will be lost, so be careful to save any work
   you want to keep._
 
-### binder
-
-If you cannot operate using a local install, and do not wish to sign up for a Colab account,
-the exercises can be launched
-[on binder](https://mybinder.org/v2/gh/Cambridge-ICCS/ml-training-material/main).
-
-_Notes:_
-* _It is not possible to save work from a binder session, so we advise using one of the above options.
-  This is an easy way to run the worked solutions, however._
 
 ## License
 
