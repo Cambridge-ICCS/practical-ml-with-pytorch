@@ -195,7 +195,12 @@ From within the root directory in a active virtual environment run:
 ```
 pip install .
 ```
-This will download the relevant dependencies into the venv as well as setting up the datasets that we will be using in the course.
+This will download the relevant dependencies into the venv as well as setting up the
+datasets that we will be using in the course.\
+Whilst the workshop should install and run with the latest versions of python libraries,
+it has been tested with following versions for major dependencies: torch 2.0.1,
+pandas 2.1.0, palmerpenguins 0.1.4, ipykernel 6.25.2, matplotlib 3.8.0, notebook 7.0.3.
+
 
 #### 4. Run the notebook
 
