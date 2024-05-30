@@ -261,7 +261,7 @@ If you spot an issue with the materials please let us know by
 here on GitHub clearly describing the problem.
 
 If you are able to fix an issue that you spot, or an
-[existing open issue](https://github.com/Cambridge-ICCS/ml-training-material/issues/new/choose)
+[existing open issue](https://github.com/Cambridge-ICCS/ml-training-material/issues)
 please get in touch by commenting on the issue thread.
 
 Contributions from the community are welcome.
