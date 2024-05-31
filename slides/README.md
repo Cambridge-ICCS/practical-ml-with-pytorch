@@ -1,8 +1,8 @@
 # Slides
 
 The slides for this course can be viewed on the ICCS Website:
-  - [Teaching](https://cambridge-iccs.github.io/slides/ml-training/slides.html)
-  - [Climate Applications](https://cambridge-iccs.github.io/slides/ml-training/applications.html)
+  - [Teaching](https://cambridge-iccs.github.io/practical-ml-with-pytorch/slides.html)
+  - [Climate Applications](https://cambridge-iccs.github.io/practical-ml-with-pytorch/applications.html)
 
 This directory contains the source for the slides.
 They have been written in [Quarto](https://quarto.org/) markdown and rendered to html

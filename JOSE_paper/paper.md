@@ -92,7 +92,7 @@ With regards to specific ML content we cover:
 
 All of the teaching materials for this course are available online in a GitHub repository.
 In addition we have a
-[GitHub pages site](https://cambridge-iccs.github.io/ml-training-material/)
+[GitHub pages site](https://cambridge-iccs.github.io/practical-ml-with-pytorch/)
 as a central resource to point participants to.
 
 ## Slides
@@ -105,7 +105,7 @@ Source and instructions on how to render are included in the repository should
 others wish to tailor them to their specifications.
 
 The
-[first set of slides](https://cambridge-iccs.github.io/ml-training-material/slides.html)
+[first set of slides](https://cambridge-iccs.github.io/practical-ml-with-pytorch/slides.html)
 covers the machine learning content introducing deep learning
 and neural networks through the concept of optimisation and gradient descent which
 should be a familiar concept to participants.
@@ -113,7 +113,7 @@ They then cover the concept of convolutional layers as a method to
 map and abstract image-like data for use in a neural network.
 
 The
-[second set of slides](https://cambridge-iccs.github.io/ml-training-material/applications.html)
+[second set of slides](https://cambridge-iccs.github.io/practical-ml-with-pytorch/applications.html)
 contains a discussion of where machine learning has been
 deployed in the field of climate science.
 This includes domain-specific concepts to be aware of in data-preparation and deployment.

@@ -4,9 +4,9 @@
 
 # ICCS Practical Machine Learning with PyTorch
 
-![GitHub](https://img.shields.io/github/license/Cambridge-ICCS/ml-training-material)
+![GitHub](https://img.shields.io/github/license/Cambridge-ICCS/practical-ml-with-pytorch)
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Cambridge-ICCS/ml-training-material/main)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Cambridge-ICCS/practical-ml-with-pytorch/main)
 
 This repository contains documentation, resources, and code for the Introduction to
 Machine Learning with PyTorch session designed and delivered by [Jack Atkinson](https://jackatkinson.net/) ([**@jatkinson1000**](https://github.com/jatkinson1000))
@@ -15,7 +15,7 @@ The material has been delivered at both the [ICCS](https://iccs.cam.ac.uk/events
 and [NCAS](https://ncas.ac.uk/study-with-us/climate-modelling-summer-school/) summer schools.  
 All materials, including slides and videos, are available such that individuals can cover the course in their own time.
 
-A website for this workshop can be found at [https://cambridge-iccs.github.io/ml-training-material/](https://cambridge-iccs.github.io/ml-training-material/).
+A website for this workshop can be found at [https://cambridge-iccs.github.io/practical-ml-with-pytorch/](https://cambridge-iccs.github.io/practical-ml-with-pytorch/).
 
 ## Contents
 
@@ -49,8 +49,8 @@ With regards to specific ML content we cover:
 
 ### Slides
 The slides for this workshop can be viewed on the ICCS Summer School Website:
-  - [Teaching](https://cambridge-iccs.github.io/ml-training-material/slides.html)
-  - [Climate Applications](https://cambridge-iccs.github.io/ml-training-material/applications.html)
+  - [Teaching](https://cambridge-iccs.github.io/practical-ml-with-pytorch/slides.html)
+  - [Climate Applications](https://cambridge-iccs.github.io/practical-ml-with-pytorch/applications.html)
 
 The slides are generated from markdown using quarto.
 The raw markdown and html files can be found in the [slides](slides/) directory.
@@ -150,12 +150,12 @@ the terminal/installation process there is the option to run the notebooks in
 Navigate to the location you want to install this repository on your system and clone
 via https by running:
 ```
-git clone https://github.com/Cambridge-ICCS/ml-training-material.git
+git clone https://github.com/Cambridge-ICCS/practical-ml-with-pytorch.git
 ```
-This will create a directory `ml-training-material/` with the contents of this repository.
+This will create a directory `practical-ml-with-pytorch/` with the contents of this repository.
 
 Please note that if you have a GitHub account and want to preserve any work you do
-we suggest you first [fork the repository](https://github.com/Cambridge-ICCS/ml-training-material/fork) 
+we suggest you first [fork the repository](https://github.com/Cambridge-ICCS/practical-ml-with-pytorch/fork) 
 and then clone your fork.
 This will allow you to push your changes and progress from the workshop back up to your
 fork for future reference.
@@ -223,10 +223,10 @@ python -m ipykernel install --user --name=MLvenv
 Running on Colab is useful as it allows you to access GPU resources.  
 To launch the notebooks in Google Colab click the following links for each of the exercises:
 
-* [Exercise 01](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/exercises/01_penguin_classification.ipynb) - [Worked Solution 01](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/worked-solutions/01_penguin_classification_solutions.ipynb)
-* [Exercise 02](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/exercises/02_penguin_regression.ipynb) - [Worked Solution 02](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/worked-solutions/02_penguin_regression_solutions.ipynb)
-* [Exercise 03](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/exercises/03_mnist_classification.ipynb) - [Worked Solution 03](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/worked-solutions/03_mnist_classification_solutions.ipynb)
-* [Exercise 04](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/exercises/04_ellipse_regression.ipynb) - [Worked Solution 04](https://colab.research.google.com/github/Cambridge-ICCS/ml-training-material/blob/colab/worked-solutions/04_ellipse_regression_solutions.ipynb)
+* [Exercise 01](https://colab.research.google.com/github/Cambridge-ICCS/practical-ml-with-pytorch/blob/colab/exercises/01_penguin_classification.ipynb) - [Worked Solution 01](https://colab.research.google.com/github/Cambridge-ICCS/practical-ml-with-pytorch/blob/colab/worked-solutions/01_penguin_classification_solutions.ipynb)
+* [Exercise 02](https://colab.research.google.com/github/Cambridge-ICCS/practical-ml-with-pytorch/blob/colab/exercises/02_penguin_regression.ipynb) - [Worked Solution 02](https://colab.research.google.com/github/Cambridge-ICCS/practical-ml-with-pytorch/blob/colab/worked-solutions/02_penguin_regression_solutions.ipynb)
+* [Exercise 03](https://colab.research.google.com/github/Cambridge-ICCS/practical-ml-with-pytorch/blob/colab/exercises/03_mnist_classification.ipynb) - [Worked Solution 03](https://colab.research.google.com/github/Cambridge-ICCS/practical-ml-with-pytorch/blob/colab/worked-solutions/03_mnist_classification_solutions.ipynb)
+* [Exercise 04](https://colab.research.google.com/github/Cambridge-ICCS/practical-ml-with-pytorch/blob/colab/exercises/04_ellipse_regression.ipynb) - [Worked Solution 04](https://colab.research.google.com/github/Cambridge-ICCS/practical-ml-with-pytorch/blob/colab/worked-solutions/04_ellipse_regression_solutions.ipynb)
 
 _Notes:_
 * _Running in Google Colab requires you to have a Google account._
@@ -237,7 +237,7 @@ _Notes:_
 
 If you cannot operate using a local install, and do not wish to sign up for a Google account,
 the repository can be launched
-[on binder](https://mybinder.org/v2/gh/Cambridge-ICCS/ml-training-material/main).
+[on binder](https://mybinder.org/v2/gh/Cambridge-ICCS/practical-ml-with-pytorch/main).
 
 _Notes:_
 * _If you leave a binder session your work will be lost, so be careful to save any work
@@ -262,16 +262,16 @@ The teaching materials are licensed under a
 ## Contribution Guidelines and Support
 
 If you spot an issue with the materials please let us know by
-[opening an issue](https://github.com/Cambridge-ICCS/ml-training-material/issues/new/choose)
+[opening an issue](https://github.com/Cambridge-ICCS/practical-ml-with-pytorch/issues/new/choose)
 here on GitHub clearly describing the problem.
 
 If you are able to fix an issue that you spot, or an
-[existing open issue](https://github.com/Cambridge-ICCS/ml-training-material/issues)
+[existing open issue](https://github.com/Cambridge-ICCS/practical-ml-with-pytorch/issues)
 please get in touch by commenting on the issue thread.
 
 Contributions from the community are welcome.
 To contribute back to the repository please first
-[fork it](https://github.com/Cambridge-ICCS/ml-training-material/fork),
+[fork it](https://github.com/Cambridge-ICCS/practical-ml-with-pytorch/fork),
 make the neccessary changes to fix the problem, and then open a pull request back to
 this repository clerly describing the changes you have made.
 We will then preform a review and merge once ready.
