@@ -1,4 +1,5 @@
 """Ellipse-drawing dataset."""
+
 from typing import Tuple, Optional, Any
 
 from numpy.random import default_rng
