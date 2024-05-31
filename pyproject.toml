@@ -3,16 +3,21 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "ml_workshop"
-version = "0.0.0"
+name = "practical_ml_with_pytorch"
+version = "1.0.0"
 description = "ICCS ML workshop."
 authors = [
   { name="Jim Denholm", email="jd949@cam.ac.uk" },
   { name="Jack Atkinson", email="jwa34@cam.ac.uk" },
 ]
 readme = "README.md"
-license = {file = "LICENSE.md"}
+license = {file = "LICENSE"}
 requires-python = ">=3.9.10"
+classifiers = [
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
 
 dependencies = [
     "torch>=2.0",
