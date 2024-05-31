@@ -24,8 +24,6 @@ dependencies = [
     "notebook",
     "torch_tools @ git+https://github.com/jdenholm/TorchTools.git",
     "matplotlib",
-    "black",
-    "black-nb"
 ]
 
 [project.optional-dependencies]
