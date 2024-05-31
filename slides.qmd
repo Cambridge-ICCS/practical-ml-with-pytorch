@@ -410,9 +410,9 @@ $$
 ## Slides
 
 These slides can be viewed at:  
-[https://cambridge-iccs.github.io/ml-training-material](https://cambridge-iccs.github.io/ml-training-material)  
+[https://cambridge-iccs.github.io/practical-ml-with-pytorch](https://cambridge-iccs.github.io/practical-ml-with-pytorch)  
 
-The html and source can be found [on GitHub](https://github.com/Cambridge-ICCS/ml-training-material).
+The html and source can be found [on GitHub](https://github.com/Cambridge-ICCS/practical-ml-with-pytorch).
 
 
 ## Contact {.smaller}
