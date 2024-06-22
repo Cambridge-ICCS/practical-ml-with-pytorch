@@ -223,10 +223,10 @@ python -m ipykernel install --user --name=MLvenv
 Running on Colab is useful as it allows you to access GPU resources.  
 To launch the notebooks in Google Colab click the following links for each of the exercises:
 
-* [Exercise 01](https://colab.research.google.com/github/Cambridge-ICCS/practical-ml-with-pytorch/blob/colab/exercises/01_penguin_classification.ipynb) - [Worked Solution 01](https://colab.research.google.com/github/Cambridge-ICCS/practical-ml-with-pytorch/blob/colab/worked-solutions/01_penguin_classification_solutions.ipynb)
-* [Exercise 02](https://colab.research.google.com/github/Cambridge-ICCS/practical-ml-with-pytorch/blob/colab/exercises/02_penguin_regression.ipynb) - [Worked Solution 02](https://colab.research.google.com/github/Cambridge-ICCS/practical-ml-with-pytorch/blob/colab/worked-solutions/02_penguin_regression_solutions.ipynb)
-* [Exercise 03](https://colab.research.google.com/github/Cambridge-ICCS/practical-ml-with-pytorch/blob/colab/exercises/03_mnist_classification.ipynb) - [Worked Solution 03](https://colab.research.google.com/github/Cambridge-ICCS/practical-ml-with-pytorch/blob/colab/worked-solutions/03_mnist_classification_solutions.ipynb)
-* [Exercise 04](https://colab.research.google.com/github/Cambridge-ICCS/practical-ml-with-pytorch/blob/colab/exercises/04_ellipse_regression.ipynb) - [Worked Solution 04](https://colab.research.google.com/github/Cambridge-ICCS/practical-ml-with-pytorch/blob/colab/worked-solutions/04_ellipse_regression_solutions.ipynb)
+* [Exercise 01](https://colab.research.google.com/github/Cambridge-ICCS/practical-ml-with-pytorch/blob/colab/exercises/01_penguin_classification.ipynb) - [Worked Solution 01](https://colab.research.google.com/github/Cambridge-ICCS/practical-ml-with-pytorch/blob/colab/worked-solutions/01_penguin_classification.ipynb)
+* [Exercise 02](https://colab.research.google.com/github/Cambridge-ICCS/practical-ml-with-pytorch/blob/colab/exercises/02_penguin_regression.ipynb) - [Worked Solution 02](https://colab.research.google.com/github/Cambridge-ICCS/practical-ml-with-pytorch/blob/colab/worked-solutions/02_penguin_regression.ipynb)
+* [Exercise 03](https://colab.research.google.com/github/Cambridge-ICCS/practical-ml-with-pytorch/blob/colab/exercises/03_mnist_classification.ipynb) - [Worked Solution 03](https://colab.research.google.com/github/Cambridge-ICCS/practical-ml-with-pytorch/blob/colab/worked-solutions/03_mnist_classification.ipynb)
+* [Exercise 04](https://colab.research.google.com/github/Cambridge-ICCS/practical-ml-with-pytorch/blob/colab/exercises/04_ellipse_regression.ipynb) - [Worked Solution 04](https://colab.research.google.com/github/Cambridge-ICCS/practical-ml-with-pytorch/blob/colab/worked-solutions/04_ellipse_regression.ipynb)
 
 _Notes:_
 * _Running in Google Colab requires you to have a Google account._
