@@ -123,13 +123,13 @@ To make the slides available online we use a
 slides and publish them to the GitHub pages site whenever there is a push to the main
 branch.
 
-## Exercises (jupyter notebooks)
+## Exercises (Jupyter notebooks)
 
-The main material is composed of four [jupyter notebooks](https://jupyter.org/),
+The main material is composed of four [Jupyter notebooks](https://jupyter.org/),
 each containing a standalone
 exercise that takes participants through the process of developing and training
 an ML model, from data preparation and training to running inference.
-Each exercise is broken down into a number of subtasks (jupyter cells).
+Each exercise is broken down into a number of subtasks (Jupyter cells).
 
 The code has been packaged using `pyproject.toml`.
 This means that installation for use in the workshop is simplified to cloning the material repository and running:
@@ -139,7 +139,7 @@ python -m pip install .
 We advise users do this from within a
 [virtual Python environment](https://docs.python.org/3/library/venv.html),
 instructions for which are provided under 'Installation and setup'.
-From there the jupyter notebook exercises are activated from the command
+From there the Jupyter notebook exercises are activated from the command
 line with `jupyter notebook`.
 
 The first pair of exercises uses
@@ -246,7 +246,7 @@ code format, however, allowing introduction of these useful tools.
 The course has been designed to be very flexible in terms of delivery, allowing
 it to be adapted to and reused in various setups.
 
-The main aspect we wish to emphasise in delivery is teaching via jupyter notebooks
+The main aspect we wish to emphasise in delivery is teaching via Jupyter notebooks
 in a _"code-along"_ fashion.
 This helps with engagement, participation, and understanding [@barba2022teaching] and
 is essential, we feel, to having a long-lasting benefit.
