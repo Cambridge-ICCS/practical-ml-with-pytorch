@@ -156,7 +156,7 @@ can be prepared for use in training.
 ### 1) Penguin Species Classification  
 _Classification of penguin species based on other physical characteristics._  
 This exercise takes participants through the process of writing an ANN.
-The tabular data from the _palmer penguins_ dataset is read in and
+The tabular data from the _Palmer Penguins_ dataset is read in and
 transformed using idiomatic PyTorch data-loading objects
 before creating dataloaders and introducing the concepts of training and
 validation splits.
@@ -173,7 +173,7 @@ a practical manner -- a step that is often missing from ML tutorials.
 ### 2) Penguin Regression  
 _Prediction of penguin mass (regression) based on other physical characteristics._  
 The second exercise is similar to the first, using an ANN to learn from
-_palmer penguins_ data, but focusses on regression rather than classification.
+_Palmer Penguins_ data, but focusses on regression rather than classification.
 The procedure is largely the same, with a discussion around how the relevant
 features of the dataset are different to those selected in exercise 1.
 We highlight how appropriate choice of loss (objective) function allows us to leverage
@@ -248,7 +248,7 @@ it to be adapted to and reused in various setups.
 
 The main aspect we wish to emphasise in delivery is teaching via jupyter notebooks
 in a _"code-along"_ fashion.
-This helps with engagement, participation, and understanding [@barba2019teaching] and
+This helps with engagement, participation, and understanding [@barba2022teaching] and
 is essential, we feel, to having a long-lasting benefit.
 This approach slows those leading the course towards the rate at which the participants
 are working, and illustrates through errors (whether intentional or not!) that even
@@ -318,7 +318,7 @@ to previously unencountered problems.
 Finally we observe that the lecture on domain-specific applications of ML
 was effective in tying the workshop together and encouraging participants
 to consider how they might utilise ML in their own work.
-This session was followed by good questions and discussion good and illustrates how
+This session was followed by good questions and discussion, and illustrates how
 to apply what has been learnt along with domain specific things to be aware of.
 We encourage anyone using this material to tailor this final set of slides
 to their own domain.
