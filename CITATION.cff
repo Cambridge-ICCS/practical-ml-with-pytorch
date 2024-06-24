@@ -1,0 +1,37 @@
+cff-version: "1.2.0"
+authors:
+- family-names: Atkinson
+  given-names: Jack
+  orcid: "https://orcid.org/0000-0001-5001-4812"
+- family-names: Denholm
+  given-names: Jim
+  orcid: "https://orcid.org/0000-0002-2389-3134"
+contact:
+- family-names: Atkinson
+  given-names: Jack
+  orcid: "https://orcid.org/0000-0001-5001-4812"
+doi: 10.5281/zenodo.11401113
+message: If you use this software, please cite our article in the
+  Journal of Open Source Software.
+preferred-citation:
+  authors:
+  - family-names: Atkinson
+    given-names: Jack
+    orcid: "https://orcid.org/0000-0001-5001-4812"
+  - family-names: Denholm
+    given-names: Jim
+    orcid: "https://orcid.org/0000-0002-2389-3134"
+  date-published: 2024-06-23
+  doi: 10.21105/jose.00239
+  issn: 2577-3569
+  issue: 76
+  journal: Journal of Open Source Education
+  publisher:
+    name: Open Journals
+  start: 239
+  title: Practical machine learning with PyTorch
+  type: article
+  url: "https://jose.theoj.org/papers/10.21105/jose.00239"
+  volume: 7
+title: Practical machine learning with PyTorch
+
