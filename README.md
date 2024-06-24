@@ -7,6 +7,7 @@
 ![GitHub](https://img.shields.io/github/license/Cambridge-ICCS/practical-ml-with-pytorch)
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Cambridge-ICCS/practical-ml-with-pytorch/main)
+[![DOI](https://jose.theoj.org/papers/10.21105/jose.00239/status.svg)](https://doi.org/10.21105/jose.00239)
 
 This repository contains documentation, resources, and code for the Introduction to
 Machine Learning with PyTorch session designed and delivered by [Jack Atkinson](https://jackatkinson.net/) ([**@jatkinson1000**](https://github.com/jatkinson1000))
@@ -23,6 +24,7 @@ A website for this workshop can be found at [https://cambridge-iccs.github.io/pr
 - [Teaching material](#teaching-material)
 - [Preparation and prerequisites](#preparation-and-prerequisites)
 - [Installation and setup](#installation-and-setup)
+- [JOSE Publication](#jose-publication)
 - [License information](#license)
 - [Contribution Guidelines and Support](#contribution-guidelines-and-support)
 
@@ -244,6 +246,20 @@ _Notes:_
   you want to keep_
 * _Due to the limited resources provided by binder you will struggle to run training in
   exercises 3 and 4._
+
+
+## JOSE Publication
+
+This workshop has been published in JOSE, the Journal of Open Source Education with
+[DOI: 10.21105/jose.00239](https://doi.org/10.21105/jose.00239).
+The paper materials can be found in [JOSE_paper/](JOSE_paper/) directory.
+
+If you re-use or build on this material please cite this publication using the information
+in the [CITATION.cff](CITATION.cff) file.
+
+```
+@article{Atkinson2024, doi = {10.21105/jose.00239}, url = {https://doi.org/10.21105/jose.00239}, year = {2024}, publisher = {The Open Journal}, volume = {7}, number = {76}, pages = {239}, author = {Jack Atkinson and Jim Denholm}, title = {Practical machine learning with PyTorch}, journal = {Journal of Open Source Education} }
+```
 
 
 ## License
