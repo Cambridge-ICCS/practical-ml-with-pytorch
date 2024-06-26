@@ -16,7 +16,7 @@ authors:
     orcid: 0000-0001-5001-4812
     affiliations: ICCS/Cambridge
   - name: Jim Denholm
-    affiliations: AZ/Cambridge 
+    affiliations: Cambridge 
     orcid: 0000-0002-2389-3134
   - name: Matt Archer
     affiliations: ICCS/Cambridge
