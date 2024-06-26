@@ -1,6 +1,6 @@
 ---
-title: "Introduction to Machine Learning with PyTorch"
-subtitle: "NCAS & ICCS Summer Schools 2023"
+title: "Introduction to Neural Networks with PyTorch"
+subtitle: "ICCS Summer School 2024"
 format:
   revealjs:
     embed-resources: true
@@ -16,11 +16,40 @@ authors:
     orcid: 0000-0001-5001-4812
     affiliations: ICCS/Cambridge
   - name: Jim Denholm
-    affiliations: Cambridge
+    affiliations: AZ/Cambridge 
     orcid: 0000-0002-2389-3134
+  - name: Matt Archer
+    affiliations: ICCS/Cambridge
+    orcid: 0009-0002-7043-6769
+  - name: Surbhi Goel
+    affiliations: ICCS/Cambridge
+    orcid: 0009-0005-0237-756X
+  
 revealjs-plugins:
   - attribution
 ---
+
+## Rough Schedule {.smaller}
+
+:::: {.columns}
+::: {.column width=50%}
+
+* 9:00-9:30 - NN lecture
+* 9:30-10:30 - Teaching/Code-along
+* 10:30-11:00 - Coffee
+* 11:00-12:00 - Teaching/Code-along
+
+Lunch
+
+* 12:00 - 13:30
+
+::: {style="color: turquoise;"}
+Helping Today:
+
+* Person 1 - Cambridge RSE
+:::
+:::
+::::
 
 <!--
 ## NCAS School (rough) Schedule {.smaller}
