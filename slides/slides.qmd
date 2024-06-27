@@ -31,26 +31,6 @@ revealjs-plugins:
 ---
 
 
-## Material {.smaller}
-
-These slides can be viewed at:
-
-- [https://cambridge-iccs.github.io/practical-ml-with-pytorch](https://cambridge-iccs.github.io/practical-ml-with-pytorch)  
-
-The html and source can be found [on GitHub](https://github.com/Cambridge-ICCS/practical-ml-with-pytorch). Follow this link:
-
-- [https://tinyurl.com/ml-iccs-24](https://tinyurl.com/ml-iccs-24)
-
-\
-\
-Based on the workshop developed by [Jack Atkinson](https://orcid.org/0000-0001-5001-4812) and [Jim Denholm](https://orcid.org/0000-0002-2389-3134):
-
-  - [github.com/Cambridge-ICCS/practical-ml-with-pytorch](https://github.com/Cambridge-ICCS/practical-ml-with-pytorch)
-  - [LICENSE](https://github.com/Cambridge-ICCS/practical-ml-with-pytorch/blob/main/LICENSE)
-
-V1.0 released and JOSE paper accepted: 
-
-  - [@atkinson2024practical]
 
 ## Rough Schedule {.smaller}
 
@@ -74,6 +54,26 @@ Helping Today:
 :::
 ::::
 
+## Material {.smaller}
+
+These slides can be viewed at:
+
+- [https://cambridge-iccs.github.io/practical-ml-with-pytorch](https://cambridge-iccs.github.io/practical-ml-with-pytorch)  
+
+The html and source can be found [on GitHub](https://github.com/Cambridge-ICCS/practical-ml-with-pytorch). Follow this link:
+
+- [https://tinyurl.com/ml-iccs-24](https://tinyurl.com/ml-iccs-24)
+
+\
+\
+Based on the workshop developed by [Jack Atkinson](https://orcid.org/0000-0001-5001-4812) and [Jim Denholm](https://orcid.org/0000-0002-2389-3134):
+
+  - [github.com/Cambridge-ICCS/practical-ml-with-pytorch](https://github.com/Cambridge-ICCS/practical-ml-with-pytorch)
+  - [LICENSE](https://github.com/Cambridge-ICCS/practical-ml-with-pytorch/blob/main/LICENSE)
+
+V1.0 released and JOSE paper accepted: 
+
+  - [@atkinson2024practical]
 <!--
 ## NCAS School (rough) Schedule {.smaller}
 
