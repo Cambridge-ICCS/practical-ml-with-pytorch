@@ -303,7 +303,7 @@ $$a_{l+1} = \sigma \left( W_{l}a_{l} + b_{l} \right)$$
 :::
 ::::
 
-![](https://web.archive.org/web/20240102183723/https://3b1b-posts.us-east-1.linodeobjects.com//images/topics/neural-networks.jpg){style="border-radius: 50%;" .absolute top=35% left=42.5% width=65%}
+![](https://web.archive.org/web/20240102183723if_/https://3b1b-posts.us-east-1.linodeobjects.com/images/topics/neural-networks.jpg){style="border-radius: 50%;" .absolute top=35% left=42.5% width=65%}
 
 ::: {.attribution}
 Image source: [3Blue1Brown](https://www.3blue1brown.com/topics/neural-networks)
