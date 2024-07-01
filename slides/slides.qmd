@@ -1,6 +1,7 @@
 ---
-title: "Introduction to Machine Learning with PyTorch"
-subtitle: "NCAS & ICCS Summer Schools 2023"
+title: "Introduction to Neural Networks with PyTorch"
+subtitle: "ICCS Summer School 2024"
+bibliography: references.bib
 format:
   revealjs:
     embed-resources: true
@@ -12,16 +13,67 @@ format:
     theme: [dark, custom.scss]
     render-on-save: true
 authors:
-  - name: Jack Atkinson
-    orcid: 0000-0001-5001-4812
+  # - name: Jack Atkinson
+  #   orcid: 0000-0001-5001-4812
+  #   affiliations: ICCS/Cambridge
+  # - name: Jim Denholm
+  #   affiliations: Cambridge 
+  #   orcid: 0000-0002-2389-3134
+  - name: Matt Archer
     affiliations: ICCS/Cambridge
-  - name: Jim Denholm
-    affiliations: Cambridge
-    orcid: 0000-0002-2389-3134
+    orcid: 0009-0002-7043-6769
+  - name: Surbhi Goel
+    affiliations: ICCS/Cambridge
+    orcid: 0009-0005-0237-756X
+  
 revealjs-plugins:
   - attribution
 ---
 
+
+
+## Rough Schedule {.smaller}
+
+:::: {.columns}
+::: {.column width=50%}
+
+* 9:00-9:30 - NN lecture
+* 9:30-10:30 - Teaching/Code-along
+* 10:30-11:00 - Coffee
+* 11:00-12:00 - Teaching/Code-along
+
+Lunch
+
+* 12:00 - 13:30
+
+::: {style="color: turquoise;"}
+Helping Today:
+
+* Person 1 - Cambridge RSE
+:::
+:::
+::::
+
+## Material {.smaller}
+
+These slides can be viewed at:
+
+- [https://cambridge-iccs.github.io/practical-ml-with-pytorch](https://cambridge-iccs.github.io/practical-ml-with-pytorch)  
+
+The html and source can be found [on GitHub](https://github.com/Cambridge-ICCS/practical-ml-with-pytorch). Follow this link:
+
+- [https://tinyurl.com/ml-iccs-24](https://tinyurl.com/ml-iccs-24)
+
+\
+\
+Based on the workshop developed by [Jack Atkinson](https://orcid.org/0000-0001-5001-4812) and [Jim Denholm](https://orcid.org/0000-0002-2389-3134):
+
+  - [github.com/Cambridge-ICCS/practical-ml-with-pytorch](https://github.com/Cambridge-ICCS/practical-ml-with-pytorch)
+  - [LICENSE](https://github.com/Cambridge-ICCS/practical-ml-with-pytorch/blob/main/LICENSE)
+
+V1.0 released and JOSE paper accepted: 
+
+  - [@atkinson2024practical]
 <!--
 ## NCAS School (rough) Schedule {.smaller}
 
@@ -181,12 +233,12 @@ $$
 :::: {#placeholder}
 ::::
 
-$$m_{n + 1} = -m_{n}\frac{dL}{dm} \cdot l_{r}$$
+$$m_{n + 1} = m_{n} - \frac{dL}{dm} \cdot l_{r}$$
 
 :::: {#placeholder}
 ::::
 
-$$c_{n + 1} = -c_{n}\frac{dL}{dc} \cdot l_{r}$$
+$$c_{n + 1} = c_{n} - \frac{dL}{dc} \cdot l_{r}$$
 
 :::: {#placeholder}
 ::::
@@ -219,7 +271,7 @@ To fit a model we need:
 
 ## Fully-connected neural networks {.smaller}
 
-- The simplest neural networks commonly used are generally called fully-connected nerual nets, dense networks, multi-layer perceptrons, or artifical neural networks (ANNs).
+- The simplest neural networks commonly used are generally called fully-connected neural nets, dense networks, multi-layer perceptrons, or artifical neural networks (ANNs).
 
 :::: {.columns}
 ::: {.column width=40%}
@@ -255,7 +307,7 @@ Image source: [3Blue1Brown](https://www.3blue1brown.com/topics/neural-networks)
 
 # Python and PyTorch {.smaller}
 
-- In this workshop-lecture-thing, we will implement some straightforward neural networks in PyTorch, and use them for different classification and regression problems.
+- In this workshop, we will implement some straightforward neural networks in PyTorch, and use them for different classification and regression problems.
 - PyTorch is a deep learning framework that can be used in both Python and C++.
   - I have never met anyone actually training models in C++; I find it a bit weird.
 - See the PyTorch website: [https://pytorch.org/](https://pytorch.org/)
@@ -405,22 +457,46 @@ $$
 - In short, the model must learn to estimate $x_{\text{c}}$, $y_{\text{c}}$, $r_{x}$ and $r_{y}$.
 
 
-# Further information
+<!-- # Further information -->
 
-## Slides
+<!-- ## Slides
 
 These slides can be viewed at:  
 [https://cambridge-iccs.github.io/practical-ml-with-pytorch](https://cambridge-iccs.github.io/practical-ml-with-pytorch)  
 
-The html and source can be found [on GitHub](https://github.com/Cambridge-ICCS/practical-ml-with-pytorch).
+The html and source can be found [on GitHub](https://github.com/Cambridge-ICCS/practical-ml-with-pytorch). -->
 
 
 ## Contact {.smaller}
 
 For more information we can be reached at:
 
-:::: {.columns}
-::: {.column width="50%"}
+:::: {.columns style="font-size: 60%"}
+::: {.column width="25%"}
+
+{{< fa pencil >}} \ Matt Archer
+
+{{< fa solid person-digging >}} \ [ICCS/UoCambridge](https://iccs.cam.ac.uk/about-us/our-team)
+
+{{< fa solid envelope >}} \ [ma595[AT]cam.ac.uk](mailto:ma595@cam.ac.uk)
+
+{{< fa brands github >}} \ [ma595](https://github.com/ma595)
+
+:::
+
+::: {.column width="25%"}
+
+{{< fa pencil >}} \ Surbhi Goel
+
+{{< fa solid person-digging >}} \ [ICCS/UoCambridge](https://iccs.cam.ac.uk/about-us/our-team)
+
+{{< fa solid envelope >}} \ [sg2147[AT]cam.ac.uk](mailto:sg2147@cam.ac.uk)
+
+{{< fa brands github >}} \ [surbhigoel77](https://github.com/surbhigoel77)
+
+:::
+
+::: {.column width="25%"}
 
 {{< fa pencil >}} \ Jack Atkinson
 
@@ -436,7 +512,7 @@ For more information we can be reached at:
 
 :::
 
-::: {.column width="50%"}
+::: {.column width="25%"}
 
 {{< fa pencil >}} \ Jim Denholm
 
