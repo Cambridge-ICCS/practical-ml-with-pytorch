@@ -249,6 +249,24 @@ $$c_{n + 1} = c_{n} - \frac{dL}{dc} \cdot l_{r}$$
 :::
 
 
+## Cost function #1
+
+![](https://miro.medium.com/v2/resize:fit:4800/format:webp/0*fcNdB994NRWt_XZ2.gif){}
+
+::: {.attribution}
+Image source: [Coursera](https://www.coursera.org/specializations/machine-learning-introduction/?utm_medium=coursera&utm_source=home-page&utm_campaign=mlslaunch2022IN)
+:::
+
+
+## Cost function #2
+
+![](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*8Lp1VXMApbAJlfXy2zq9MA.gif){fig-align="center"}
+
+::: {.attribution}
+Image source: [Coursera](https://www.coursera.org/specializations/machine-learning-introduction/?utm_medium=coursera&utm_source=home-page&utm_campaign=mlslaunch2022IN)
+:::
+
+
 ## Quick recap {.smaller}
 
 To fit a model we need:
@@ -285,7 +303,7 @@ $$a_{l+1} = \sigma \left( W_{l}a_{l} + b_{l} \right)$$
 :::
 ::::
 
-![](https://3b1b-posts.us-east-1.linodeobjects.com//images/topics/neural-networks.jpg){style="border-radius: 50%;" .absolute top=35% left=42.5% width=65%}
+![](https://web.archive.org/web/20240102183723/https://3b1b-posts.us-east-1.linodeobjects.com//images/topics/neural-networks.jpg){style="border-radius: 50%;" .absolute top=35% left=42.5% width=65%}
 
 ::: {.attribution}
 Image source: [3Blue1Brown](https://www.3blue1brown.com/topics/neural-networks)
