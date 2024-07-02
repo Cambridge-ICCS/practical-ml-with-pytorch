@@ -77,7 +77,7 @@ V1.0 released and JOSE paper accepted:
 
 ## Learning objectives {.smaller}
 
-We hope to provide sound engineering principles:
+We hope to demonstrate sound engineering principles:
 
 - provide an understanding of the structure of a PyTorch model and ML pipeline,
 - introduce the different functionalities PyTorch might provide,
@@ -86,7 +86,7 @@ We hope to provide sound engineering principles:
 
 \
 \
-With regards to specific ML content we cover:
+With regards to specific ML content, we cover:
 
 - using ML for both classification and regression,
 - artificial neural networks (ANNs) <!-- and convolutional neural networks (CNNs) -->
