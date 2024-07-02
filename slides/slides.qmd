@@ -76,8 +76,10 @@ V1.0 released and JOSE paper accepted:
   - [@atkinson2024practical]
 
 ## Learning objectives {.smaller}
+The key learning objective from this workshop could be simply summarised as:
+*Provide the ability to develop ML models in PyTorch.*
 
-We hope to demonstrate sound engineering principles:
+Specifically: 
 
 - provide an understanding of the structure of a PyTorch model and ML pipeline,
 - introduce the different functionalities PyTorch might provide,
