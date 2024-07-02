@@ -351,6 +351,12 @@ Image source: [3Blue1Brown](https://www.3blue1brown.com/topics/neural-networks)
 - See the PyTorch website: [https://pytorch.org/](https://pytorch.org/)
 
 
+# Resources
+
+- [coursera.org/machine-learning-introduction](https://www.coursera.org/specializations/machine-learning-introduction/?utm_medium=coursera&utm_source=home-page&utm_campaign=mlslaunch2022IN)
+- [uvadlc](https://uvadlc-notebooks.readthedocs.io/en/latest/)
+- [3Blue1Brown](https://www.3blue1brown.com/topics/neural-networks)
+
 # Exercises
 
 
