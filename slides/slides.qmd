@@ -113,14 +113,29 @@ Helping Today:
 
 # Part 1: Neural-network basics -- and fun applications.
 
+## Fitting a straight line I {.smaller}
 
-## Stochastic gradient descent (SGD)
+- Consider the data:
 
-- Generally speaking, most neural networks are fit/trained using SGD (or some variant of it).
+| $x_{i}$  | $y_{i}$ |
+|:--------:|:-------:|
+| 1.0      | 2.1     |
+| 2.0      | 3.9     |
+| 3.0      | 6.2     |
+
+- Wish to fit a function to the above data. 
+$$f(x) = mx + c$$
+
+- When fitting a function, we are essentially creating a model, $f$, which describes some data, $y$.
+
+## Fitting a straight line II - SGD
+
+- Simple problems like the previous can be solved analytically. 
+- Generally speaking, most neural networks are fit/trained using Stochastic Gradient Descent (SGD) - or some variant of it. 
 - To understand how one might fit a function with SGD, let's start with a straight line: $$y=mx+c$$
 
 
-## Fitting a straight line with SGD I {.smaller}
+## Fitting a straight line III - SGD {.smaller}
 
 - **Question**---when we a differentiate a function, what do we get?
 
@@ -137,7 +152,7 @@ $$\frac{dy}{dx} = m$$
 :::
 
 
-## Fitting a straight line with SGD II {.smaller}
+## Fitting a straight line IV - SGD {.smaller}
 
 - **Answer**---a function's derivative gives a _vector_ which points in the direction of _steepest ascent_.
 
@@ -164,10 +179,9 @@ $$-\frac{dy}{dx}$$
 :::
 
 
-## Fitting a straight line with SGD III {.smaller}
+## Fitting a straight line V - Cost fn {.smaller}
 
-- When fitting a function, we are essentially creating a model, $f$, which describes some data, $y$.
-- We therefore need a way of measuring how well a model's predictions match our observations.
+- We need a way of measuring how well a model's predictions match our observations.
 
 
 ::: {.fragment .fade-in}
@@ -201,7 +215,7 @@ $$L_{\text{MSE}} = \frac{1}{n}\sum_{i=1}^{n}\left(y_{i} - f(x_{i})\right)^{2}$$
 :::
 
 
-## Fitting a straight line with SGD IV {.smaller}
+## Fitting a straight line VI {.smaller}
 
 :::: {.columns}
 ::: {.column width="45%"}
@@ -210,18 +224,18 @@ $$L_{\text{MSE}} = \frac{1}{n}\sum_{i=1}^{n}\left(y_{i} - f(x_{i})\right)^{2}$$
 
 - Data: \ $\{x_{i}, y_{i}\}$
 
-- Loss: \ $\frac{1}{n}\sum_{i=1}^{n}(y_{i} - x_{i})^{2}$
-
-:::
-::: {.column width="55%"}
-
-$$
+- Loss fn: 
+- $$
 \begin{align}
 L_{\text{MSE}} &= \frac{1}{n}\sum_{i=1}^{n}(y_{i} - f(x_{i}))^{2}\\
     &= \frac{1}{n}\sum_{i=1}^{n}(y_{i} - mx_{i} + c)^{2}
 \end{align}
 $$
+<!-- - Loss: \$\frac{1}{n}\sum_{i=1}^{n}(y_{i} - x_{i})^{2}$ -->
 
+:::
+::: {.column width="55%"}
+![](https://images.squarespace-cdn.com/content/v1/5acbdd3a25bf024c12f4c8b4/1600368657769-5BJU5FK86VZ6UXZGRC1M/Mean+Squared+Error.png?format=2500w){width=65%}
 :::
 ::::
 
@@ -233,7 +247,7 @@ $$
 :::: {#placeholder}
 ::::
 
-$$m_{n + 1} = m_{n} - \frac{dL}{dm} \cdot l_{r}$$
+$$m_{t + 1} = m_{t} - \frac{dL}{dm} \cdot l_{r}$$
 
 :::: {#placeholder}
 ::::
