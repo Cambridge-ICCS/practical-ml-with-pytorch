@@ -248,7 +248,7 @@ $$L_{\text{MSE}} = \frac{1}{n}\sum_{i=1}^{n}\left(y_{i} - f(x_{i})\right)^{2}$$
 - $$
 \begin{align}
 L_{\text{MSE}} &= \frac{1}{n}\sum_{i=1}^{n}(y_{i} - f(x_{i}))^{2}\\
-    &= \frac{1}{n}\sum_{i=1}^{n}(y_{i} - mx_{i} + c)^{2}
+    &= \frac{1}{n}\sum_{i=1}^{n}(y_{i} - mx_{i} - c)^{2}
 \end{align}
 $$
 <!-- - Loss: \$\frac{1}{n}\sum_{i=1}^{n}(y_{i} - x_{i})^{2}$ -->
@@ -365,7 +365,7 @@ Image source: [3Blue1Brown](https://www.3blue1brown.com/topics/neural-networks)
 - See the PyTorch website: [https://pytorch.org/](https://pytorch.org/)
 
 
-# Resources
+# Other resources
 
 - [coursera.org/machine-learning-introduction](https://www.coursera.org/specializations/machine-learning-introduction/?utm_medium=coursera&utm_source=home-page&utm_campaign=mlslaunch2022IN)
 - [uvadlc](https://uvadlc-notebooks.readthedocs.io/en/latest/)
@@ -395,124 +395,127 @@ Image source: [Palmer Penguins by Alison Horst](https://allisonhorst.github.io/p
 - [https://github.com/allisonhorst/palmerpenguins](https://github.com/allisonhorst/palmerpenguins)
 
 
-# Part 2: Fun with CNNs
-
-
-## Convolutional neural networks (CNNs): why? {.smaller}
-
-Advantages over simple ANNs:
-
-- They require far fewer parameters per layer.
-  - The forward pass of a conv layer involves running a filter of fixed size over the inputs.
-  - The number of parameters per layer _does not_ depend on the input size.
-- They are a much more natural choice of function for *image-like* data:
-
-:::: {.columns}
-::: {.column width=10%}
-:::
-::: {.column width=35%}
-
-![](https://machinelearningmastery.com/wp-content/uploads/2019/03/Plot-of-the-First-Nine-Photos-of-Dogs-in-the-Dogs-vs-Cats-Dataset.png)
-
-:::
-::: {.column width=10%}
-:::
-::: {.column width=35%}
-
-![](https://machinelearningmastery.com/wp-content/uploads/2019/03/Plot-of-the-First-Nine-Photos-of-Cats-in-the-Dogs-vs-Cats-Dataset.png)
-
-:::
-::::
-
-::: {.attribution}
-Image source: [Machine Learning Mastery](https://machinelearningmastery.com/how-to-develop-a-convolutional-neural-network-to-classify-photos-of-dogs-and-cats/)
-:::
-
-
-## Convolutional neural networks (CNNs): why? {.smaller}
-
-Some other points:
-
-- Convolutional layers are translationally invariant:
-  - i.e. they don't care _where_ the "dog" is in the image.
-- Convolutional layers are _not_ rotationally invariant.
-  - e.g. a model trained to detect correctly-oriented human faces will likely fail on upside-down images
-  - We can address this with data augmentation (explored in exercises).
-
-
-## What is a (1D) convolutional layer? {.smaller}
-
-![](1d-conv.png)
-
-See the [`torch.nn.Conv1d` docs](https://pytorch.org/docs/stable/generated/torch.nn.Conv1d.html)
-
-
-## 2D convolutional layer {.smaller}
-
-- Same idea as in on dimension, but in two (funnily enough).
-
-![](2d-conv.png)
-
-- Everthing else proceeds in the same way as with the 1D case.
-- See the [`torch.nn.Conv2d` docs](https://pytorch.org/docs/stable/generated/torch.nn.Conv2d.html).
-- As with Linear layers, Conv2d layers also have non-linear activations applied to them.
-
-
-## Typical CNN overview {.smaller}
-
-::: {layout="[ 0.5, 0.5 ]"}
-
-![](https://miro.medium.com/v2/resize:fit:1162/format:webp/1*tvwYybdIwvoOs0DuUEJJTg.png)
-
-- Series of conv layers extract features from the inputs.
-  - Often called an encoder.
-- Adaptive pooling layer:
-  - Image-like objects $\to$ vectors.
-  - Standardises size.
-  - [``torch.nn.AdaptiveAvgPool2d``](https://pytorch.org/docs/stable/generated/torch.nn.AdaptiveAvgPool2d.html)
-  - [``torch.nn.AdaptiveMaxPool2d``](https://pytorch.org/docs/stable/generated/torch.nn.AdaptiveMaxPool2d.html)
-- Classification (or regression) head.
-
-:::
-
-- For common CNN architectures see [``torchvision.models`` docs](https://pytorch.org/vision/stable/models.html).
-
-::: {.attribution}
-Image source: [medium.com - binary image classifier cnn using tensorflow](https://medium.com/techiepedia/binary-image-classifier-cnn-using-tensorflow-a3f5d6746697)
-:::
-
-
-# Exercises
-
-## Exercise 1 -- classification
-
-### MNIST hand-written digits.
-
-::: {layout="[ 0.5, 0.5 ]"}
-
-![](https://i.ytimg.com/vi/0QI3xgXuB-Q/hqdefault.jpg)
-
-- In this exercise we'll train a CNN to classify hand-written digits in the MNIST dataset.
-- See the [MNIST database wiki](https://en.wikipedia.org/wiki/MNIST_database) for more details.
-
-:::
-
-::: {.attribution}
-Image source: [npmjs.com](https://www.npmjs.com/package/mnist)
-:::
 
 
 
-## Exercise 2---regression
-### Random ellipse problem
+<!-- # Part 2: Fun with CNNs -->
 
-- In this exercise, we'll train a CNN to estimate the centre $(x_{\text{c}}, y_{\text{c}})$ and the $x$ and $y$ radii of an ellipse defined by
-$$
-\frac{(x - x_{\text{c}})^{2}}{r_{x}^{2}} + \frac{(y - y_{\text{c}})^{2}}{r_{y}^{2}} = 1
-$$
 
-- The ellipse, and its background, will have random colours chosen uniformly on $\left[0,\ 255\right]^{3}$.
-- In short, the model must learn to estimate $x_{\text{c}}$, $y_{\text{c}}$, $r_{x}$ and $r_{y}$.
+<!-- ## Convolutional neural networks (CNNs): why? {.smaller} -->
+
+<!-- Advantages over simple ANNs: -->
+
+<!-- - They require far fewer parameters per layer. -->
+<!--   - The forward pass of a conv layer involves running a filter of fixed size over the inputs. -->
+<!--   - The number of parameters per layer _does not_ depend on the input size. -->
+<!-- - They are a much more natural choice of function for *image-like* data: -->
+
+<!-- :::: {.columns} -->
+<!-- ::: {.column width=10%} -->
+<!-- ::: -->
+<!-- ::: {.column width=35%} -->
+
+<!-- ![](https://machinelearningmastery.com/wp-content/uploads/2019/03/Plot-of-the-First-Nine-Photos-of-Dogs-in-the-Dogs-vs-Cats-Dataset.png) -->
+
+<!-- ::: -->
+<!-- ::: {.column width=10%} -->
+<!-- ::: -->
+<!-- ::: {.column width=35%} -->
+
+<!-- ![](https://machinelearningmastery.com/wp-content/uploads/2019/03/Plot-of-the-First-Nine-Photos-of-Cats-in-the-Dogs-vs-Cats-Dataset.png) -->
+
+<!-- ::: -->
+<!-- :::: -->
+
+<!-- ::: {.attribution} -->
+<!-- Image source: [Machine Learning Mastery](https://machinelearningmastery.com/how-to-develop-a-convolutional-neural-network-to-classify-photos-of-dogs-and-cats/) -->
+<!-- ::: -->
+
+
+<!-- ## Convolutional neural networks (CNNs): why? {.smaller} -->
+
+<!-- Some other points: -->
+
+<!-- - Convolutional layers are translationally invariant: -->
+<!--   - i.e. they don't care _where_ the "dog" is in the image. -->
+<!-- - Convolutional layers are _not_ rotationally invariant. -->
+<!--   - e.g. a model trained to detect correctly-oriented human faces will likely fail on upside-down images -->
+<!--   - We can address this with data augmentation (explored in exercises). -->
+
+
+<!-- ## What is a (1D) convolutional layer? {.smaller} -->
+
+<!-- ![](1d-conv.png) -->
+
+<!-- See the [`torch.nn.Conv1d` docs](https://pytorch.org/docs/stable/generated/torch.nn.Conv1d.html) -->
+
+
+<!-- ## 2D convolutional layer {.smaller} -->
+
+<!-- - Same idea as in on dimension, but in two (funnily enough). -->
+
+<!-- ![](2d-conv.png) -->
+
+<!-- - Everthing else proceeds in the same way as with the 1D case. -->
+<!-- - See the [`torch.nn.Conv2d` docs](https://pytorch.org/docs/stable/generated/torch.nn.Conv2d.html). -->
+<!-- - As with Linear layers, Conv2d layers also have non-linear activations applied to them. -->
+
+
+<!-- ## Typical CNN overview {.smaller} -->
+
+<!-- ::: {layout="[ 0.5, 0.5 ]"} -->
+
+<!-- ![](https://miro.medium.com/v2/resize:fit:1162/format:webp/1*tvwYybdIwvoOs0DuUEJJTg.png) -->
+
+<!-- - Series of conv layers extract features from the inputs. -->
+<!--   - Often called an encoder. -->
+<!-- - Adaptive pooling layer: -->
+<!--   - Image-like objects $\to$ vectors. -->
+<!--   - Standardises size. -->
+<!--   - [``torch.nn.AdaptiveAvgPool2d``](https://pytorch.org/docs/stable/generated/torch.nn.AdaptiveAvgPool2d.html) -->
+<!--   - [``torch.nn.AdaptiveMaxPool2d``](https://pytorch.org/docs/stable/generated/torch.nn.AdaptiveMaxPool2d.html) -->
+<!-- - Classification (or regression) head. -->
+
+<!-- ::: -->
+
+<!-- - For common CNN architectures see [``torchvision.models`` docs](https://pytorch.org/vision/stable/models.html). -->
+
+<!-- ::: {.attribution} -->
+<!-- Image source: [medium.com - binary image classifier cnn using tensorflow](https://medium.com/techiepedia/binary-image-classifier-cnn-using-tensorflow-a3f5d6746697) -->
+<!-- ::: -->
+
+
+<!-- # Exercises -->
+
+<!-- ## Exercise 1 -- classification -->
+
+<!-- ### MNIST hand-written digits. -->
+
+<!-- ::: {layout="[ 0.5, 0.5 ]"} -->
+
+<!-- ![](https://i.ytimg.com/vi/0QI3xgXuB-Q/hqdefault.jpg) -->
+
+<!-- - In this exercise we'll train a CNN to classify hand-written digits in the MNIST dataset. -->
+<!-- - See the [MNIST database wiki](https://en.wikipedia.org/wiki/MNIST_database) for more details. -->
+
+<!-- ::: -->
+
+<!-- ::: {.attribution} -->
+<!-- Image source: [npmjs.com](https://www.npmjs.com/package/mnist) -->
+<!-- ::: -->
+
+
+
+<!-- ## Exercise 2---regression -->
+<!-- ### Random ellipse problem -->
+
+<!-- - In this exercise, we'll train a CNN to estimate the centre $(x_{\text{c}}, y_{\text{c}})$ and the $x$ and $y$ radii of an ellipse defined by -->
+<!-- $$ -->
+<!-- \frac{(x - x_{\text{c}})^{2}}{r_{x}^{2}} + \frac{(y - y_{\text{c}})^{2}}{r_{y}^{2}} = 1 -->
+<!-- $$ -->
+
+<!-- - The ellipse, and its background, will have random colours chosen uniformly on $\left[0,\ 255\right]^{3}$. -->
+<!-- - In short, the model must learn to estimate $x_{\text{c}}$, $y_{\text{c}}$, $r_{x}$ and $r_{y}$. -->
 
 
 <!-- # Further information -->
