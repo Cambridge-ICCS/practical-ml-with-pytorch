@@ -75,52 +75,6 @@ These are for recapping after the course in case you missed anything, and contai
 [black](https://black.readthedocs.io/en/stable/) code style.
 
 
-## Learning Objectives
-The key learning objective from this workshop could be simply summarised as:  
-_Provide the ability to develop ML models in PyTorch_.
-
-However, more specifically we aim to:
-
-* provide an understanding of the structure of a PyTorch model and ML pipeline,
-* introduce the different functionalities PyTorch might provide,
-* encourage good research software engineering (RSE) practice, and
-* exercise careful consideration and understanding of data used for training ML models.
-
-With regards to specific ML content we cover:
-
-* using ML for both classification and regression,
-* artificial neural networks (ANNs) and convolutional neural networks (CNNs)
-* treatment of both tabular and image data
-
-
-## Teaching Material
-
-### Slides
-The slides for this workshop can be viewed on the ICCS Summer School Website:
-  - [Teaching](https://cambridge-iccs.github.io/ml-training-material/slides.html)
-  - [Climate Applications](https://cambridge-iccs.github.io/ml-training-material/applications.html)
-
-The slides are generated from markdown using quarto.
-The raw markdown and html files can be found in the [slides](slides/) directory.
-
-### Exercises
-The exercises for the course can be found in the [exercises](exercises/) directory.  
-These take the form of partially complete jupyter notebooks.
-
-### Videos
-Videos from past workshops may be useful if you are following along independently.  
-These can be found on the [ICCS youtube channel](https://www.youtube.com/@instituteofcomputingforcli3982) 
-under the 2023 Summer School materials.
-
-### Worked Solutions
-Worked solutions for all of the exercises can be found in the [worked solutions](worked-solutions/) directory.  
-These are for recapping after the course in case you missed anything, and contain ideal solutions complete with
-[docstrings](https://peps.python.org/pep-0257/), outfitted with
-[type hints](https://docs.python.org/3/library/typing.html),
-[linted](https://docs.pylint.org/intro.html), and conforming to the
-[black](https://black.readthedocs.io/en/stable/) code style.
-
-
 ## Preparation and prerequisites
 
 To get the most out of the session we assume a basic understanding in a few areas and 
