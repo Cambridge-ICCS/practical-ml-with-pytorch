@@ -1,6 +1,6 @@
 ---
-title: "Introduction to Machine Learning with PyTorch"
-subtitle: "NCAS & ICCS Summer Schools 2023"
+title: "Introduction to Neural Networks with PyTorch"
+subtitle: "ICCS Summer School 2024"
 format:
   revealjs:
     embed-resources: true
@@ -12,12 +12,12 @@ format:
     theme: [dark, custom.scss]
     render-on-save: true
 authors:
-  - name: Jack Atkinson
-    orcid: 0000-0001-5001-4812
+  - name: Matt Archer
+    orcid: 0009-0002-7043-6769
     affiliations: ICCS/Cambridge
-  - name: Jim Denholm
-    affiliations: Cambridge
-    orcid: 0000-0002-2389-3134
+  - name: Surbhi Goel
+    affiliations: ICCS/Cambridge
+    orcid: 0009-0005-0237-756X
 revealjs-plugins:
   - attribution
 ---
@@ -60,6 +60,17 @@ Helping Today:
 -->
 
 # Part 1: Neural-network basics -- and fun applications.
+
+## Machine learning
+
+- Machine learns underlying patterns and relations in given data to produce an output.
+
+- Machine learning is accomplished by learning a mathematical function that can represent the data. 
+
+
+## Types of Machine learning
+
+- Learning can be supervised, unsupervised, semi-supervised, self-supervised, reinforcement etc. depending on the task in hand.   
 
 
 ## Stochastic gradient descent (SGD)
@@ -253,12 +264,50 @@ Image source: [3Blue1Brown](https://www.3blue1brown.com/topics/neural-networks)
 :::
 
 
+## The Learning process summarised
+
+![](ModelLearning.png)
+
 # Python and PyTorch {.smaller}
 
 - In this workshop-lecture-thing, we will implement some straightforward neural networks in PyTorch, and use them for different classification and regression problems.
 - PyTorch is a deep learning framework that can be used in both Python and C++.
   - I have never met anyone actually training models in C++; I find it a bit weird.
 - See the PyTorch website: [https://pytorch.org/](https://pytorch.org/)
+
+
+
+## Getting to the Exercise
+ *Github Repository Cloning*
+
+- Navigate to 
+[https://tinyurl.com/ml-iccs-24](https://tinyurl.com/ml-iccs-24)
+- Go to terminal and type in the below command
+- `git clone https://github.com/Cambridge-ICCS/practical-ml-with-pytorch`
+
+## Using online platform
+*Using Colab*
+
+`https://tinyurl.com/4arrjjt5`
+
+*Using Jupyter Notebook*
+
+- Download the repo from the [https://tinyurl.com/ml-iccs-24](https://tinyurl.com/ml-iccs-24)
+- `cd <path_to_your_repo>`
+- `jupyter notebook`
+
+## Creating virtual environement
+*Installing with venv*
+
+- `python3 -m venv venv`
+- `source venv/bin/activate`
+
+*Installing with conda*
+
+- `conda create -n ml-workshop "python>=3.9.10"`
+- `conda activate ml-workshop`
+- `cd practical-ml-with-PyTorch`
+- `pip install . `
 
 
 # Exercises
