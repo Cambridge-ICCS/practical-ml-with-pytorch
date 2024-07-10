@@ -42,17 +42,13 @@ revealjs-plugins:
 * 10:30-11:00 - Coffee
 * 11:00-12:00 - Teaching/Code-along
 
-Lunch
+Lunch @ Churchill college 
 
 * 12:00 - 13:30
 
-::: {style="color: turquoise;"}
-Helping Today:
-
-* Person 1 - Cambridge RSE
-:::
 :::
 ::::
+
 
 ## Material {.smaller}
 
