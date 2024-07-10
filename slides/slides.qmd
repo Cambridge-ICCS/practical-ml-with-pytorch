@@ -131,9 +131,7 @@ Helping Today:
 
 ## Machine learning
 
-- Machine learns underlying patterns and relations in given data to produce an output.
-
-- Machine learning is accomplished by learning a mathematical function that can represent the data.
+- Machine learning is accomplished by learning a function that can represent the data.
 
 - Learning can be supervised, unsupervised, semi-supervised, self-supervised, reinforcement etc. 
 
