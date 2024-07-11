@@ -129,6 +129,12 @@ Helping Today:
 
 # Part 1: Neural-network basics -- and fun applications.
 
+## Machine learning
+
+- Machine learning is accomplished by learning a function that can represent the data.
+
+- Learning can be supervised, unsupervised, semi-supervised, self-supervised, reinforcement etc. 
+
 ## Fitting a straight line I {.smaller}
 
 - Consider the data:
@@ -359,6 +365,39 @@ Image source: [3Blue1Brown](https://www.3blue1brown.com/topics/neural-networks)
 - PyTorch is a deep learning framework that can be used in both Python and C++.
   - I have never met anyone actually training models in C++; I find it a bit weird.
 - See the PyTorch website: [https://pytorch.org/](https://pytorch.org/)
+
+## Getting to the Exercise
+ *Github Repository Cloning*
+
+- Navigate to 
+[https://tinyurl.com/ml-iccs-24](https://tinyurl.com/ml-iccs-24)
+- Go to terminal and type in the below command
+- `git clone https://github.com/Cambridge-ICCS/practical-ml-with-pytorch`
+
+## Using online platform
+*Using Colab*
+
+`https://tinyurl.com/4arrjjt5`
+
+*Using Jupyter Notebook*
+
+- Download the repo from the [https://tinyurl.com/ml-iccs-24](https://tinyurl.com/ml-iccs-24)
+- `cd <path_to_the_repo>`
+- `jupyter notebook`
+- exercises/01_penguin_classification.ipynb
+
+## Creating virtual environment
+*Installing with venv*
+
+- `python3 -m venv venv`
+- `source venv/bin/activate`
+
+*Installing with conda*
+
+- `conda create -n ml-workshop "python>=3.9.10"`
+- `conda activate ml-workshop`
+- `cd practical-ml-with-PyTorch`
+`pip install . `
 
 
 # Other resources
