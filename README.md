@@ -288,8 +288,8 @@ please get in touch by commenting on the issue thread.
 Contributions from the community are welcome.
 To contribute back to the repository please first
 [fork it](https://github.com/Cambridge-ICCS/practical-ml-with-pytorch/fork),
-make the neccessary changes to fix the problem, and then open a pull request back to
-this repository clerly describing the changes you have made.
+make the necessary changes to fix the problem, and then open a pull request back to
+this repository clearly describing the changes you have made.
 We will then preform a review and merge once ready.
 
 If you would like support using these materials, adapting them to your needs, or
