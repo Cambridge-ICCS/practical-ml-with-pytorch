@@ -74,6 +74,26 @@ Based on the workshop developed by [Jack Atkinson](https://orcid.org/0000-0001-5
 V1.0 released and JOSE paper accepted: 
 
   - [@atkinson2024practical]
+
+## Learning objectives {.smaller}
+The key learning objective from this workshop could be simply summarised as:
+*Provide the ability to develop ML models in PyTorch.*
+
+Specifically: 
+
+- provide an understanding of the structure of a PyTorch model and ML pipeline,
+- introduce the different functionalities PyTorch might provide,
+- encourage good research software engineering (RSE) practice, and
+- exercise careful consideration and understanding of data used for training ML models.
+
+\
+\
+With regards to specific ML content, we cover:
+
+- using ML for both classification and regression,
+- artificial neural networks (ANNs) and convolutional neural networks (CNNs)
+- treatment of tabular data and image data
+
 <!--
 ## NCAS School (rough) Schedule {.smaller}
 
