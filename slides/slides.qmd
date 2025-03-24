@@ -91,8 +91,8 @@ Specifically:
 With regards to specific ML content, we cover:
 
 - using ML for both classification and regression,
-- artificial neural networks (ANNs) <!-- and convolutional neural networks (CNNs) -->
-- treatment of tabular data <!-- and image data -->
+- artificial neural networks (ANNs) and convolutional neural networks (CNNs)
+- treatment of tabular data and image data
 
 <!--
 ## NCAS School (rough) Schedule {.smaller}
