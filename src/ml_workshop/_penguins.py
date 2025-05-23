@@ -28,7 +28,7 @@ class PenguinDataset(Dataset):
     x_tfms : Compose, optional
         A composition of transforms to apply to the inputs.
     y_tfms : Compose, optional
-        A composition of transfroms to apply to the targets.
+        A composition of transforms to apply to the targets.
 
     Notes
     -----
