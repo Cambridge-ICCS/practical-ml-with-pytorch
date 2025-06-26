@@ -11,7 +11,7 @@
 
 This repository contains documentation, resources, and code for the Introduction to
 Machine Learning with PyTorch session designed and delivered by [Jack Atkinson](https://jackatkinson.net/) ([**@jatkinson1000**](https://github.com/jatkinson1000)),
-Matt Archer [@ma595](https://github.com/ma595), and Jim Denholm ([**@jdenholm**](https://github.com/jdenholm)) of [ICCS](https://github.com/Cambridge-ICCS).  
+Matt Archer [**@ma595**](https://github.com/ma595), and Jim Denholm ([**@jdenholm**](https://github.com/jdenholm)) of [ICCS](https://github.com/Cambridge-ICCS).  
 The material has been delivered at both the [ICCS](https://iccs.cam.ac.uk/events/iccs-summer-school-2023) 
 and [NCAS](https://ncas.ac.uk/study-with-us/climate-modelling-summer-school/) summer schools.  
 All materials, including slides and videos, are available such that individuals can cover the course in their own time.
