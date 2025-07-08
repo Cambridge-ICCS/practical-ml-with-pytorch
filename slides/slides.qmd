@@ -1,6 +1,6 @@
 ---
 title: "Introduction to Neural Networks with PyTorch"
-subtitle: "ICCS Summer School 2024"
+subtitle: "ICCS Summer School 2025"
 bibliography: references.bib
 format:
   revealjs:
@@ -22,9 +22,8 @@ authors:
   - name: Matt Archer
     affiliations: ICCS/Cambridge
     orcid: 0009-0002-7043-6769
-  - name: Surbhi Goel
+  - name: Isaac Akanho
     affiliations: ICCS/Cambridge
-    orcid: 0009-0005-0237-756X
   
 revealjs-plugins:
   - attribution
@@ -37,19 +36,18 @@ revealjs-plugins:
 :::: {.columns}
 ::: {.column width=50%}
 
-* 9:00-9:30 - NN lecture
+### Wednesday
+* 9:30-10:00 - NN lecture
+* 10:00-10:30 - Teaching/Code-along
+* 13:30-15:00 - Teaching/Code-along
+
+
+### Thursday
+
 * 9:30-10:30 - Teaching/Code-along
-* 10:30-11:00 - Coffee
-* 11:00-12:00 - Teaching/Code-along
-
-Lunch
-
-* 12:00 - 13:30
 
 ::: {style="color: turquoise;"}
-Helping Today:
 
-* Person 1 - Cambridge RSE
 :::
 :::
 ::::
@@ -189,39 +187,33 @@ $$-\frac{dy}{dx}$$
 - When fitting a function, we are essentially creating a model, $f$, which describes some data, $y$.
 - We therefore need a way of measuring how well a model's predictions match our observations.
 
+## Fitting a straight line with SGD IV {.smaller}
 
-::: {.fragment .fade-in}
 
-:::: {.columns}
-::: {.column width="30%"}
+![](error-line.png)
 
-- Consider the data:
+- We can measure the distance between $f(x_{i})$ and $y_{i}$.
+
+
+<!-- :::: {.columns} -->
+<!-- ::: {.column width="30%"} -->
+
+<!-- - Consider the data:
 
 | $x_{i}$  | $y_{i}$ |
 |:--------:|:-------:|
 | 1.0      | 2.1     |
 | 2.0      | 3.9     |
-| 3.0      | 6.2     |
+| 3.0      | 6.2     | -->
 
-:::
-::: {.column width="70%"}
-- We can measure the distance between $f(x_{i})$ and $y_{i}$.
+## Fitting a straight line with SGD V {.smaller}
+
+
+<!-- ::: {.column width="70%"} -->
+
 - Normally we might consider the mean-squared error:
 
 $$L_{\text{MSE}} = \frac{1}{n}\sum_{i=1}^{n}\left(y_{i} - f(x_{i})\right)^{2}$$
-
-:::
-::::
-
-:::
-
-::: {.fragment .fade-in}
-- We can differentiate the loss function w.r.t. to each parameter in the the model $f$.
-- We can use these directions of steepest descent to iteratively 'nudge' the parameters in a direction which will reduce the loss.
-:::
-
-
-## Fitting a straight line with SGD IV {.smaller}
 
 :::: {.columns}
 ::: {.column width="45%"}
@@ -233,19 +225,43 @@ $$L_{\text{MSE}} = \frac{1}{n}\sum_{i=1}^{n}\left(y_{i} - f(x_{i})\right)^{2}$$
 - Loss: \ $\frac{1}{n}\sum_{i=1}^{n}(y_{i} - x_{i})^{2}$
 
 :::
-::: {.column width="55%"}
 
+::: {.column width="55%"} 
+
+- We can differentiate the loss function w.r.t. to each parameter in the the model $f$.
 $$
 \begin{align}
 L_{\text{MSE}} &= \frac{1}{n}\sum_{i=1}^{n}(y_{i} - f(x_{i}))^{2}\\
     &= \frac{1}{n}\sum_{i=1}^{n}(y_{i} - mx_{i} + c)^{2}
 \end{align}
 $$
-
 :::
 ::::
 
-::: {.fragment .fade-in}
+
+####
+
+## Fitting a straight line with SGD VI {.smaller}
+
+- Differential:
+
+$$
+\frac{\partial L}{\partial m}
+\;=\;
+\frac{1}{n}\sum_{i=1}^{n} 2\bigl(m\,x_{i}+c-y_{i}\bigr)\,x_{i}.
+$$
+
+$$
+\frac{\partial L}{\partial c}
+\;=\;
+\frac{1}{n}\sum_{i=1}^{n} 2\bigl(m\,x_{i}+c-y_{i}\bigr).
+$$
+
+- This gradient is used to find the parameters that **minimise the loss**, thereby reducing overall error.
+
+
+## Update Rule
+
 - We can iteratively minimise the loss by stepping the model's parameters in the direction of steepest descent:
 
 ::: {layout="[0.5, 1, 0.5, 1, 0.5]"}
@@ -266,7 +282,6 @@ $$c_{n + 1} = c_{n} - \frac{dL}{dc} \cdot l_{r}$$
 :::
 
 - where $l_{\text{r}}$ is a small constant known as the _learning rate_.
-:::
 
 
 ## Quick recap {.smaller}
@@ -305,7 +320,7 @@ $$a_{l+1} = \sigma \left( W_{l}a_{l} + b_{l} \right)$$
 :::
 ::::
 
-![](https://3b1b-posts.us-east-1.linodeobjects.com//images/topics/neural-networks.jpg){style="border-radius: 50%;" .absolute top=35% left=42.5% width=65%}
+![](https://web.archive.org/web/20230105124836if_/https://3b1b-posts.us-east-1.linodeobjects.com//images/topics/neural-networks.jpg){style="border-radius: 50%;" .absolute top=35% left=42.5% width=65%}
 
 ::: {.attribution}
 Image source: [3Blue1Brown](https://www.3blue1brown.com/topics/neural-networks)
@@ -329,8 +344,177 @@ Image source: [3Blue1Brown](https://www.3blue1brown.com/topics/neural-networks)
 
 - In this workshop, we will implement some straightforward neural networks in PyTorch, and use them for different classification and regression problems.
 - PyTorch is a deep learning framework that can be used in both Python and C++.
-  - I have never met anyone actually training models in C++; I find it a bit weird.
+- There are other frameworks like Jax, Tensorflow, PyTorch Lightning
 - See the PyTorch website: [https://pytorch.org/](https://pytorch.org/)
+
+# Datasets, DataLoaders & `nn.Module`
+
+
+---
+
+## What a `Dataset` class does
+
+- Provides a **uniform API** to your data
+- Handles
+  - **Loading** raw files (images, CSVs, audio …)
+  - **Train / validation / test** split logic
+  - **Transforms / augmentation** per item
+  - **Item retrieval** so the rest of PyTorch can stay agnostic
+
+---
+
+## Anatomy of a custom `Dataset`
+
+```python
+class MyDataset(torch.utils.data.Dataset):
+    def __init__(self, root_dir, split="train", transform=None):
+        # 1️ load or download files / labels
+        self.paths, self.labels = load_index_file(root_dir, split)
+        self.transform = transform  # 2️ save transforms
+```
+
+*The constructor is where you gather file paths, download archives, read CSVs, etc.*
+
+---
+
+## `__len__` & `__getitem__`
+
+```python
+    def __len__(self):
+        return len(self.paths)      # total #samples
+
+    def __getitem__(self, idx):
+        img = PIL.Image.open(self.paths[idx]).convert("RGB")
+        if self.transform:          # 3️ apply transforms
+            img = self.transform(img)
+        label = self.labels[idx]
+        return img, label           # 4️ single example
+```
+
+With these two methods PyTorch knows **how big** the dataset is and **how to fetch** one record.
+
+---
+
+## Using the custom dataset
+
+```python
+from torchvision import transforms
+
+train_ds = MyDataset(
+    "data/cats_vs_dogs",
+    split="train",
+    transform=transforms.ToTensor()
+)
+print(len(train_ds))   # e.g. ➜ 20_000
+img, y = train_ds[0]   # one (tensor, label) pair
+```
+
+---
+
+## The **DataLoader** at a glance
+
+- Wraps any `Dataset` in an **iterable**
+- **Batches** samples together
+- **Shuffles** if asked
+- Uses **multiprocessing** (`num_workers`) to pre‑fetch data in parallel
+- Returns `(batch, labels)` tuples ready for the GPU
+
+---
+
+## Typical DataLoader code
+
+```python
+train_loader = torch.utils.data.DataLoader(
+    dataset=train_ds,
+    batch_size=64,
+    shuffle=True,
+    num_workers=4,      # 4 CPU workers
+)
+
+for images, labels in train_loader:
+    ...
+```
+
+
+
+---
+
+## Quick networks with `nn.Sequential`
+
+```python
+mlp = torch.nn.Sequential(
+    torch.nn.Linear(784, 256), torch.nn.ReLU(),
+    torch.nn.Linear(256, 64),  torch.nn.ReLU(),
+    torch.nn.Linear(64, 10)
+)
+
+out = mlp(torch.rand(32, 784))  # 32‑sample batch
+```
+
+Great for simple feed‑forward stacks when no branching logic is needed.
+
+---
+
+## `nn.Module` overview
+
+- The **base class** for *all* neural‑network parts in PyTorch
+- You **sub‑class**, then implement
+  - `__init__(self)`: declare layers
+  - `forward(self, x)`: define the forward pass
+
+---
+
+## Declaring layers in `__init__`
+
+```python
+class MyCNN(torch.nn.Module):
+    def __init__(self, num_classes=2):
+        super().__init__()
+        self.features = torch.nn.Sequential(
+            torch.nn.Conv2d(3, 32, 3, padding=1), torch.nn.ReLU(),
+            torch.nn.MaxPool2d(2),
+            torch.nn.Conv2d(32, 64, 3, padding=1), torch.nn.ReLU(),
+            torch.nn.MaxPool2d(2)
+        )
+        self.classifier = torch.nn.Linear(64*56*56, num_classes)
+```
+
+---
+
+## The `forward` pass
+
+```python
+    def forward(self, x):
+        x = self.features(x)   # conv stack
+        x = x.flatten(1)       # N,…
+        x = self.classifier(x) # logits
+        return x
+```
+
+Only **forward** is needed – back‑prop is handled automatically.
+
+---
+
+## Calling the model ≈ calling `forward`
+
+```python
+model = MyCNN()
+logits1 = model(images)          # preferred ✔
+logits2 = model.forward(images)  # works, but avoid
+```
+
+`model(input)` internally routes to `model.forward(input)` via `__call__`.
+
+---
+
+## Key Take‑Aways
+
+1. **Dataset** = organized access to *individual* samples
+2. **DataLoader** = batching, shuffling, parallel I/O
+3. `nn.Module` = reusable building block; override `__init__` & `forward`
+4. `model(x)` is the idiomatic way to run a forward pass
+5. Use `nn.Sequential` for quick layer chains
+
 
 
 # Exercises
@@ -506,13 +690,13 @@ For more information we can be reached at:
 
 ::: {.column width="25%"}
 
-{{< fa pencil >}} \ Surbhi Goel
+{{< fa pencil >}} \ Isaac Akanho
 
 {{< fa solid person-digging >}} \ [ICCS/UoCambridge](https://iccs.cam.ac.uk/about-us/our-team)
 
-{{< fa solid envelope >}} \ [sg2147[AT]cam.ac.uk](mailto:sg2147@cam.ac.uk)
+{{< fa solid envelope >}} \ [ia464[AT]cam.ac.uk](mailto:ia464@cam.ac.uk)
 
-{{< fa brands github >}} \ [surbhigoel77](https://github.com/surbhigoel77)
+{{< fa brands github >}} \ [isaacaka](https://github.com/isaacaka)
 
 :::
 
