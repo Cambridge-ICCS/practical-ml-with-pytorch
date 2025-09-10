@@ -3,7 +3,7 @@ title: "Climate Machine Learning Applications"
 subtitle: "NCAS Summer school 2025"
 format:
   revealjs:
-    embed-resources: true
+    embed-resources: false
     slide-number: true
     chalkboard: false
     preview-links: auto
@@ -31,12 +31,7 @@ bibliography: references.bib
 
 ## Teaching Material Recap {.smaller}
 
-Over the ML sessions at the summer school we have learnt about:
-
-- Classification - categorising items based on information
-- Regression - using information to predict another value
-
-using:
+We have learnt the theory behind using:
 
 - ANNs - using input _features_ to make predictions
 - CNNs - using _image-like_ data as an input
@@ -46,18 +41,18 @@ using:
 
 ## _Image-like_ data
 
-![](https://web.archive.org/web/20250812154555if_/http://colah.github.io/posts/2014-10-Visualizing-MNIST/img/mnist_pca/MNIST-p1815-1.png){.absolute width=30% top=20% left=35%}
+![](http://colah.github.io/posts/2014-10-Visualizing-MNIST/img/mnist_pca/MNIST-p1815-1.png){.absolute width=30% top=20% left=35%}
 
 ::: {.fragment}
-![](https://web.archive.org/web/20250812154555if_/http://colah.github.io/posts/2014-10-Visualizing-MNIST/img/mnist_pca/MNIST-PCA1.png){.absolute width=30% top=20% left=35%}
+![](http://colah.github.io/posts/2014-10-Visualizing-MNIST/img/mnist_pca/MNIST-PCA1.png){.absolute width=30% top=20% left=35%}
 :::
 
 ::: {.fragment}
-![](https://web.archive.org/web/20250812154621if_/http://colah.github.io/posts/2014-10-Visualizing-MNIST/img/mnist_pca/MNIST-PCA1-4.png){.absolute width=30% top=20% left=35%}
+![](http://colah.github.io/posts/2014-10-Visualizing-MNIST/img/mnist_pca/MNIST-PCA1-4.png){.absolute width=30% top=20% left=35%}
 :::
 
 ::: {.fragment}
-![](https://web.archive.org/web/20171016213111if_/http://mdpi.com/atmosphere/atmosphere-08-00024/article_deploy/html/images/atmosphere-08-00024-g005.png){.absolute width=70% top=15% left=15%}
+![](http://mdpi.com/atmosphere/atmosphere-08-00024/article_deploy/html/images/atmosphere-08-00024-g005.png){.absolute width=70% top=15% left=15%}
 :::
 
 ::: {.attribution}
@@ -74,7 +69,7 @@ NB: [colah provides an excellent article](https://colah.github.io/posts/2014-10-
 
 ## Applications in geosciences: {.smaller}
 
-See review of @kashinath2021physics
+See review of @kashinath2021physics and @gmd-16-6433-2023
 
 :::: {.columns}
 ::: {.column width="50%"}
@@ -88,17 +83,21 @@ See review of @kashinath2021physics
 - Downscaling/Upsampling  
   [@harris2022generative]
   <br>
+- Climate Emulators  
+  [@watt2025ace2; @chapman2025camulator; @Dheeshjith_2025]  
+  <br>
 :::
 
 ::: {.column width="50%"}
 - Time series forecasting  
-  [@shao2021deep]  
+  [@shao2021deep; @nguyen2023climax; @bodnar2025foundation]  
   <br>
 - Equation discovery  
   [@zanna2020data; @ma2021data]  
   <br>  
 - Complete forecasting  
-  [@rasp2020weatherbench; @pathak2022fourcastnet; @bi2022pangu]  
+  [@pathak2022fourcastnet; @bi2022pangu; @rasp2024weatherbench; @Kochkov_2024; @nathaniel2024chaosbench]  
+  <br>
   <br>
 
 :::
@@ -188,7 +187,7 @@ Additional challenges:
 - Train to predict _'image'_ from coarsened version.
   - Topography?
 
-![](https://web.archive.org/web/20250907164310if_/https://earthdatascience.org/images/earth-analytics/climate-data/downscale-climate-data-met.jpg)
+![](https://earthdatascience.org/images/earth-analytics/climate-data/downscale-climate-data-met.jpg)
 
 ::: {.attribution}
 Image by [Earth Lab](https://www.earthdatascience.org/courses/use-data-open-source-python/hierarchical-data-formats-hdf/intro-to-MACAv2-cmip5-data/)
@@ -198,10 +197,10 @@ Image by [Earth Lab](https://www.earthdatascience.org/courses/use-data-open-sour
 ## Forecasting {.smaller}
 
 - Time-series
-  - popular use
   - Recurrent Neural Nets
 - Complete weather
-  - FourCastNet, Pangu-Weather, GraphCast, NeuralGCM
+  - FourCastNet, Pangu-Weather, 
+  - GraphCast, NeuralGCM
 
 ![](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41586-023-06185-3/MediaObjects/41586_2023_6185_Fig2_HTML.png?as=webp){.absolute bottom=0% left=0% width=48%}
 
@@ -215,6 +214,28 @@ Global image from NVIDIA FourCastNet
 ::: {.notes}
 Speaker notes go here.
 :::
+
+## Differentiable Models
+
+- Online training
+  - End-to-end differentiable GCMs
+  - Greater stability
+
+![](https://storage.googleapis.com/gweb-research2023-media/images/NeuralGCM-img1.width-1250.png){.absolute bottom=10% left=10% width=100%}
+
+::: {.attribution}
+Images from Google NeuralGCM
+:::
+
+
+## Foundation Models
+- Pretrained on large amount of heterogeneous climate datasets
+- Aims to learn general purpose representations of dynamic
+- Fine tune for specific forecasting tasks
+- Examples:
+  - ClimaX, Microsoft Aurora 
+
+
 
 # Challenges
 
@@ -287,7 +308,7 @@ Replacing physics-based components of larger models (emulation or data-driven) r
 - Language interoperation
 - Physical compatibility
 
-![]( https://web.archive.org/web/20250718183653if_/https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Mathematical_Bridge_tangents.jpg/250px-Mathematical_Bridge_tangents.jpg ){style="border-radius: 50%;" .absolute top=40% left=30% width=40%}
+![]( https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Mathematical_Bridge_tangents.jpg/250px-Mathematical_Bridge_tangents.jpg ){style="border-radius: 50%;" .absolute top=40% left=30% width=40%}
 
 ::: {.attribution}
 [Mathematical Bridge](https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Mathematical_Bridge_tangents.jpg/250px-Mathematical_Bridge_tangents.jpg)
@@ -303,7 +324,7 @@ used under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en
 
 ![](https://raw.githubusercontent.com/pytorch/pytorch/main/docs/source/_static/img/pytorch-logo-dark.png){style="background-image: radial-gradient(gray 40%, black);" .absolute top=65% left=5% width=20%}
 
-![]( https://web.archive.org/web/20250825230804if_/https://upload.wikimedia.org/wikipedia/commons/1/11/TensorFlowLogo.svg ){.absolute top=75% left=7.5% width=15%}
+![]( https://upload.wikimedia.org/wikipedia/commons/1/11/TensorFlowLogo.svg ){.absolute top=75% left=7.5% width=15%}
 
 
 
@@ -393,7 +414,7 @@ runtime
 
 ![](https://raw.githubusercontent.com/pytorch/pytorch/main/docs/source/_static/img/pytorch-logo-dark.png){style="background-image: radial-gradient(gray 40%, black);" .absolute bottom=12.5% right=22% height=10%}
 
-![](https://web.archive.org/web/20250825230804if_/https://upload.wikimedia.org/wikipedia/commons/1/11/TensorFlowLogo.svg){.absolute bottom=10% left=82% height=15%}
+![](https://upload.wikimedia.org/wikipedia/commons/1/11/TensorFlowLogo.svg){.absolute bottom=10% left=82% height=15%}
 
 
 
