@@ -41,18 +41,18 @@ We have learnt the theory behind using:
 
 ## _Image-like_ data
 
-![](http://colah.github.io/posts/2014-10-Visualizing-MNIST/img/mnist_pca/MNIST-p1815-1.png){.absolute width=30% top=20% left=35%}
+![](https://colah.github.io/posts/2014-10-Visualizing-MNIST/img/mnist_pca/MNIST-p1815-1.png){.absolute width=30% top=20% left=35%}
 
 ::: {.fragment}
-![](http://colah.github.io/posts/2014-10-Visualizing-MNIST/img/mnist_pca/MNIST-PCA1.png){.absolute width=30% top=20% left=35%}
+![](https://colah.github.io/posts/2014-10-Visualizing-MNIST/img/mnist_pca/MNIST-PCA1.png){.absolute width=30% top=20% left=35%}
 :::
 
 ::: {.fragment}
-![](http://colah.github.io/posts/2014-10-Visualizing-MNIST/img/mnist_pca/MNIST-PCA1-4.png){.absolute width=30% top=20% left=35%}
+![](https://colah.github.io/posts/2014-10-Visualizing-MNIST/img/mnist_pca/MNIST-PCA1-4.png){.absolute width=30% top=20% left=35%}
 :::
 
 ::: {.fragment}
-![](http://mdpi.com/atmosphere/atmosphere-08-00024/article_deploy/html/images/atmosphere-08-00024-g005.png){.absolute width=70% top=15% left=15%}
+![](https://mdpi.com/atmosphere/atmosphere-08-00024/article_deploy/html/images/atmosphere-08-00024-g005.png){.absolute width=70% top=15% left=15%}
 :::
 
 ::: {.attribution}
@@ -77,7 +77,7 @@ See review of @kashinath2021physics and @gmd-16-6433-2023
 - Emulation of existing parameterisations  
   [@espinosa2022machine]  
   <br>
-- Data-driven paramterisations  
+- Data-driven parameterisations  
   [@yuval2020stable; @giglio2018estimating]  
   <br>
 - Downscaling/Upsampling  
@@ -90,13 +90,13 @@ See review of @kashinath2021physics and @gmd-16-6433-2023
 
 ::: {.column width="50%"}
 - Time series forecasting  
-  [@shao2021deep; @nguyen2023climax; @bodnar2025foundation]  
+  [@shao2021deep]  
   <br>
 - Equation discovery  
   [@zanna2020data; @ma2021data]  
   <br>  
 - Complete forecasting  
-  [@pathak2022fourcastnet; @bi2022pangu; @rasp2024weatherbench; @Kochkov_2024; @nathaniel2024chaosbench]  
+  [@pathak2022fourcastnet; @bi2022pangu; @nguyen2023climax; @rasp2024weatherbench; @Kochkov_2024; @nathaniel2024chaosbench; @bodnar2025foundation]  
   <br>
   <br>
 
@@ -199,8 +199,8 @@ Image by [Earth Lab](https://www.earthdatascience.org/courses/use-data-open-sour
 - Time-series
   - Recurrent Neural Nets
 - Complete weather
-  - FourCastNet, Pangu-Weather, 
-  - GraphCast, NeuralGCM
+  - FourCastNet, Pangu-Weather, ClimaX
+  - GraphCast, NeuralGCM, Aurora
 
 ![](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41586-023-06185-3/MediaObjects/41586_2023_6185_Fig2_HTML.png?as=webp){.absolute bottom=0% left=0% width=48%}
 
@@ -234,6 +234,9 @@ Images from Google NeuralGCM
 - Fine tune for specific forecasting tasks
 - Examples:
   - ClimaX, Microsoft Aurora 
+- Limitations
+  - Poor accuracy beyond short term forecasts
+  - Predict unrealistic dynamics [@chattopadhyay2023long]
 
 
 
