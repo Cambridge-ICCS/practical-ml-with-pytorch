@@ -1,15 +1,15 @@
 ---
 title: "Introduction to Neural Networks with PyTorch"
-subtitle: "ICCS Summer School 2025"
+subtitle: "NCAS Summer School 2025"
 bibliography: references.bib
 format:
   revealjs:
-    embed-resources: true
+    embed-resources: false
     slide-number: true
     chalkboard: false
     preview-links: auto
     history: false
-    logo: https://iccs.cam.ac.uk/sites/iccs.cam.ac.uk/files/logo2_2.png
+    logo: https://iccs.cam.ac.uk/sites/default/files/logo2_2.png
     theme: [dark, custom.scss]
     render-on-save: true
 authors:
@@ -19,10 +19,9 @@ authors:
   # - name: Jim Denholm
   #   affiliations: Cambridge 
   #   orcid: 0000-0002-2389-3134
-  - name: Matt Archer
-    affiliations: ICCS/Cambridge
-    orcid: 0009-0002-7043-6769
   - name: Isaac Akanho
+    affiliations: ICCS/Cambridge
+  - name: Joe Wallwork
     affiliations: ICCS/Cambridge
   
 revealjs-plugins:
@@ -36,15 +35,8 @@ revealjs-plugins:
 :::: {.columns}
 ::: {.column width=50%}
 
-### Wednesday
-* 9:30-10:00 - NN lecture
-* 10:00-10:30 - Teaching/Code-along
-* 13:30-15:00 - Teaching/Code-along
-
-
-### Thursday
-
-* 9:30-10:30 - Teaching/Code-along
+* 9:00-10:30 - Neural Networks and Climate Application lecture  
+* 11-12:30 - Teaching/Code-along
 
 ::: {style="color: turquoise;"}
 
@@ -320,7 +312,7 @@ $$a_{l+1} = \sigma \left( W_{l}a_{l} + b_{l} \right)$$
 :::
 ::::
 
-![](https://web.archive.org/web/20230105124836if_/https://3b1b-posts.us-east-1.linodeobjects.com//images/topics/neural-networks.jpg){style="border-radius: 50%;" .absolute top=35% left=42.5% width=65%}
+![](https://miro.medium.com/v2/resize:fit:1100/format:webp/0*whWZiPnG0rXxels-.jpg){style="border-radius: 50%;" .absolute top=35% left=42.5% width=65%}
 
 ::: {.attribution}
 Image source: [3Blue1Brown](https://www.3blue1brown.com/topics/neural-networks)
@@ -678,18 +670,6 @@ For more information we can be reached at:
 :::: {.columns style="font-size: 60%"}
 ::: {.column width="25%"}
 
-{{< fa pencil >}} \ Matt Archer
-
-{{< fa solid person-digging >}} \ [ICCS/UoCambridge](https://iccs.cam.ac.uk/about-us/our-team)
-
-{{< fa solid envelope >}} \ [ma595[AT]cam.ac.uk](mailto:ma595@cam.ac.uk)
-
-{{< fa brands github >}} \ [ma595](https://github.com/ma595)
-
-:::
-
-::: {.column width="25%"}
-
 {{< fa pencil >}} \ Isaac Akanho
 
 {{< fa solid person-digging >}} \ [ICCS/UoCambridge](https://iccs.cam.ac.uk/about-us/our-team)
@@ -697,6 +677,18 @@ For more information we can be reached at:
 {{< fa solid envelope >}} \ [ia464[AT]cam.ac.uk](mailto:ia464@cam.ac.uk)
 
 {{< fa brands github >}} \ [isaacaka](https://github.com/isaacaka)
+
+:::
+
+::: {.column width="25%"}
+
+{{< fa pencil >}} \ Joe Wallwork
+
+{{< fa solid person-digging >}} \ [ICCS/UoCambridge](https://iccs.cam.ac.uk/about-us/our-team)
+
+{{< fa solid envelope >}} \ [jw2423[AT]cam.ac.uk](mailto:jw2423@cam.ac.uk)
+
+{{< fa brands github >}} \ [jwallwork23](https://github.com/jwallwork23)
 
 :::
 
@@ -731,4 +723,4 @@ For more information we can be reached at:
 :::
 ::::
 
-You can also contact the ICCS, [make a resource allocation request](https://iccs.cam.ac.uk/resources-vesri-members/resource-allocation-process), or visit us at the [Summer School RSE Helpdesk](https://docs.google.com/spreadsheets/d/1WKZxp3nqpXrIRMRkfFzc71sos-UD-Uy1zeab0c1p7Xc/edit#gid=0).
+<!-- You can also contact the ICCS, [make a resource allocation request](https://iccs.cam.ac.uk/resources-vesri-members/resource-allocation-process), or visit us at the [Summer School RSE Helpdesk](https://docs.google.com/spreadsheets/d/1WKZxp3nqpXrIRMRkfFzc71sos-UD-Uy1zeab0c1p7Xc/edit#gid=0). -->
