@@ -136,6 +136,7 @@ us before a training session.
 There are three options for participating in this workshop for which instructions are provided below:
 
 * via a [local install](#local-install)
+* via [install on Dawn](#dawn-install)
 * on [Google Colab](#google-colab)
 * on [binder](#binder)
 
@@ -218,6 +219,121 @@ The following step is sometimes useful if you're having trouble with your jupyte
 launching the jupyter notebook.
 ```
 python -m ipykernel install --user --name=MLvenv
+```
+
+### Install on Dawn
+
+[Dawn](https://docs.hpc.cam.ac.uk/hpc/user-guide/pvc.html) is a supercomputer
+hosted at the University of Cambridge, and is part
+of the [AI Resource Research (AIRR)](https://www.gov.uk/government/publications/ai-research-resource/airr-advanced-supercomputers-for-the-uk).  It makes
+available [Intel Data Centre GPU Max 1550](https://www.intel.com/content/www/us/en/products/sku/232873/intel-data-center-gpu-max-1550/specifications.html)
+GPUs.  To install and run the workshop software on Dawn, you
+will need to have been granted access.  For further information, see:
+[Access to Dawn](https://www.csd3.cam.ac.uk/index.php/access-dawn).
+
+#### 1. Enable access to Dawn via the login-web interface
+
+If you haven't done this already, and have an account, enable access to
+Dawn via the [login-web interface](https://docs.hpc.cam.ac.uk/hpc/user-guide/login-web.html).
+
+#### 2. Connect to Jupyter server
+
+Login at: [https://login-web.hpc.cam.ac.uk/](https://login-web.hpc.cam.ac.uk/)
+
+At the top of the dashboard page presented after login, select:
+```
+Interactive Apps -> Jupyter Notebook
+```
+
+On the Jupyter Notebook form enter:
+```
+- Project account: the name of your Slurm project account
+- Partition: pvc9
+- Reservation [leave blank]:
+- Number of hours: 3
+- Number of cores: 1
+- Number of GPUs: 1
+- Modules: rhel9/default-dawn jupyterlab
+- Number of nodes: 1
+```
+The above request the resources needed for this workshop, for a period of
+3 hours.  The number of hours may be decreased or increased as needed.
+
+Click the __Launch__ button.
+
+Your request for a Jupyter Notebook will progress through the states:
+__Queued__, __Starting__, __Running__.  Once the __Running__ state is reached,
+click the __Connect to Jupyter__ button.
+
+Once connected to the Jupyter server, you will initially be shown the
+__File Browser__, in the Jupyter Home tab.
+
+#### 3. Create a virtual environment and install dependencies
+
+On the Jupyter page, select:
+```
+File -> New -> Terminal
+```
+The Terminal window that opens will be in the home directory of your
+account on Dawn.  Use `cd` as needed to move to the directory where you
+would like the workshop software to be installed, creating any new directories
+needed, for example:
+```
+mkdir iccs_workshop
+cd iccs_workshop
+```
+
+Download and run the install script [mlvenv_dawn.sh](./scripts/mlvenv_dawn.sh):
+```
+wget https://raw.githubusercontent.com/kh296/practical-ml-with-pytorch/refs/heads/xpu/scripts/mlvenv_dawn.sh
+bash ./mlvenv_dawn.sh
+```
+
+The install script performs steps similar to those for
+[local install](#local-install), including the optional step to keep
+the virtual environment persistent in Jupyter notebooks.
+
+Note that the install script typically takes 10-15 minutes
+to complete.  As an alternative to running interactively, it can also be run
+in batch mode from the Terminal window:
+```
+sbatch ./mlenv_dawn.sh
+```
+
+Once the install script has completed, it will have created:
+- a directory `practical-ml-with-pytorch`, into which the workshop repository
+is cloned;
+- a directory `MLvenv`, containing the software for the workshop environment;
+- a script `ml_venv_install.sh` that can be sourced to set up the
+workshop environment in the Terminal window (not needed when working
+in Jupyter notebooks);
+- a file `~/.local/share/jupyter/kernels/practical-ml-with-pytorch/` for
+setting up the workshop environment in a Jupyter notebook.
+
+The Jupyter Terminal tab can be closed.
+
+#### 4. Run notebooks
+
+In the Jupyter Home tab (__File Browser__), navigate to the workshop
+notebooks.  These will be under the installation directory chosen in step 3:
+
+- exercises: `practical-ml-with-pytorch/exercises/`
+- worked solutions: `practical-ml-with-pytorch/worked-solutions/`
+
+Once in the relevant directory, click on a notebook to open it.  You will
+initially be shown the Jupyter notebook view, but may switch between
+this and the Jupyter lab view:
+```
+# Switch from Jupyter notebook to Jupyter lab.
+View -> Open JuptyerLab
+
+# Switch from Jupyter lab to Jupyter notebook.
+View -> Open in Jupyter Notebook
+```
+
+Before running any notebook cells, set the workshop kernel:
+```
+Kernel -> Change Kernel... -> practical-ml-with-pytorch
 ```
 
 ### Google Colab
