@@ -6,10 +6,10 @@
 <script src="slides_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="slides_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="slides_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="slides_files/libs/quarto-html/quarto-syntax-highlighting-dark-befe23ebd2f54d8af2c8a89d1a1611f1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="slides_files/libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="slides_files/libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="slides_files/libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.34">
+  <meta name="generator" content="quarto-1.9.38">
 
   <title>Introduction to Neural Networks with PyTorch</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -18,6 +18,9 @@
   <link rel="stylesheet" href="slides_files/libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="slides_files/libs/revealjs/dist/reveal.css">
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -99,7 +102,6 @@
     div.csl-bib-body { }
     div.csl-entry {
       clear: both;
-      margin-bottom: 0em;
     }
     .hanging-indent div.csl-entry {
       margin-left:2em;
@@ -116,7 +118,7 @@
     div.csl-indent {
       margin-left: 2em;
     }  </style>
-  <link rel="stylesheet" href="slides_files/libs/revealjs/dist/theme/quarto-0e416b91905942e6e531b3fc46c1a85d.css">
+  <link rel="stylesheet" href="slides_files/libs/revealjs/dist/theme/quarto-e8ad971eccac43fb3f7949856a7824a4.css">
   <link href="slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="slides_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="slides_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -568,16 +570,16 @@ L_{\text{MSE}} &amp;= \frac{1}{n}\sum_{i=1}^{n}(y_{i} - f(x_{i}))^{2}\\
 </section>
 <section id="anatomy-of-a-custom-dataset" class="slide level2">
 <h2>Anatomy of a custom <code>Dataset</code></h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a><span class="kw">class</span> MyDataset(torch.utils.data.Dataset):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a><span class="kw">class</span> MyDataset(torch.utils.data.Dataset):</span>
 <span id="cb1-2"><a href=""></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, root_dir, split<span class="op">=</span><span class="st">"train"</span>, transform<span class="op">=</span><span class="va">None</span>):</span>
 <span id="cb1-3"><a href=""></a>        <span class="co"># 1️ load or download files / labels</span></span>
 <span id="cb1-4"><a href=""></a>        <span class="va">self</span>.paths, <span class="va">self</span>.labels <span class="op">=</span> load_index_file(root_dir, split)</span>
-<span id="cb1-5"><a href=""></a>        <span class="va">self</span>.transform <span class="op">=</span> transform  <span class="co"># 2️ save transforms</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-5"><a href=""></a>        <span class="va">self</span>.transform <span class="op">=</span> transform  <span class="co"># 2️ save transforms</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><em>The constructor is where you gather file paths, download archives, read CSVs, etc.</em></p>
 </section>
 <section id="len__-__getitem__" class="slide level2">
 <h2><code>__len__</code> &amp; <code>__getitem__</code></h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href=""></a>    <span class="kw">def</span> <span class="fu">__len__</span>(<span class="va">self</span>):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href=""></a>    <span class="kw">def</span> <span class="fu">__len__</span>(<span class="va">self</span>):</span>
 <span id="cb2-2"><a href=""></a>        <span class="cf">return</span> <span class="bu">len</span>(<span class="va">self</span>.paths)      <span class="co"># total #samples</span></span>
 <span id="cb2-3"><a href=""></a></span>
 <span id="cb2-4"><a href=""></a>    <span class="kw">def</span> <span class="fu">__getitem__</span>(<span class="va">self</span>, idx):</span>
@@ -585,12 +587,12 @@ L_{\text{MSE}} &amp;= \frac{1}{n}\sum_{i=1}^{n}(y_{i} - f(x_{i}))^{2}\\
 <span id="cb2-6"><a href=""></a>        <span class="cf">if</span> <span class="va">self</span>.transform:          <span class="co"># 3️ apply transforms</span></span>
 <span id="cb2-7"><a href=""></a>            img <span class="op">=</span> <span class="va">self</span>.transform(img)</span>
 <span id="cb2-8"><a href=""></a>        label <span class="op">=</span> <span class="va">self</span>.labels[idx]</span>
-<span id="cb2-9"><a href=""></a>        <span class="cf">return</span> img, label           <span class="co"># 4️ single example</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-9"><a href=""></a>        <span class="cf">return</span> img, label           <span class="co"># 4️ single example</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>With these two methods PyTorch knows <strong>how big</strong> the dataset is and <strong>how to fetch</strong> one record.</p>
 </section>
 <section id="using-the-custom-dataset" class="slide level2">
 <h2>Using the custom dataset</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href=""></a><span class="im">from</span> torchvision <span class="im">import</span> transforms</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href=""></a><span class="im">from</span> torchvision <span class="im">import</span> transforms</span>
 <span id="cb3-2"><a href=""></a></span>
 <span id="cb3-3"><a href=""></a>train_ds <span class="op">=</span> MyDataset(</span>
 <span id="cb3-4"><a href=""></a>    <span class="st">"data/cats_vs_dogs"</span>,</span>
@@ -598,7 +600,7 @@ L_{\text{MSE}} &amp;= \frac{1}{n}\sum_{i=1}^{n}(y_{i} - f(x_{i}))^{2}\\
 <span id="cb3-6"><a href=""></a>    transform<span class="op">=</span>transforms.ToTensor()</span>
 <span id="cb3-7"><a href=""></a>)</span>
 <span id="cb3-8"><a href=""></a><span class="bu">print</span>(<span class="bu">len</span>(train_ds))   <span class="co"># e.g. ➜ 20_000</span></span>
-<span id="cb3-9"><a href=""></a>img, y <span class="op">=</span> train_ds[<span class="dv">0</span>]   <span class="co"># one (tensor, label) pair</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-9"><a href=""></a>img, y <span class="op">=</span> train_ds[<span class="dv">0</span>]   <span class="co"># one (tensor, label) pair</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="the-dataloader-at-a-glance" class="slide level2">
 <h2>The <strong>DataLoader</strong> at a glance</h2>
@@ -612,7 +614,7 @@ L_{\text{MSE}} &amp;= \frac{1}{n}\sum_{i=1}^{n}(y_{i} - f(x_{i}))^{2}\\
 </section>
 <section id="typical-dataloader-code" class="slide level2">
 <h2>Typical DataLoader code</h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href=""></a>train_loader <span class="op">=</span> torch.utils.data.DataLoader(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href=""></a>train_loader <span class="op">=</span> torch.utils.data.DataLoader(</span>
 <span id="cb4-2"><a href=""></a>    dataset<span class="op">=</span>train_ds,</span>
 <span id="cb4-3"><a href=""></a>    batch_size<span class="op">=</span><span class="dv">64</span>,</span>
 <span id="cb4-4"><a href=""></a>    shuffle<span class="op">=</span><span class="va">True</span>,</span>
@@ -620,17 +622,17 @@ L_{\text{MSE}} &amp;= \frac{1}{n}\sum_{i=1}^{n}(y_{i} - f(x_{i}))^{2}\\
 <span id="cb4-6"><a href=""></a>)</span>
 <span id="cb4-7"><a href=""></a></span>
 <span id="cb4-8"><a href=""></a><span class="cf">for</span> images, labels <span class="kw">in</span> train_loader:</span>
-<span id="cb4-9"><a href=""></a>    ...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-9"><a href=""></a>    ...</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="quick-networks-with-nn.sequential" class="slide level2">
 <h2>Quick networks with <code>nn.Sequential</code></h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href=""></a>mlp <span class="op">=</span> torch.nn.Sequential(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href=""></a>mlp <span class="op">=</span> torch.nn.Sequential(</span>
 <span id="cb5-2"><a href=""></a>    torch.nn.Linear(<span class="dv">784</span>, <span class="dv">256</span>), torch.nn.ReLU(),</span>
 <span id="cb5-3"><a href=""></a>    torch.nn.Linear(<span class="dv">256</span>, <span class="dv">64</span>),  torch.nn.ReLU(),</span>
 <span id="cb5-4"><a href=""></a>    torch.nn.Linear(<span class="dv">64</span>, <span class="dv">10</span>)</span>
 <span id="cb5-5"><a href=""></a>)</span>
 <span id="cb5-6"><a href=""></a></span>
-<span id="cb5-7"><a href=""></a>out <span class="op">=</span> mlp(torch.rand(<span class="dv">32</span>, <span class="dv">784</span>))  <span class="co"># 32‑sample batch</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-7"><a href=""></a>out <span class="op">=</span> mlp(torch.rand(<span class="dv">32</span>, <span class="dv">784</span>))  <span class="co"># 32‑sample batch</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Great for simple feed‑forward stacks when no branching logic is needed.</p>
 </section>
 <section id="nn.module-overview" class="slide level2">
@@ -646,7 +648,7 @@ L_{\text{MSE}} &amp;= \frac{1}{n}\sum_{i=1}^{n}(y_{i} - f(x_{i}))^{2}\\
 </section>
 <section id="declaring-layers-in-__init__" class="slide level2">
 <h2>Declaring layers in <code>__init__</code></h2>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href=""></a><span class="kw">class</span> MyCNN(torch.nn.Module):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href=""></a><span class="kw">class</span> MyCNN(torch.nn.Module):</span>
 <span id="cb6-2"><a href=""></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, num_classes<span class="op">=</span><span class="dv">2</span>):</span>
 <span id="cb6-3"><a href=""></a>        <span class="bu">super</span>().<span class="fu">__init__</span>()</span>
 <span id="cb6-4"><a href=""></a>        <span class="va">self</span>.features <span class="op">=</span> torch.nn.Sequential(</span>
@@ -655,22 +657,22 @@ L_{\text{MSE}} &amp;= \frac{1}{n}\sum_{i=1}^{n}(y_{i} - f(x_{i}))^{2}\\
 <span id="cb6-7"><a href=""></a>            torch.nn.Conv2d(<span class="dv">32</span>, <span class="dv">64</span>, <span class="dv">3</span>, padding<span class="op">=</span><span class="dv">1</span>), torch.nn.ReLU(),</span>
 <span id="cb6-8"><a href=""></a>            torch.nn.MaxPool2d(<span class="dv">2</span>)</span>
 <span id="cb6-9"><a href=""></a>        )</span>
-<span id="cb6-10"><a href=""></a>        <span class="va">self</span>.classifier <span class="op">=</span> torch.nn.Linear(<span class="dv">64</span><span class="op">*</span><span class="dv">56</span><span class="op">*</span><span class="dv">56</span>, num_classes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-10"><a href=""></a>        <span class="va">self</span>.classifier <span class="op">=</span> torch.nn.Linear(<span class="dv">64</span><span class="op">*</span><span class="dv">56</span><span class="op">*</span><span class="dv">56</span>, num_classes)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="the-forward-pass" class="slide level2">
 <h2>The <code>forward</code> pass</h2>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href=""></a>    <span class="kw">def</span> forward(<span class="va">self</span>, x):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href=""></a>    <span class="kw">def</span> forward(<span class="va">self</span>, x):</span>
 <span id="cb7-2"><a href=""></a>        x <span class="op">=</span> <span class="va">self</span>.features(x)   <span class="co"># conv stack</span></span>
 <span id="cb7-3"><a href=""></a>        x <span class="op">=</span> x.flatten(<span class="dv">1</span>)       <span class="co"># N,…</span></span>
 <span id="cb7-4"><a href=""></a>        x <span class="op">=</span> <span class="va">self</span>.classifier(x) <span class="co"># logits</span></span>
-<span id="cb7-5"><a href=""></a>        <span class="cf">return</span> x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-5"><a href=""></a>        <span class="cf">return</span> x</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Only <strong>forward</strong> is needed – back‑prop is handled automatically.</p>
 </section>
 <section id="calling-the-model-calling-forward" class="slide level2">
 <h2>Calling the model ≈ calling <code>forward</code></h2>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href=""></a>model <span class="op">=</span> MyCNN()</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href=""></a>model <span class="op">=</span> MyCNN()</span>
 <span id="cb8-2"><a href=""></a>logits1 <span class="op">=</span> model(images)          <span class="co"># preferred ✔</span></span>
-<span id="cb8-3"><a href=""></a>logits2 <span class="op">=</span> model.forward(images)  <span class="co"># works, but avoid</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-3"><a href=""></a>logits2 <span class="op">=</span> model.forward(images)  <span class="co"># works, but avoid</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><code>model(input)</code> internally routes to <code>model.forward(input)</code> via <code>__call__</code>.</p>
 </section>
 <section id="key-takeaways" class="slide level2">
@@ -877,7 +879,7 @@ The html and source can be found [on GitHub](https://github.com/Cambridge-ICCS/p
 </div></div>
 <!-- You can also contact the ICCS, [make a resource allocation request](https://iccs.cam.ac.uk/resources-vesri-members/resource-allocation-process), or visit us at the [Summer School RSE Helpdesk](https://docs.google.com/spreadsheets/d/1WKZxp3nqpXrIRMRkfFzc71sos-UD-Uy1zeab0c1p7Xc/edit#gid=0). -->
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-atkinson2024practical" class="csl-entry" role="listitem">
 Atkinson, Jack, and Jim Denholm. 2024. <span>“<span class="nocase">Practical machine learning with PyTorch</span>.”</span> <em>Journal of Open Source Education</em> 7 (76): 239. <a href="https://doi.org/10.21105/jose.00239">https://doi.org/10.21105/jose.00239</a>.
 </div>
@@ -1075,7 +1077,7 @@ Atkinson, Jack, and Jim Denholm. 2024. <span>“<span class="nocase">Practical m
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -1149,13 +1151,14 @@ Atkinson, Jack, and Jim Denholm. 2024. <span>“<span class="nocase">Practical m
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy

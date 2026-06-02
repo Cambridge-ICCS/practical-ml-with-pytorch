@@ -6,12 +6,12 @@
 <script src="applications_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="applications_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="applications_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="applications_files/libs/quarto-html/quarto-syntax-highlighting-dark-437f30c51863257f6a0e3763259ee6fb.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="applications_files/libs/quarto-html/quarto-syntax-highlighting-dark-9de9f6925d305bcf5b7eb9351f368d06.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="applications_files/libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="applications_files/libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.34">
+  <meta name="generator" content="quarto-1.9.38">
 
-  <meta name="dcterms.date" content="2025-09-11">
+  <meta name="dcterms.date" content="2026-06-02">
   <title>Climate Machine Learning Applications</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -19,6 +19,9 @@
   <link rel="stylesheet" href="applications_files/libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="applications_files/libs/revealjs/dist/reveal.css">
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -100,7 +103,6 @@
     div.csl-bib-body { }
     div.csl-entry {
       clear: both;
-      margin-bottom: 0em;
     }
     .hanging-indent div.csl-entry {
       margin-left:2em;
@@ -117,7 +119,7 @@
     div.csl-indent {
       margin-left: 2em;
     }  </style>
-  <link rel="stylesheet" href="applications_files/libs/revealjs/dist/theme/quarto-215f11bb533c8397a16e1750c5ab600c.css">
+  <link rel="stylesheet" href="applications_files/libs/revealjs/dist/theme/quarto-e47e949643d1a18de004a4bf409ba33c.css">
   <link href="applications_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="applications_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="applications_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -238,7 +240,7 @@ Joe Wallwork
     </div>
 </div>
 
-  <p class="date">2025-09-11</p>
+  <p class="date">2026-06-02</p>
 </section>
 <section>
 <section id="teaching-material-recap" class="title-slide slide level1 center">
@@ -271,7 +273,7 @@ Joe Wallwork
 <p><img data-src="https://mdpi.com/atmosphere/atmosphere-08-00024/article_deploy/html/images/atmosphere-08-00024-g005.png" class="absolute" style="top: 15%; left: 15%; width: 70%; "></p>
 </div>
 <div class="attribution">
-<p>Gravity waves image from <span class="citation" data-cites="sheridan2017mountain">Sheridan, Vosper, and Brown (<a href="#/references" role="doc-biblioref" onclick="">2017</a>)</span>.<br>
+<p>Gravity waves image from <span class="citation" data-cites="sheridan2017mountain">Sheridan et al. (<a href="#/references" role="doc-biblioref" onclick="">2017</a>)</span>.<br>
 MNIST Images from <a href="https://colah.github.io/posts/2014-10-Visualizing-MNIST/">colah</a></p>
 </div>
 
@@ -285,7 +287,7 @@ MNIST Images from <a href="https://colah.github.io/posts/2014-10-Visualizing-MNI
 </section>
 <section id="applications-in-geosciences" class="slide level2 smaller">
 <h2>Applications in geosciences:</h2>
-<p>See review of <span class="citation" data-cites="kashinath2021physics">Kashinath et al. (<a href="#/references" role="doc-biblioref" onclick="">2021</a>)</span> and <span class="citation" data-cites="gmd-16-6433-2023">Burgh-Day and Leeuwenburg (<a href="#/references" role="doc-biblioref" onclick="">2023</a>)</span></p>
+<p>See review of <span class="citation" data-cites="kashinath2021physics"><span class="nocase">Kashinath et al.</span> (<a href="#/references" role="doc-biblioref" onclick="">2021</a>)</span> and <span class="citation" data-cites="gmd-16-6433-2023">Burgh-Day and Leeuwenburg (<a href="#/references" role="doc-biblioref" onclick="">2023</a>)</span></p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
@@ -293,7 +295,7 @@ MNIST Images from <a href="https://colah.github.io/posts/2014-10-Visualizing-MNI
 <span class="citation" data-cites="espinosa2022machine">(<a href="#/references" role="doc-biblioref" onclick="">Espinosa et al. 2022</a>)</span><br>
 <br></li>
 <li>Data-driven parameterisations<br>
-<span class="citation" data-cites="yuval2020stable giglio2018estimating">(<a href="#/references" role="doc-biblioref" onclick="">Yuval and O’Gorman 2020</a>; <a href="#/references" role="doc-biblioref" onclick="">Giglio, Lyubchich, and Mazloff 2018</a>)</span><br>
+<span class="citation" data-cites="yuval2020stable giglio2018estimating">(<a href="#/references" role="doc-biblioref" onclick="">Yuval and O’Gorman 2020</a>; <a href="#/references" role="doc-biblioref" onclick="">Giglio et al. 2018</a>)</span><br>
 <br></li>
 <li>Downscaling/Upsampling<br>
 <span class="citation" data-cites="harris2022generative">(<a href="#/references" role="doc-biblioref" onclick="">Harris et al. 2022</a>)</span> <br></li>
@@ -311,7 +313,7 @@ MNIST Images from <a href="https://colah.github.io/posts/2014-10-Visualizing-MNI
 <br><br>
 </li>
 <li>Complete forecasting<br>
-<span class="citation" data-cites="pathak2022fourcastnet bi2022pangu nguyen2023climax rasp2024weatherbench Kochkov_2024 nathaniel2024chaosbench bodnar2025foundation">(<a href="#/references" role="doc-biblioref" onclick="">Pathak et al. 2022</a>; <a href="#/references" role="doc-biblioref" onclick="">Bi et al. 2022</a>; <a href="#/references" role="doc-biblioref" onclick="">Nguyen et al. 2023</a>; <a href="#/references" role="doc-biblioref" onclick="">Rasp et al. 2024</a>; <a href="#/references" role="doc-biblioref" onclick="">Kochkov et al. 2024</a>; <a href="#/references" role="doc-biblioref" onclick="">Nathaniel et al. 2024</a>; <a href="#/references" role="doc-biblioref" onclick="">Bodnar et al. 2025</a>)</span><br>
+<span class="citation" data-cites="pathak2022fourcastnet bi2022pangu nguyen2023climax rasp2024weatherbench Kochkov_2024 nathaniel2024chaosbench bodnar2025foundation">(<a href="#/references" role="doc-biblioref" onclick=""><span class="nocase">Pathak et al.</span> 2022</a>; <a href="#/references" role="doc-biblioref" onclick="">Bi et al. 2022</a>; <a href="#/references" role="doc-biblioref" onclick="">Nguyen et al. 2023</a>; <a href="#/references" role="doc-biblioref" onclick=""><span class="nocase">Rasp et al.</span> 2024</a>; <a href="#/references" role="doc-biblioref" onclick="">Kochkov et al. 2024</a>; <a href="#/references" role="doc-biblioref" onclick="">Nathaniel et al. 2024</a>; <a href="#/references" role="doc-biblioref" onclick=""><span class="nocase">Bodnar et al.</span> 2025</a>)</span><br>
 <br> <br></li>
 </ul>
 </div></div>
@@ -523,7 +525,7 @@ Global image from NVIDIA FourCastNet</p>
 <p>Many ML applications in climate science are more complex than other <em>classical</em> applications.</p>
 <ul>
 <li>our ML useage is often not end-to-end</li>
-<li>A stable/accurate offline model will not neccessarily be stable online <span class="citation" data-cites="furner2023iterative">(<a href="#/references" role="doc-biblioref" onclick="">Furner et al. 2023</a>)</span>.</li>
+<li>A stable/accurate offline model will not neccessarily be stable online <span class="citation" data-cites="furner2023iterative">(<a href="#/references" role="doc-biblioref" onclick=""><span class="nocase">Furner et al.</span> 2023</a>)</span>.</li>
 </ul>
 <p>Your NN is perfectly happy to have ‘negative rain’.</p>
 <ul>
@@ -781,26 +783,26 @@ runtime</p>
 <li>Take model file</li>
 <li>Save as torchscript</li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
 <span id="cb1-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> my_ml_model</span>
 <span id="cb1-3"><a href="" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-4"><a href="" aria-hidden="true" tabindex="-1"></a>trained_model <span class="op">=</span> my_ml_model.initialize()</span>
 <span id="cb1-5"><a href="" aria-hidden="true" tabindex="-1"></a>scripted_model <span class="op">=</span> torch.jit.script(model)</span>
-<span id="cb1-6"><a href="" aria-hidden="true" tabindex="-1"></a>scripted_model.save(<span class="st">"my_torchscript_model.pt"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-6"><a href="" aria-hidden="true" tabindex="-1"></a>scripted_model.save(<span class="st">"my_torchscript_model.pt"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="code-example---pytorch-1" class="slide level2">
 <h2>Code Example - PyTorch</h2>
 <p>Neccessary imports:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode fortranfree code-overflow-wrap code-with-copy"><code class="sourceCode fortranfree"><span id="cb2-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span>, <span class="kw">intrinsic</span> <span class="dt">::</span> iso_c_binding, <span class="kw">only</span>: c_int64_t, c_float, c_char, <span class="kw">&amp;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode fortranfree code-overflow-wrap code-with-copy"><code class="sourceCode fortranfree"><span id="cb2-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span>, <span class="kw">intrinsic</span> <span class="dt">::</span> iso_c_binding, <span class="kw">only</span>: c_int64_t, c_float, c_char, <span class="kw">&amp;</span></span>
 <span id="cb2-2"><a href="" aria-hidden="true" tabindex="-1"></a>                                       c_null_char, c_ptr, c_loc</span>
-<span id="cb2-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> ftorch</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> ftorch</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Loading a pytorch model:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode fortranfree code-overflow-wrap code-with-copy"><code class="sourceCode fortranfree"><span id="cb3-1"><a href="" aria-hidden="true" tabindex="-1"></a>model <span class="kw">=</span> torch_module_load(<span class="st">'/path/to/saved/model.pt'</span><span class="kw">//</span>c_null_char)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode fortranfree code-overflow-wrap code-with-copy"><code class="sourceCode fortranfree"><span id="cb3-1"><a href="" aria-hidden="true" tabindex="-1"></a>model <span class="kw">=</span> torch_module_load(<span class="st">'/path/to/saved/model.pt'</span><span class="kw">//</span>c_null_char)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="code-example---pytorch-2" class="slide level2">
 <h2>Code Example - PyTorch</h2>
 <p>Tensor creation from Fortran arrays:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode fortranfree code-overflow-wrap code-with-copy"><code class="sourceCode fortranfree"><span id="cb4-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">! Fortran variables</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode fortranfree code-overflow-wrap code-with-copy"><code class="sourceCode fortranfree"><span id="cb4-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">! Fortran variables</span></span>
 <span id="cb4-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="dt">real</span>, <span class="dt">dimension(:,:)</span>, <span class="dt">target</span>  <span class="dt">::</span> SST, model_output</span>
 <span id="cb4-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">! C/Torch variables</span></span>
 <span id="cb4-4"><a href="" aria-hidden="true" tabindex="-1"></a><span class="dt">integer(c_int)</span>, <span class="dt">parameter</span> <span class="dt">::</span> dims_T <span class="kw">=</span> <span class="dv">2</span></span>
@@ -815,15 +817,15 @@ runtime</p>
 <span id="cb4-13"><a href="" aria-hidden="true" tabindex="-1"></a>                                         torch_kFloat64, torch_kCPU)</span>
 <span id="cb4-14"><a href="" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-15"><a href="" aria-hidden="true" tabindex="-1"></a>model_output <span class="kw">=</span> torch_tensor_from_blob(c_loc(output), dims_T, shape_T, <span class="kw">&amp;</span></span>
-<span id="cb4-16"><a href="" aria-hidden="true" tabindex="-1"></a>                                      torch_kFloat64, torch_kCPU)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-16"><a href="" aria-hidden="true" tabindex="-1"></a>                                      torch_kFloat64, torch_kCPU)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="code-example---pytorch-3" class="slide level2">
 <h2>Code Example - PyTorch</h2>
 <p>Running the model</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode fortranfree code-overflow-wrap code-with-copy"><code class="sourceCode fortranfree"><span id="cb5-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="kw">call</span> torch_module_forward(model, model_inputs, n_inputs, model_output_T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode fortranfree code-overflow-wrap code-with-copy"><code class="sourceCode fortranfree"><span id="cb5-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="kw">call</span> torch_module_forward(model, model_inputs, n_inputs, model_output_T)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Cleaning up:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode fortranfree code-overflow-wrap code-with-copy"><code class="sourceCode fortranfree"><span id="cb6-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="kw">call</span> torch_tensor_delete(model_inputs(<span class="dv">1</span>))</span>
-<span id="cb6-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="kw">call</span> torch_module_delete(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode fortranfree code-overflow-wrap code-with-copy"><code class="sourceCode fortranfree"><span id="cb6-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="kw">call</span> torch_tensor_delete(model_inputs(<span class="dv">1</span>))</span>
+<span id="cb6-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="kw">call</span> torch_module_delete(model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <aside class="notes">
 <p>We recommend PT TF has a weakness that prior knowledge of model structure is required.</p>
 <style type="text/css">
@@ -845,33 +847,33 @@ runtime</p>
 </section>
 <section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-bi2022pangu" class="csl-entry" role="listitem">
 Bi, Kaifeng, Lingxi Xie, Hengheng Zhang, Xin Chen, Xiaotao Gu, and Qi Tian. 2022. <span>“Pangu-Weather: A 3d High-Resolution Model for Fast and Accurate Global Weather Forecast.”</span> <em>arXiv Preprint arXiv:2211.02556</em>.
 </div>
 <div id="ref-bi2023accurate" class="csl-entry" role="listitem">
-———. 2023. <span>“Accurate Medium-Range Global Weather Forecasting with 3D Neural Networks.”</span> <em>Nature</em>, 1–6.
+Bi, Kaifeng, Lingxi Xie, Hengheng Zhang, Xin Chen, Xiaotao Gu, and Qi Tian. 2023. <span>“Accurate Medium-Range Global Weather Forecasting with 3D Neural Networks.”</span> <em>Nature</em>, 1–6.
 </div>
 <div id="ref-bodnar2025foundation" class="csl-entry" role="listitem">
-Bodnar, Cristian, Wessel P Bruinsma, Ana Lucic, Megan Stanley, Anna Allen, Johannes Brandstetter, Patrick Garvan, et al. 2025. <span>“A Foundation Model for the Earth System.”</span> <em>Nature</em>, 1–8.
+<span class="nocase">Bodnar, Cristian, Wessel P Bruinsma, Ana Lucic, et al.</span> 2025. <span>“A Foundation Model for the Earth System.”</span> <em>Nature</em>, 1–8.
 </div>
 <div id="ref-gmd-16-6433-2023" class="csl-entry" role="listitem">
 Burgh-Day, C. O. de, and T. Leeuwenburg. 2023. <span>“Machine Learning for Numerical Weather and Climate Modelling: A Review.”</span> <em>Geoscientific Model Development</em> 16 (22): 6433–77. <a href="https://doi.org/10.5194/gmd-16-6433-2023">https://doi.org/10.5194/gmd-16-6433-2023</a>.
 </div>
 <div id="ref-chapman2025camulator" class="csl-entry" role="listitem">
-Chapman, William E, John S Schreck, Yingkai Sha, David John Gagne II, Dhamma Kimpara, Laure Zanna, Kirsten J Mayer, and Judith Berner. 2025. <span>“CAMulator: Fast Emulation of the Community Atmosphere Model.”</span> <em>arXiv Preprint arXiv:2504.06007</em>.
+Chapman, William E, John S Schreck, Yingkai Sha, et al. 2025. <span>“CAMulator: Fast Emulation of the Community Atmosphere Model.”</span> <em>arXiv Preprint arXiv:2504.06007</em>.
 </div>
 <div id="ref-chattopadhyay2023long" class="csl-entry" role="listitem">
 Chattopadhyay, Ashesh, and Pedram Hassanzadeh. 2023. <span>“Long-Term Instabilities of Deep Learning-Based Digital Twins of the Climate System: The Cause and a Solution.”</span> <em>arXiv Preprint arXiv:2304.07029</em>.
 </div>
 <div id="ref-Dheeshjith_2025" class="csl-entry" role="listitem">
-Dheeshjith, Surya, Adam Subel, Alistair Adcroft, Julius Busecke, Carlos Fernandez‐Granda, Shubham Gupta, and Laure Zanna. 2025. <span>“Samudra: An AI Global Ocean Emulator for Climate.”</span> <em>Geophysical Research Letters</em> 52 (10). <a href="https://doi.org/10.1029/2024gl114318">https://doi.org/10.1029/2024gl114318</a>.
+Dheeshjith, Surya, Adam Subel, Alistair Adcroft, et al. 2025. <span>“Samudra: An AI Global Ocean Emulator for Climate.”</span> <em>Geophysical Research Letters</em> 52 (10). <a href="https://doi.org/10.1029/2024gl114318">https://doi.org/10.1029/2024gl114318</a>.
 </div>
 <div id="ref-espinosa2022machine" class="csl-entry" role="listitem">
 Espinosa, Zachary I, Aditi Sheshadri, Gerald R Cain, Edwin P Gerber, and Kevin J DallaSanta. 2022. <span>“Machine Learning Gravity Wave Parameterization Generalizes to Capture the QBO and Response to Increased CO2.”</span> <em>Geophysical Research Letters</em> 49 (8): e2022GL098174.
 </div>
 <div id="ref-furner2023iterative" class="csl-entry" role="listitem">
-Furner, Rachel, Peter Haynes, Dave Munday, Brooks Paige, Emily Shuckburgh, et al. 2023. <span>“An Iterative Data-Driven Emulator of an Ocean General Circulation Model.”</span>
+<span class="nocase">Furner, Rachel, Peter Haynes, Dave Munday, Brooks Paige, Emily Shuckburgh, et al.</span> 2023. <span>“An Iterative Data-Driven Emulator of an Ocean General Circulation Model.”</span> Unpublished manuscript.
 </div>
 <div id="ref-giglio2018estimating" class="csl-entry" role="listitem">
 Giglio, Donata, Vyacheslav Lyubchich, and Matthew R Mazloff. 2018. <span>“Estimating Oxygen in the Southern Ocean Using Argo Temperature and Salinity.”</span> <em>Journal of Geophysical Research: Oceans</em> 123 (6): 4280–97.
@@ -880,28 +882,28 @@ Giglio, Donata, Vyacheslav Lyubchich, and Matthew R Mazloff. 2018. <span>“Esti
 Harris, Lucy, Andrew TT McRae, Matthew Chantry, Peter D Dueben, and Tim N Palmer. 2022. <span>“A Generative Deep Learning Approach to Stochastic Downscaling of Precipitation Forecasts.”</span> <em>Journal of Advances in Modeling Earth Systems</em> 14 (10): e2022MS003120.
 </div>
 <div id="ref-kashinath2021physics" class="csl-entry" role="listitem">
-Kashinath, Karthik, M Mustafa, Adrian Albert, JL Wu, C Jiang, Soheil Esmaeilzadeh, Kamyar Azizzadenesheli, et al. 2021. <span>“Physics-Informed Machine Learning: Case Studies for Weather and Climate Modelling.”</span> <em>Philosophical Transactions of the Royal Society A</em> 379 (2194): 20200093.
+<span class="nocase">Kashinath, Karthik, M Mustafa, Adrian Albert, et al.</span> 2021. <span>“Physics-Informed Machine Learning: Case Studies for Weather and Climate Modelling.”</span> <em>Philosophical Transactions of the Royal Society A</em> 379 (2194): 20200093.
 </div>
 <div id="ref-Kochkov_2024" class="csl-entry" role="listitem">
-Kochkov, Dmitrii, Janni Yuval, Ian Langmore, Peter Norgaard, Jamie Smith, Griffin Mooers, Milan Klöwer, et al. 2024. <span>“Neural General Circulation Models for Weather and Climate.”</span> <em>Nature</em> 632 (8027): 1060–66. <a href="https://doi.org/10.1038/s41586-024-07744-y">https://doi.org/10.1038/s41586-024-07744-y</a>.
+Kochkov, Dmitrii, Janni Yuval, Ian Langmore, et al. 2024. <span>“Neural General Circulation Models for Weather and Climate.”</span> <em>Nature</em> 632 (8027): 1060–66. <a href="https://doi.org/10.1038/s41586-024-07744-y">https://doi.org/10.1038/s41586-024-07744-y</a>.
 </div>
 <div id="ref-ma2021data" class="csl-entry" role="listitem">
-Ma, Donglai, Jacob Bortnik, Edurado Alves, Enrico Camporeale, Xiangning Chu, and Adam Kellerman. 2021. <span>“Data-Driven Discovery of the Governing Equations Describing Radiation Belt Dynamics.”</span> In <em>AGU Fall Meeting Abstracts</em>, 2021:SA15B–1928.
+Ma, Donglai, Jacob Bortnik, Edurado Alves, Enrico Camporeale, Xiangning Chu, and Adam Kellerman. 2021. <span>“Data-Driven Discovery of the Governing Equations Describing Radiation Belt Dynamics.”</span> <em>AGU Fall Meeting Abstracts</em> 2021: SA15B–1928.
 </div>
 <div id="ref-nathaniel2024chaosbench" class="csl-entry" role="listitem">
-Nathaniel, Juan, Yongquan Qu, Tung Nguyen, Sungduk Yu, Julius Busecke, Aditya Grover, and Pierre Gentine. 2024. <span>“Chaosbench: A Multi-Channel, Physics-Based Benchmark for Subseasonal-to-Seasonal Climate Prediction.”</span> <em>Advances in Neural Information Processing Systems</em> 37: 43715–29.
+Nathaniel, Juan, Yongquan Qu, Tung Nguyen, et al. 2024. <span>“Chaosbench: A Multi-Channel, Physics-Based Benchmark for Subseasonal-to-Seasonal Climate Prediction.”</span> <em>Advances in Neural Information Processing Systems</em> 37: 43715–29.
 </div>
 <div id="ref-nguyen2023climax" class="csl-entry" role="listitem">
 Nguyen, Tung, Johannes Brandstetter, Ashish Kapoor, Jayesh K Gupta, and Aditya Grover. 2023. <span>“Climax: A Foundation Model for Weather and Climate.”</span> <em>arXiv Preprint arXiv:2301.10343</em>.
 </div>
 <div id="ref-pathak2022fourcastnet" class="csl-entry" role="listitem">
-Pathak, Jaideep, Shashank Subramanian, Peter Harrington, Sanjeev Raja, Ashesh Chattopadhyay, Morteza Mardani, Thorsten Kurth, et al. 2022. <span>“Fourcastnet: A Global Data-Driven High-Resolution Weather Model Using Adaptive Fourier Neural Operators.”</span> <em>arXiv Preprint arXiv:2202.11214</em>.
+<span class="nocase">Pathak, Jaideep, Shashank Subramanian, Peter Harrington, et al.</span> 2022. <span>“Fourcastnet: A Global Data-Driven High-Resolution Weather Model Using Adaptive Fourier Neural Operators.”</span> <em>arXiv Preprint arXiv:2202.11214</em>.
 </div>
 <div id="ref-rasp2024weatherbench" class="csl-entry" role="listitem">
-Rasp, Stephan, Stephan Hoyer, Alexander Merose, Ian Langmore, Peter Battaglia, Tyler Russell, Alvaro Sanchez-Gonzalez, et al. 2024. <span>“WeatherBench 2: A Benchmark for the Next Generation of Data-Driven Global Weather Models.”</span> <em>Journal of Advances in Modeling Earth Systems</em> 16 (6): e2023MS004019.
+<span class="nocase">Rasp, Stephan, Stephan Hoyer, Alexander Merose, et al.</span> 2024. <span>“WeatherBench 2: A Benchmark for the Next Generation of Data-Driven Global Weather Models.”</span> <em>Journal of Advances in Modeling Earth Systems</em> 16 (6): e2023MS004019.
 </div>
 <div id="ref-shao2021deep" class="csl-entry" role="listitem">
-Shao, Qi, Wei Li, Guijun Han, Guangchao Hou, Siyuan Liu, Yantian Gong, and Ping Qu. 2021. <span>“A Deep Learning Model for Forecasting Sea Surface Height Anomalies and Temperatures in the South China Sea.”</span> <em>Journal of Geophysical Research: Oceans</em> 126 (7): e2021JC017515.
+Shao, Qi, Wei Li, Guijun Han, et al. 2021. <span>“A Deep Learning Model for Forecasting Sea Surface Height Anomalies and Temperatures in the South China Sea.”</span> <em>Journal of Geophysical Research: Oceans</em> 126 (7): e2021JC017515.
 </div>
 <div id="ref-sheridan2017mountain" class="csl-entry" role="listitem">
 Sheridan, Peter, Simon Vosper, and Philip Brown. 2017. <span>“Mountain Waves in High Resolution Forecast Models: Automated Diagnostics of Wave Severity and Impact on Surface Winds.”</span> <em>Atmosphere</em> 8 (1): 24.
@@ -910,7 +912,7 @@ Sheridan, Peter, Simon Vosper, and Philip Brown. 2017. <span>“Mountain Waves i
 Ukkonen, Peter. 2022. <span>“Exploring Pathways to More Accurate Machine Learning Emulation of Atmospheric Radiative Transfer.”</span> <em>Journal of Advances in Modeling Earth Systems</em> 14 (4): e2021MS002875.
 </div>
 <div id="ref-watt2025ace2" class="csl-entry" role="listitem">
-Watt-Meyer, Oliver, Brian Henn, Jeremy McGibbon, Spencer K Clark, Anna Kwa, W Andre Perkins, Elynn Wu, Lucas Harris, and Christopher S Bretherton. 2025. <span>“ACE2: Accurately Learning Subseasonal to Decadal Atmospheric Variability and Forced Responses.”</span> <em>Npj Climate and Atmospheric Science</em> 8 (1): 205.
+Watt-Meyer, Oliver, Brian Henn, Jeremy McGibbon, et al. 2025. <span>“ACE2: Accurately Learning Subseasonal to Decadal Atmospheric Variability and Forced Responses.”</span> <em>Npj Climate and Atmospheric Science</em> 8 (1): 205.
 </div>
 <div id="ref-yuval2020stable" class="csl-entry" role="listitem">
 Yuval, Janni, and Paul A O’Gorman. 2020. <span>“Stable Machine-Learning Parameterization of Subgrid Processes for Climate Modeling at a Range of Resolutions.”</span> <em>Nature Communications</em> 11 (1): 3295.
@@ -1136,7 +1138,7 @@ You can also contact the ICCS, [make a resource allocation request](https://iccs
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -1210,13 +1212,14 @@ You can also contact the ICCS, [make a resource allocation request](https://iccs
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy
