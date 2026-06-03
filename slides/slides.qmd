@@ -1,6 +1,6 @@
 ---
 title: "Introduction to Neural Networks with PyTorch"
-subtitle: "NCAS Summer School 2025"
+subtitle: "Calipso Workshop 2026"
 bibliography: references.bib
 format:
   revealjs:
@@ -13,16 +13,16 @@ format:
     theme: [dark, custom.scss]
     render-on-save: true
 authors:
-  # - name: Jack Atkinson
-  #   orcid: 0000-0001-5001-4812
-  #   affiliations: ICCS/Cambridge
+  - name: Isaac Akanho
+    affiliations: ICCS/Cambridge
+  - name: Jack Atkinson
+    orcid: 0000-0001-5001-4812
+    affiliations: ICCS/Cambridge
   # - name: Jim Denholm
   #   affiliations: Cambridge 
   #   orcid: 0000-0002-2389-3134
-  - name: Isaac Akanho
-    affiliations: ICCS/Cambridge
-  - name: Joe Wallwork
-    affiliations: ICCS/Cambridge
+  # - name: Joe Wallwork
+  #   affiliations: ICCS/Cambridge
   
 revealjs-plugins:
   - attribution
@@ -35,8 +35,13 @@ revealjs-plugins:
 :::: {.columns}
 ::: {.column width=50%}
 
-* 9:00-10:30 - Neural Networks and Climate Application lecture  
-* 11-12:30 - Teaching/Code-along
+* 9:00-9:40: Introduction to Neural Networks  
+* 9:40-12:00: Classification using tabular data
+* 12:00-13:30: Lunch
+* 13:30-13:45: Introduction to Convolutional Neural Networks
+* 13:45-15:45: Classification using image data
+* 15:45-16:30: Discussion of ML applications in Climate Science
+
 
 ::: {style="color: turquoise;"}
 
@@ -668,7 +673,7 @@ The html and source can be found [on GitHub](https://github.com/Cambridge-ICCS/p
 For more information we can be reached at:
 
 :::: {.columns style="font-size: 60%"}
-::: {.column width="25%"}
+::: {.column width="33%"}
 
 {{< fa pencil >}} \ Isaac Akanho
 
@@ -680,7 +685,7 @@ For more information we can be reached at:
 
 :::
 
-::: {.column width="25%"}
+<!-- ::: {.column width="25%"}
 
 {{< fa pencil >}} \ Joe Wallwork
 
@@ -690,9 +695,9 @@ For more information we can be reached at:
 
 {{< fa brands github >}} \ [jwallwork23](https://github.com/jwallwork23)
 
-:::
+::: -->
 
-::: {.column width="25%"}
+::: {.column width="33%"}
 
 {{< fa pencil >}} \ Jack Atkinson
 
@@ -704,11 +709,11 @@ For more information we can be reached at:
 
 {{< fa brands github >}} \ [jatkinson1000](https://github.com/jatkinson1000)
 
-{{< fa brands mastodon >}} \ [\@jatkinson1000\@fosstodon.org](https://fosstodon.org/@jatkinson1000)
+{{< fa brands mastodon >}} \ [\@jatkinson1000\@fosstodon.org](https://hachyderm.io/@jatkinson1000)
 
 :::
 
-::: {.column width="25%"}
+::: {.column width="33%"}
 
 {{< fa pencil >}} \ Jim Denholm
 
