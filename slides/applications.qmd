@@ -1,6 +1,6 @@
 ---
 title: "Climate Machine Learning Applications"
-subtitle: "NCAS Summer school 2025"
+subtitle: "Calipso Workshop 2026"
 format:
   revealjs:
     embed-resources: false
@@ -19,8 +19,8 @@ authors:
   - name: Isaac Akanho
     orcid:
     affiliations: ICCS/Cambridge
-  - name: Joe Wallwork
-    orcid:
+  - name: Jack Atkinson
+    orcid: 0000-0001-5001-4812
     affiliations: ICCS/Cambridge
 date: last-modified
 bibliography: references.bib
@@ -619,11 +619,11 @@ For more information we can be reached at:
 
 ::: {.column width="50%"}
 
-{{< fa pencil >}} \ Joe Wallwork
+{{< fa pencil >}} \ Jack Atkinson
 
 {{< fa solid person-digging >}} \ [ICCS/UoCambridge](https://iccs.cam.ac.uk/about-us/our-team)
 
-{{< fa solid envelope >}} \ [jw2423[AT]cam.ac.uk](mailto:jw2423@cam.ac.uk)
+{{< fa solid envelope >}} \ [jwa34[AT]cam.ac.uk](mailto:jwa34@cam.ac.uk)
 
 
 :::
