@@ -29,7 +29,7 @@ dependencies = [
     "notebook",
     "torch_tools @ git+https://github.com/jdenholm/TorchTools.git",
     "matplotlib",
-    "numpy<2.0.0",
+    "numpy>=2.0.0",
     "umap-learn",
     "seaborn"
 ]
