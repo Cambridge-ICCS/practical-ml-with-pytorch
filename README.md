@@ -94,8 +94,10 @@ Neural Networks:
 - We recommend the [video series by 3Blue1Brown](https://www.3blue1brown.com/topics/neural-networks), at least chapters 1-3.
 
 ### Python
-The course will be taught in python using pyTorch.
-Whilst no prior knowledge of pyTorch is expected we assume users are familiar with the basics of Python3.
+The course will be taught in Python using PyTorch.
+It requires a Python version of at least 3.9 to be installed.
+
+Whilst no prior knowledge of PyTorch is expected we assume users are familiar with the basics of Python3.
 This includes:
 - Basic mathematical operations
 - Writing and running scripts/programs
@@ -121,7 +123,8 @@ should provide the necessary knowledge.
 In preparation for the course please ensure that your computer contains the following:
 - A text editor - e.g. vim/[neovim](https://neovim.io/), [gedit](https://gedit.en.softonic.com/), [vscode](https://code.visualstudio.com/), [sublimetext](https://www.sublimetext.com/) etc. to open and edit code files
 - A terminal emulator - e.g. [GNOME Terminal](https://help.gnome.org/users/gnome-terminal/stable/), [wezterm](https://wezfurlong.org/wezterm/index.html), [Windows Terminal (windows only)](https://learn.microsoft.com/en-us/windows/terminal/), [iTerm (mac only)](https://iterm2.com/)
-- python virtual environment (see [Installation and setup](#installation-and-setup))
+- Python virtual environment (see [Installation and setup](#installation-and-setup)) with
+  Python >= 3.9.
 
 Note for Windows users: _We have linked suitable applications for windows in the above lists.
 However, you may wish to refer to [Windows' getting-started with python information](https://learn.microsoft.com/en-us/windows/python/beginners)
@@ -165,9 +168,10 @@ fork for future reference.
 #### 2. Create a virtual environment
 Before installing any Python packages it is important to first create a Python virtual environment.
 This provides an insulated environment inside which we can install Python packages 
-without polluting the operating systems' Python environment.
+without polluting the operating system's Python environment.
+Note that this workshop requires a Python version of 3.9 or greater.
 
-If you have never done this before don't worry: it is *very* good practise, especially 
+If you have never done this before don't worry: it is *very* good practice, especially 
 when you are working on multiple projects, and easy to do.
 
 ```
@@ -178,14 +182,14 @@ To activate the environment run:
 ```
 source MLvenv/bin/activate
 ```
-You can now work on python from within this isolated environment, installing packages
+You can now work on Python from within this isolated environment, installing packages
 as you wish without disturbing your base system environment.
 
 When you have finished working on this project run:
 ```
 deactivate
 ```
-to deactivate the venv and return to the system python environment.
+to deactivate the venv and return to the system Python environment.
 
 You can always boot back into the venv as you left it by running the activate command again.
 
@@ -199,9 +203,10 @@ pip install .
 ```
 This will download the relevant dependencies into the venv as well as setting up the
 datasets that we will be using in the course.\
-Whilst the workshop should install and run with the latest versions of python libraries,
-it has been tested with following versions for major dependencies: torch 2.0.1,
-pandas 2.1.0, palmerpenguins 0.1.4, ipykernel 6.25.2, matplotlib 3.8.0, notebook 7.0.3.
+Whilst the workshop should install and run with the latest versions of Python libraries,
+it has been tested with Python 3.13 and the following versions for major dependencies:
+torch 2.12.0, pandas 3.0.3, palmerpenguins 0.1.6, ipykernel 7.2.0, matplotlib 3.10.9,
+notebook 7.5.6.
 
 
 #### 4. Run the notebook
