@@ -15,8 +15,8 @@ format:
 authors:
   - name: Isaac Akanho
     affiliations: ICCS/Cambridge
-  - name: Jack Atkinson
-    orcid: 0000-0001-5001-4812
+  - name: Nirav Shah
+    orcid: 0000-0002-6378-0898
     affiliations: ICCS/Cambridge
   # - name: Jim Denholm
   #   affiliations: Cambridge 
@@ -35,12 +35,15 @@ revealjs-plugins:
 :::: {.columns}
 ::: {.column width=50%}
 
-* 9:00-9:40: Introduction to Neural Networks  
-* 9:40-12:00: Classification using tabular data
-* 12:00-13:30: Lunch
-* 13:30-13:45: Introduction to Convolutional Neural Networks
-* 13:45-15:45: Classification using image data
-* 15:45-16:30: Discussion of ML applications in Climate Science
+| Time | Session |
+|------|---------|
+| 9:00–9:40 | Introduction to Neural Networks |
+| 9:40–10:30 | Classification Using Tabular Data |
+| 10:30–11:00 | Break |
+| 11:00–12:30 | Classification Using Tabular Data (cont.) |
+| 12:10–12:30 | Introduction to Convolutional Neural Networks |
+| 12:30–13:30 | Lunch |
+
 
 
 ::: {style="color: turquoise;"}
