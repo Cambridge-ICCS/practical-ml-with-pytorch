@@ -42,9 +42,9 @@ However, more specifically we aim to:
 
 With regards to specific ML content we cover:
 
-* using ML for both classification and regression,
-* artificial neural networks (ANNs) and convolutional neural networks (CNNs)
-* treatment of both tabular and image data
+* using ML for classification,
+* artificial neural networks (ANNs)
+* treatment of tabular data
 
 
 ## Teaching Material
@@ -142,10 +142,9 @@ There are three options for participating in this workshop for which instruction
 * on [Google Colab](#google-colab)
 * on [binder](#binder)
 
-We recommend the [local install](#local-install) approach, especially if you forked
-the repository, as it is the easiest way to keep a copy of your work and push back to GitHub.
+We recommend the [Google Colab](#google-colab) approach, as it is the easiest way to get started
 
-However, if you experience issues with the installation process or are unfamiliar with
+You can also do a local install however, if you experience issues with the installation process or are unfamiliar with
 the terminal/installation process there is the option to run the notebooks in
 [Google Colab](#google-colab) or on [binder](#binder).
 
@@ -228,12 +227,10 @@ python -m ipykernel install --user --name=MLvenv
 ### Google Colab
 
 Running on Colab is useful as it allows you to access GPU resources.  
-To launch the notebooks in Google Colab click the following links for each of the exercises:
+To launch the notebook in Google Colab click the following link:
 
-* [Exercise 01](https://colab.research.google.com/github/Cambridge-ICCS/practical-ml-with-pytorch/blob/main/exercises/01_penguin_classification.ipynb) - [Worked Solution 01](https://colab.research.google.com/github/Cambridge-ICCS/practical-ml-with-pytorch/blob/main/worked-solutions/01_penguin_classification_solutions.ipynb)
-* [Exercise 02](https://colab.research.google.com/github/Cambridge-ICCS/practical-ml-with-pytorch/blob/colab/exercises/02_penguin_regression.ipynb) - [Worked Solution 02](https://colab.research.google.com/github/Cambridge-ICCS/practical-ml-with-pytorch/blob/colab/worked-solutions/02_penguin_regression_solutions.ipynb)
-* [Exercise 03](https://colab.research.google.com/github/Cambridge-ICCS/practical-ml-with-pytorch/blob/colab/exercises/03_mnist_classification.ipynb) - [Worked Solution 03](https://colab.research.google.com/github/Cambridge-ICCS/practical-ml-with-pytorch/blob/colab/worked-solutions/03_mnist_classification_solutions.ipynb)
-* [Exercise 04](https://colab.research.google.com/github/Cambridge-ICCS/practical-ml-with-pytorch/blob/colab/exercises/04_ellipse_regression.ipynb) - [Worked Solution 04](https://colab.research.google.com/github/Cambridge-ICCS/practical-ml-with-pytorch/blob/colab/worked-solutions/04_ellipse_regression_solutions.ipynb)
+* [Walkthrough](https://colab.research.google.com/github/Cambridge-ICCS/practical-ml-with-pytorch/blob/byte_sized/walkthrough/01_penguin_classification_walkthrough.ipynb)
+
 
 _Notes:_
 * _Running in Google Colab requires you to have a Google account._
@@ -244,13 +241,11 @@ _Notes:_
 
 If you cannot operate using a local install, and do not wish to sign up for a Google account,
 the repository can be launched
-[on binder](https://mybinder.org/v2/gh/Cambridge-ICCS/practical-ml-with-pytorch/main).
+[on binder](https://mybinder.org/v2/gh/Cambridge-ICCS/practical-ml-with-pytorch/byte-sized).
 
 _Notes:_
 * _If you leave a binder session your work will be lost, so be careful to save any work
   you want to keep_
-* _Due to the limited resources provided by binder you will struggle to run training in
-  exercises 3 and 4._
 
 
 ## JOSE Publication
