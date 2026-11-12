@@ -1,6 +1,6 @@
 ---
 title: "Introduction to Neural Networks with PyTorch"
-subtitle: "Calipso Workshop 2026"
+subtitle: "STEP-UP ByteSized dRTP"
 bibliography: references.bib
 format:
   revealjs:
@@ -15,8 +15,8 @@ format:
 authors:
   - name: Isaac Akanho
     affiliations: ICCS/Cambridge
-  - name: Nirav Shah
-    orcid: 0000-0002-6378-0898
+  - name: David Kamm
+    orcid: 0009-0006-2210-3715
     affiliations: ICCS/Cambridge
   # - name: Jim Denholm
   #   affiliations: Cambridge 
@@ -33,22 +33,15 @@ revealjs-plugins:
 ## Rough Schedule {.smaller}
 
 :::: {.columns}
-::: {.column width=50%}
+::: {.column width=80%}
 
 | Time | Session |
 |------|---------|
-| 9:00–9:40 | Introduction to Neural Networks |
-| 9:40–10:30 | Classification Using Tabular Data |
-| 10:30–11:00 | Break |
-| 11:00–12:30 | Classification Using Tabular Data (cont.) |
-| 12:10–12:30 | Introduction to Convolutional Neural Networks |
-| 12:30–13:30 | Lunch |
+| 14:00–14:30 | Introduction to Neural Networks (David)|
+| 14:30–15:30 | Classification Using Tabular Data (Isaac)|
 
+TODO: Is this necessary?
 
-
-::: {style="color: turquoise;"}
-
-:::
 :::
 ::::
 
@@ -56,7 +49,7 @@ revealjs-plugins:
 
 These slides can be viewed at:
 
-- [https://cambridge-iccs.github.io/practical-ml-with-pytorch](https://cambridge-iccs.github.io/practical-ml-with-pytorch)  
+- [https://cambridge-iccs.github.io/practical-ml-with-pytorch TODO](https://cambridge-iccs.github.io/practical-ml-with-pytorch)  
 
 The html and source can be found [on GitHub](https://github.com/Cambridge-ICCS/practical-ml-with-pytorch). Follow this link:
 
@@ -80,17 +73,15 @@ The key learning objective from this workshop could be simply summarised as:
 Specifically: 
 
 - provide an understanding of the structure of a PyTorch model and ML pipeline,
-- introduce the different functionalities PyTorch might provide,
-- encourage good research software engineering (RSE) practice, and
+- introduce the different functionalities PyTorch might provide, and
 - exercise careful consideration and understanding of data used for training ML models.
 
 \
 \
 With regards to specific ML content, we cover:
 
-- using ML for both classification and regression,
-- artificial neural networks (ANNs) and convolutional neural networks (CNNs)
-- treatment of tabular data and image data
+- using ML for classification problems,
+- TODO: maybe more specific within classification problem
 
 <!--
 ## NCAS School (rough) Schedule {.smaller}
@@ -135,64 +126,28 @@ Helping Today:
 ## Stochastic gradient descent (SGD)
 
 - Generally speaking, most neural networks are fit/trained using SGD (or some variant of it).
-- To understand how one might fit a function with SGD, let's start with a straight line: $$y=mx+c$$
-
+- To understand how one might fit a function with SGD, let's start with a straight line: $$f(x)=mx+c$$
 
 ## Fitting a straight line with SGD I {.smaller}
 
-- **Question**---when we a differentiate a function, what do we get?
+- Suppose we have some observed data points, each consisting of an input $x_i$ and a corresponding target $y_i$: $\{x_i, y_i\}$
 
-::: {.fragment .fade-in}
+- Our model predicts:
+$$
+\widehat{y}_{i}=f(x_i)=mx_i+c
+$$
 
-- Consider:
+- We can measure the distance between our model $\widehat{y}_{i}$ and the data points $y_{i}$: 
+$$e = |\widehat{y}_i - y_{i}|$$
 
-$$y = mx + c$$
-
-$$\frac{dy}{dx} = m$$
-
-- $m$ is certainly $y$'s slope, but is there a (perhaps) more fundamental way to view a derivative?
-
-:::
-
+- $e$ depends on the model parameters $m$ and $c$.
 
 ## Fitting a straight line with SGD II {.smaller}
-
-- **Answer**---a function's derivative gives a _vector_ which points in the direction of _steepest ascent_.
-
-::: {.fragment .fade-in}
-
-:::: {.columns}
-::: {.column width="50%"}
-
-- Consider
-
-$$y = x$$
-
-$$\frac{dy}{dx} = 1$$
-
-- What is the direction of _steepest descent?_
-
-$$-\frac{dy}{dx}$$
-
-:::
-::::
-
-![](straight-line.png){.absolute top=35% left=60% width=40%}
-
-:::
-
-
-## Fitting a straight line with SGD III {.smaller}
-
-- When fitting a function, we are essentially creating a model, $f$, which describes some data, $y$.
-- We therefore need a way of measuring how well a model's predictions match our observations.
-
-## Fitting a straight line with SGD IV {.smaller}
 
 
 ![](error-line.png)
 
-- We can measure the distance between $f(x_{i})$ and $y_{i}$.
+- Goal is to find the optimal combination of $m$ and $c$ to **minimise the loss**.
 
 
 <!-- :::: {.columns} -->
@@ -206,14 +161,14 @@ $$-\frac{dy}{dx}$$
 | 2.0      | 3.9     |
 | 3.0      | 6.2     | -->
 
-## Fitting a straight line with SGD V {.smaller}
+## Fitting a straight line with SGD III {.smaller}
 
 
 <!-- ::: {.column width="70%"} -->
 
 - Normally we might consider the mean-squared error:
 
-$$L_{\text{MSE}} = \frac{1}{n}\sum_{i=1}^{n}\left(y_{i} - f(x_{i})\right)^{2}$$
+$$L_{\text{MSE}} = \frac{1}{n}\sum_{i=1}^{n}\left(y_{i} - \widehat{y}_{i}\right)^{2}$$
 
 :::: {.columns}
 ::: {.column width="45%"}
@@ -222,7 +177,7 @@ $$L_{\text{MSE}} = \frac{1}{n}\sum_{i=1}^{n}\left(y_{i} - f(x_{i})\right)^{2}$$
 
 - Data: \ $\{x_{i}, y_{i}\}$
 
-- Loss: \ $\frac{1}{n}\sum_{i=1}^{n}(y_{i} - x_{i})^{2}$
+- Loss: \ $\frac{1}{n}\sum_{i=1}^{n}(y_{i} - \widehat{y}_{i})^{2}$
 
 :::
 
@@ -243,7 +198,7 @@ $$
 
 ## Fitting a straight line with SGD VI {.smaller}
 
-- Differential:
+- With chain-rule:
 
 $$
 \frac{\partial L}{\partial m}
@@ -257,29 +212,37 @@ $$
 \frac{1}{n}\sum_{i=1}^{n} 2\bigl(m\,x_{i}+c-y_{i}\bigr).
 $$
 
-- This gradient is used to find the parameters that **minimise the loss**, thereby reducing overall error.
+- The gradient 
+$\vec{\nabla} L = \begin{bmatrix} \frac{\partial L}{\partial m} \\ \frac{\partial L}{\partial c} \end{bmatrix}$
+then points in the direction of _steepest ascent_.
+
+- $-\vec{\nabla} L$ in the direction of _steepest descent_.
 
 
-## Update Rule
+## Fitting a straight line with SGD V {.smaller}
 
+- Assuming an initial guess for the model parameters 
+$$\begin{bmatrix}
+m_{0} \\
+c_{0}
+\end{bmatrix}
+$$
 - We can iteratively minimise the loss by stepping the model's parameters in the direction of steepest descent:
 
-::: {layout="[0.5, 1, 0.5, 1, 0.5]"}
-
-:::: {#placeholder}
-::::
-
-$$m_{n + 1} = m_{n} - \frac{dL}{dm} \cdot l_{r}$$
-
-:::: {#placeholder}
-::::
-
-$$c_{n + 1} = c_{n} - \frac{dL}{dc} \cdot l_{r}$$
-
-:::: {#placeholder}
-::::
-
-:::
+$$\begin{bmatrix}
+m_{n+1} \\
+c_{n+1}
+\end{bmatrix} =
+\begin{bmatrix}
+m_{n} \\
+c_{n}
+\end{bmatrix} -
+l_{r} \, \vec{\nabla}L_{n} = 
+\begin{bmatrix}
+m_{n} - l_{r}\frac{dL}{dm}|_{m_{n}, c_{n}}\\
+c_{n} - l_{r}\frac{dL}{dc}|_{m_{n}, c_{n}}
+\end{bmatrix}
+$$
 
 - where $l_{\text{r}}$ is a small constant known as the _learning rate_.
 
@@ -290,13 +253,17 @@ To fit a model we need:
 
 - Some^[Well, a suitable amount of - often a lot.] data.
 - A model.
-- A loss function
+- A loss function.
 - An optimisation procedure (often SGD and other flavours of SGD).
+
+::: {.fragment .fade-in}
+To evaluate how well our model performs, we can split our data into **training** and **validation** sets.
+:::
 
 
 ## What about neural networks? {.smaller}
 
-- Neural networks are just functions.
+- Neural networks are just functions (usually with many parameters).
 - We can "train", or "fit", them as we would any other function:
   - by iteratively nudging parameters to minimise a loss.
 - With neural networks, differentiating the loss function is a bit more complicated
@@ -309,9 +276,9 @@ To fit a model we need:
 - The simplest neural networks commonly used are generally called fully-connected neural nets, dense networks, multi-layer perceptrons, or artifical neural networks (ANNs).
 
 :::: {.columns}
-::: {.column width=40%}
+::: {.column width=50%}
 
-- We map between the features at consecutive layers through matrix multiplication and the application of some non-linear activation function.
+- We map between the features at consecutive layers through matrix multiplication (weights $W_{l}$ and bias $b_{l}$) and the application of some non-linear activation function ($\sigma$).
 
 $$a_{l+1} = \sigma \left( W_{l}a_{l} + b_{l} \right)$$
 
@@ -320,7 +287,7 @@ $$a_{l+1} = \sigma \left( W_{l}a_{l} + b_{l} \right)$$
 :::
 ::::
 
-![](https://miro.medium.com/v2/resize:fit:1100/format:webp/0*whWZiPnG0rXxels-.jpg){style="border-radius: 50%;" .absolute top=35% left=42.5% width=65%}
+![](https://miro.medium.com/v2/resize:fit:1100/format:webp/0*whWZiPnG0rXxels-.jpg){style="border-radius: 40%;" .absolute top=35% left=55% width=55%}
 
 ::: {.attribution}
 Image source: [3Blue1Brown](https://www.3blue1brown.com/topics/neural-networks)
@@ -342,10 +309,11 @@ Image source: [3Blue1Brown](https://www.3blue1brown.com/topics/neural-networks)
 
 # Python and PyTorch {.smaller}
 
-- In this workshop, we will implement some straightforward neural networks in PyTorch, and use them for different classification and regression problems.
+- In this workshop, we will implement some straightforward neural networks in PyTorch, and use them for a classification problem.
 - PyTorch is a deep learning framework that can be used in both Python and C++.
 - There are other frameworks like Jax, Tensorflow, PyTorch Lightning
 - See the PyTorch website: [https://pytorch.org/](https://pytorch.org/)
+- TODO: Should we still point to full course if people want to have a look at other problems
 
 # Datasets, DataLoaders & `nn.Module`
 
@@ -414,7 +382,7 @@ img, y = train_ds[0]   # one (tensor, label) pair
 ## The **DataLoader** at a glance
 
 - Wraps any `Dataset` in an **iterable**
-- **Batches** samples together
+- **Batches** samples together (TODO: mainly important for GPU performance?)
 - **Shuffles** if asked
 - Uses **multiprocessing** (`num_workers`) to pre‑fetch data in parallel
 - Returns `(batch, labels)` tuples ready for the GPU
@@ -478,6 +446,7 @@ class MyCNN(torch.nn.Module):
         )
         self.classifier = torch.nn.Linear(64*56*56, num_classes)
 ```
+TODO: this introduces CNNs, we want to keep or go back to quick NN example?
 
 ---
 
@@ -502,6 +471,7 @@ model = MyCNN()
 logits1 = model(images)          # preferred ✔
 logits2 = model.forward(images)  # works, but avoid
 ```
+TODO: why avoid?
 
 `model(input)` internally routes to `model.forward(input)` via `__call__`.
 
@@ -534,133 +504,6 @@ Image source: [Palmer Penguins by Alison Horst](https://allisonhorst.github.io/p
 - In this exercise, you will train a fully-connected neural network to [*classify the species*]{style="text-decoration: underline;"} of penguins based on certain physical features.
 - [https://github.com/allisonhorst/palmerpenguins](https://github.com/allisonhorst/palmerpenguins)
 
-
-## Exercise 2 -- regression
-
-- In this exercise, you will train a fully-connected neural network to [*predict the mass*]{style="text-decoration: underline;"} of penguins based on other physical features.
-- [https://github.com/allisonhorst/palmerpenguins](https://github.com/allisonhorst/palmerpenguins)
-
-
-# Part 2: Fun with CNNs
-
-
-## Convolutional neural networks (CNNs): why? {.smaller}
-
-Advantages over simple ANNs:
-
-- They require far fewer parameters per layer.
-  - The forward pass of a conv layer involves running a filter of fixed size over the inputs.
-  - The number of parameters per layer _does not_ depend on the input size.
-- They are a much more natural choice of function for *image-like* data:
-
-:::: {.columns}
-::: {.column width=10%}
-:::
-::: {.column width=35%}
-
-![](https://machinelearningmastery.com/wp-content/uploads/2019/03/Plot-of-the-First-Nine-Photos-of-Dogs-in-the-Dogs-vs-Cats-Dataset.png)
-
-:::
-::: {.column width=10%}
-:::
-::: {.column width=35%}
-
-![](https://machinelearningmastery.com/wp-content/uploads/2019/03/Plot-of-the-First-Nine-Photos-of-Cats-in-the-Dogs-vs-Cats-Dataset.png)
-
-:::
-::::
-
-::: {.attribution}
-Image source: [Machine Learning Mastery](https://machinelearningmastery.com/how-to-develop-a-convolutional-neural-network-to-classify-photos-of-dogs-and-cats/)
-:::
-
-
-## Convolutional neural networks (CNNs): why? {.smaller}
-
-Some other points:
-
-- Convolutional layers are translationally invariant:
-  - i.e. they don't care _where_ the "dog" is in the image.
-- Convolutional layers are _not_ rotationally invariant.
-  - e.g. a model trained to detect correctly-oriented human faces will likely fail on upside-down images
-  - We can address this with data augmentation (explored in exercises).
-
-
-## What is a (1D) convolutional layer? {.smaller}
-
-![](1d-conv.png)
-
-See the [`torch.nn.Conv1d` docs](https://pytorch.org/docs/stable/generated/torch.nn.Conv1d.html)
-
-
-## 2D convolutional layer {.smaller}
-
-- Same idea as in on dimension, but in two (funnily enough).
-
-![](2d-conv.png)
-
-- Everthing else proceeds in the same way as with the 1D case.
-- See the [`torch.nn.Conv2d` docs](https://pytorch.org/docs/stable/generated/torch.nn.Conv2d.html).
-- As with Linear layers, Conv2d layers also have non-linear activations applied to them.
-
-
-## Typical CNN overview {.smaller}
-
-::: {layout="[ 0.5, 0.5 ]"}
-
-![](https://miro.medium.com/v2/resize:fit:1162/format:webp/1*tvwYybdIwvoOs0DuUEJJTg.png)
-
-- Series of conv layers extract features from the inputs.
-  - Often called an encoder.
-- Adaptive pooling layer:
-  - Image-like objects $\to$ vectors.
-  - Standardises size.
-  - [``torch.nn.AdaptiveAvgPool2d``](https://pytorch.org/docs/stable/generated/torch.nn.AdaptiveAvgPool2d.html)
-  - [``torch.nn.AdaptiveMaxPool2d``](https://pytorch.org/docs/stable/generated/torch.nn.AdaptiveMaxPool2d.html)
-- Classification (or regression) head.
-
-:::
-
-- For common CNN architectures see [``torchvision.models`` docs](https://pytorch.org/vision/stable/models.html).
-
-::: {.attribution}
-Image source: [medium.com - binary image classifier cnn using tensorflow](https://medium.com/techiepedia/binary-image-classifier-cnn-using-tensorflow-a3f5d6746697)
-:::
-
-
-# Exercises
-
-## Exercise 1 -- classification
-
-### MNIST hand-written digits.
-
-::: {layout="[ 0.5, 0.5 ]"}
-
-![](https://i.ytimg.com/vi/0QI3xgXuB-Q/hqdefault.jpg)
-
-- In this exercise we'll train a CNN to classify hand-written digits in the MNIST dataset.
-- See the [MNIST database wiki](https://en.wikipedia.org/wiki/MNIST_database) for more details.
-
-:::
-
-::: {.attribution}
-Image source: [npmjs.com](https://www.npmjs.com/package/mnist)
-:::
-
-
-
-## Exercise 2---regression
-### Random ellipse problem
-
-- In this exercise, we'll train a CNN to estimate the centre $(x_{\text{c}}, y_{\text{c}})$ and the $x$ and $y$ radii of an ellipse defined by
-$$
-\frac{(x - x_{\text{c}})^{2}}{r_{x}^{2}} + \frac{(y - y_{\text{c}})^{2}}{r_{y}^{2}} = 1
-$$
-
-- The ellipse, and its background, will have random colours chosen uniformly on $\left[0,\ 255\right]^{3}$.
-- In short, the model must learn to estimate $x_{\text{c}}$, $y_{\text{c}}$, $r_{x}$ and $r_{y}$.
-
-
 <!-- # Further information -->
 
 <!-- ## Slides
@@ -676,7 +519,7 @@ The html and source can be found [on GitHub](https://github.com/Cambridge-ICCS/p
 For more information we can be reached at:
 
 :::: {.columns style="font-size: 60%"}
-::: {.column width="33%"}
+::: {.column width="25%"}
 
 {{< fa pencil >}} \ Isaac Akanho
 
@@ -685,6 +528,18 @@ For more information we can be reached at:
 {{< fa solid envelope >}} \ [ia464[AT]cam.ac.uk](mailto:ia464@cam.ac.uk)
 
 {{< fa brands github >}} \ [isaacaka](https://github.com/isaacaka)
+
+:::
+
+::: {.column width="25%"}
+
+{{< fa pencil >}} \ David Kamm
+
+{{< fa solid person-digging >}} \ [ICCS/UoCambridge](https://iccs.cam.ac.uk/about-us/our-team)
+
+{{< fa solid envelope >}} \ [dk789[AT]cam.ac.uk](mailto:dk789@cam.ac.uk)
+
+{{< fa brands github >}} \ [vopikamm](https://github.com/vopikamm)
 
 :::
 
@@ -700,7 +555,7 @@ For more information we can be reached at:
 
 ::: -->
 
-::: {.column width="33%"}
+::: {.column width="25%"}
 
 {{< fa pencil >}} \ Jack Atkinson
 
@@ -716,7 +571,7 @@ For more information we can be reached at:
 
 :::
 
-::: {.column width="33%"}
+::: {.column width="25%"}
 
 {{< fa pencil >}} \ Jim Denholm
 
